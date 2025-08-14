@@ -7,6 +7,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/uicons-brands/css/uicons-brands.css">
     <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/uicons-solid-rounded/css/uicons-solid-rounded.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
     <title>Sora | MyPorto</title>
 </head>
 <body style="font-family: 'Poppins', sans-serif;">
@@ -203,6 +204,25 @@
 
     <!-- </div> -->
 </div>
+
+    <!-- Footer -->
+  <footer class="bg-[#f5faff] shadow-md border-t border-gray-200 mt-10">
+    <div class="container mx-auto px-6 py-4 flex flex-col md:flex-row justify-between items-center">
+      <!-- Logo/Teks -->
+      <div class="text-xl font-semibold text-[#5E3BEE]">MyPorto</div>
+      <div>@2025 by FarisDani</div>
+      <!-- Social Icons -->
+      <div class="flex space-x-4 mt-4 md:mt-0">
+        <a href="http://www.linkedin.com/in/faris-dani-rizkianto-rizkianto-809629310/" target="_blank" class="text-gray-600 hover:text-[#0077B5] transition">
+          <i class="fab fa-linkedin fa-lg"></i>
+        </a>
+        <a href="https://github.com/FarisDani" target="_blank" class="text-gray-600 hover:text-[#0077B5] transition">
+          <i class="fab fa-github fa-lg"></i>
+        </a>
+        <!-- Tambahkan lebih banyak ikon jika diperlukan -->
+      </div>
+    </div>
+  </footer>
 
   <script>
     // Mobile menu toggle

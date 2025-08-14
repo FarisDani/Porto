@@ -169,37 +169,52 @@
 </div>
 
 <div class="min-h-[100px] w-full flex flex-row items-center justify-center gap-10 px-6 py-10 bg-white">
-  <!-- Grid Cards -->
-  <!-- <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-20  "> -->
-    
-        <!-- Android Programming -->
+<!-- Grid Cards -->
+
         <div class="bg-[#f5faff] min-h-[500px] w-[600px] rounded-lg shadow-sm hover:shadow-lg transition duration-300  flex flex-col items-start ">
-        <!-- Ikon Android dengan Ficon -->
-              <img class="w-full h-full h-10 w-10 mb-3 rounded-lg" src="projectIL1.png" alt="Code">
+        <a href="terasbudaya.php">
+          <img class="w-full h-full h-10 w-10 mb-3 rounded-lg" src="projectIL1.png" alt="Code">
           <div class="items-start justify-center p-6">  
             <h3 class="text-lg font-semibold text-[#f0a202] ">Teras Budaya</h3>
             <h4 class="text-sm">Teras Budaya is a platform for exploring Indonesian culture, allowing users to explore cultural events.</h4>
-          </div>   
+            <br>
+            <a href="terasbudaya.php" class=" px-4 py-2 bg-[#f0a202] text-white font-semibold rounded-md text-center hover:bg-white hover:text-[#f0a202]  hover:border border-[#f0a202]  texttransition ">
+                View Project
+            </a>
+          </div>
+        </a>  
         </div>
 
-        <!-- Android Programming -->
+        <!-- PawPals -->
         <div class="bg-[#f5faff] min-h-[500px] w-[600px] rounded-lg shadow-sm hover:shadow-lg transition duration-300  flex flex-col items-start ">
-        <!-- Ikon Android dengan Ficon -->
-              <img class="w-full h-full h-10 w-10 mb-3 rounded-lg" src="projectIL2.png" alt="Code">
+          <a href="pawpals.php">
+        
+          <img class="w-full h-full h-10 w-10 mb-3 rounded-lg" src="projectIL2.png" alt="Code">
           <div class="items-start justify-center p-6">  
             <h3 class="text-lg font-semibold text-[#fd6220]">PawPals</h3>
-            <h4 class="text-sm">PawPals is a pet care platform that offers solutions to help owners care for their pets. </h4>
-          </div>   
+            <h4 class="text-sm">PawPals is a pet care platform that offers solutions to help the pet owners to taking care of their best pals.</h4>
+            <br>
+            <a href="pawpals.php" class=" px-4 py-2 bg-[#fd6220] text-white font-semibold rounded-md text-center hover:bg-white hover:text-[#fd6220]  hover:border border-[#fd6220]  texttransition ">
+                View Project
+            </a>
+          </div>
+          </a>   
         </div>
 
-        <!-- Android Programming -->
+        <!-- MentorKita -->
         <div class="bg-[#f5faff] min-h-[500px] w-[600px] rounded-lg shadow-sm hover:shadow-lg transition duration-300  flex flex-col items-start ">
-        <!-- Ikon Android dengan Ficon -->
-              <img class="w-full h-full h-10 w-10 mb-3 rounded-lg" src="projectITC3 (2).png" alt="Code">
+          <a href="mentorkita.php">
+        
+          <img class="w-full h-full h-10 w-10 mb-3 rounded-lg" src="projectITC3 (2).png" alt="Code">
           <div class="items-start justify-center p-6">  
             <h3 class="text-lg font-semibold text-[#5E3BEE] ">Mentor Kita</h3>
             <h4 class="text-sm">Mentor Kita is a web-based platform developed by my team to help users find mentors tailored to their personal goals and interests.</h4>
-          </div>   
+            <br>
+            <a href="mentorkita.php" class=" px-4 py-2 bg-[#5E3BEE] text-white font-semibold rounded-md text-center hover:bg-white hover:text-[#5E3BEE] hover:border border-[#5E3BEE]  texttransition ">
+                View Project
+            </a>
+          </div>
+          </a>   
         </div>
 
     <!-- </div> -->

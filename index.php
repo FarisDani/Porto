@@ -162,7 +162,7 @@
     My Portofolio
   </h2>
   <!-- Tombol -->
-  <a href="portofolio.php"
+  <a href="portofolio.html"
      class="block px-4 py-2 bg-[#5E3BEE] text-white rounded-md text-center hover:bg-white hover:text-[#5E3BEE] hover:border border-[#5E3BEE] texttransition ">
     See More
   </a>

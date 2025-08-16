@@ -59,56 +59,51 @@
     <a href="portofolio.html" class="hover:underline">Portofolio</a>
   </div>
 
-  <div class="min-h-[50px] w-full flex flex-col items-center justify-center gap-10 px-6 py-10 bg-white">
-<!-- Grid Cards -->
+<div class="min-h-[50px] w-full flex flex-col items-center justify-center gap-10 px-4 py-10 bg-white">
 
-        <div class="bg-[#f5faff] min-h-[100px] w-[800px] rounded-lg shadow-sm hover:shadow-lg transition duration-300  flex flex-row items-start ">
-        <a href="porto1.html" >
-          <img class="rounded-lg w-full max-h-70" src="img/projectIL1.png" alt="Code">
-          <div class="items-start justify-center p-6">  
-            <h3 class="text-lg font-semibold text-[#f0a202] ">Teras Budaya</h3>
-            <h4 class="text-sm">Teras Budaya is a platform for exploring Indonesian culture, allowing users to explore cultural events.</h4>
-            <br>
-            <a href="porto1.html" class=" px-4 py-2 bg-[#f0a202] text-white font-semibold rounded-md text-center hover:bg-white hover:text-[#f0a202]  hover:border border-[#f0a202]  texttransition ">
-                View Project
-            </a>
-          </div>
-        </a>  
-        </div>
+  <!-- Grid Wrapper -->
+  <div class="grid grid-cols-1 md:grid-cols-1 gap-8 max-w-5xl w-full">
 
-        <!-- PawPals -->
-        <div class="bg-[#f5faff] min-h-[100px] w-[800px] rounded-lg shadow-sm hover:shadow-lg transition duration-300  flex flex-row items-start ">
-          <a href="pawpals.html">
-          
-          <div class="items-start justify-center p-6">  
-            <h3 class="text-lg font-semibold text-[#fd6220]">PawPals</h3>
-            <h4 class="text-sm">PawPals is a pet care platform that offers solutions to help the pet owners to taking care of their best pals.</h4>
-            <br>
-            <a href="pawpals.html" class=" px-4 py-2 bg-[#fd6220] text-white font-semibold rounded-md text-center hover:bg-white hover:text-[#fd6220]  hover:border border-[#fd6220]  texttransition ">
-                View Project
-            </a>
-          </div>
-          <img class="rounded-lg w-full max-h-70" src="img/projectIL2.png" alt="Code">
-          </a>   
-        </div>
+    <!-- Card 1 -->
+    <div class="group flex flex-col md:flex-row items-center bg-[#f5faff] rounded-xl overflow-hidden shadow-md hover:shadow-xl transition duration-300 animate-fade-in-up">
+      <a href="porto1.html" class="w-full md:w-1/2 overflow-hidden">
+        <img src="img/projectIL1.png" alt="Teras Budaya" class="object-cover w-full h-full transform group-hover:scale-105 group-hover:rotate-1 transition duration-500 ease-in-out">
+      </a>
+      <div class="p-6 flex flex-col justify-between w-full md:w-1/2">
+        <h3 class="text-xl font-bold text-[#f0a202] mb-2">Teras Budaya</h3>
+        <p class="text-sm text-gray-700 mb-4">Teras Budaya is a platform for exploring Indonesian culture, allowing users to explore cultural events.</p>
+        <a href="porto3.html" class="self-start px-4 py-2 bg-[#f0a202] text-white rounded-md font-medium transition duration-300 hover:bg-white hover:text-[#f0a202] border border-transparent hover:border-[#f0a202]">View Project</a>
+      </div>
+    </div>
 
-        <!-- MentorKita -->
-        <div class="bg-[#f5faff] min-h-[100px] w-[800px] rounded-lg shadow-sm hover:shadow-lg transition duration-300  flex flex-row items-start ">
-          <a href="mentorkita.html">
-          <img class="rounded-lg w-full max-h-90" src="img/projectITC3 (2).png" alt="Code">
-          <div class="items-start justify-center p-6">  
-            <h3 class="text-lg font-semibold text-[#5E3BEE] ">Mentor Kita</h3>
-            <h4 class="text-sm">Mentor Kita is a web-based platform developed by my team to help users find mentors tailored to their personal goals and interests.</h4>
-            <br>
-            <a href="mentorkita.html" class=" px-4 py-2 bg-[#5E3BEE] text-white font-semibold rounded-md text-center hover:bg-white hover:text-[#5E3BEE] hover:border border-[#5E3BEE]  texttransition ">
-                View Project
-            </a>
-          </div>
-          </a>   
-        </div>
+    <!-- Card 2 -->
+    <div class="group flex flex-col-reverse md:flex-row items-center bg-[#f5faff] rounded-xl overflow-hidden shadow-md hover:shadow-xl transition duration-300 animate-fade-in-up">
+      <div class="p-6 flex flex-col justify-between w-full md:w-1/2">
+        <h3 class="text-xl font-bold text-[#fd6220] mb-2">PawPals</h3>
+        <p class="text-sm text-gray-700 mb-4">PawPals is a pet care platform that helps pet owners take care of their furry friends.</p>
+        <a href="porto2.html" class="self-start px-4 py-2 bg-[#fd6220] text-white rounded-md font-medium transition duration-300 hover:bg-white hover:text-[#fd6220] border border-transparent hover:border-[#fd6220]">View Project</a>
+      </div>
+      <a href="pawpals.html" class="w-full md:w-1/2 overflow-hidden">
+        <img src="img/projectIL2.png" alt="PawPals" class="object-cover w-full h-full transform group-hover:scale-105 group-hover:rotate-1 transition duration-500 ease-in-out">
+      </a>
+    </div>
 
-    <!-- </div> -->
+    <!-- Card 3 -->
+    <div class="group flex flex-col md:flex-row items-center bg-[#f5faff] rounded-xl overflow-hidden shadow-md hover:shadow-xl transition duration-300 animate-fade-in-up">
+      <a href="mentorkita.html" class="w-full md:w-1/2 overflow-hidden">
+        <img src="img/projectITC3 (2).png" alt="Mentor Kita" class="object-cover w-full h-full transform group-hover:scale-105 group-hover:rotate-1 transition duration-500 ease-in-out">
+      </a>
+      <div class="p-6 flex flex-col justify-between w-full md:w-1/2">
+        <h3 class="text-xl font-bold text-[#5E3BEE] mb-2">Mentor Kita</h3>
+        <p class="text-sm text-gray-700 mb-4">Mentor Kita is a platform to help users find mentors that match their personal goals and interests.</p>
+        <a href="mentorkita.html" class="self-start px-4 py-2 bg-[#5E3BEE] text-white rounded-md font-medium transition duration-300 hover:bg-white hover:text-[#5E3BEE] border border-transparent hover:border-[#5E3BEE]">View Project</a>
+      </div>
+    </div>
+
+  </div>
 </div>
+
+
 
     <!-- Footer -->
   <footer class="bg-[#f5faff] shadow-md border-t border-gray-200 mt-10">

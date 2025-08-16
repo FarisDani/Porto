@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Interactive Project Detail</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          keyframes: {
+            pop: {
+              '0%': { transform: 'scale(0)' },
+              '100%': { transform: 'scale(1)' },
+            }
+          },
+          animation: {
+            pop: 'pop 0.3s ease-out',
+          },
+        },
+      },
+    };
+  </script>
+</head>
+<body class="bg-white text-gray-800 font-sans">
+
+  <!-- Header Section -->
+  <section class="flex flex-col lg:flex-row items-center justify-start gap-6 px-10 py-10 bg-[#f5faff]">
+    <img src="img/projectIL1.png" alt="Logo" class="w-28 h-28 object-contain" />
+    <div class="flex-1 max-w-2xl">
+      <h1 class="text-3xl font-bold text-[#3b3b3b] mb-2">Teras Budaya</h1>
+      <p class="text-md text-gray-600">
+        Teras Budaya is a platform that allows users to explore and celebrate Indonesian cultural richness. It features
+        curated cultural events, articles, and a personalized experience for enthusiasts.
+      </p>
+    </div>
+  </section>
+
+  <!-- Tools Section -->
+  <section class="bg-white py-12 px-6">
+    <h2 class="text-2xl font-bold text-center mb-8">Tools Used</h2>
+    <div class="flex justify-center gap-8 flex-wrap animate-bounce">
+      <div class="bg-[#e2e8f0] px-6 py-3 rounded-full shadow hover:scale-105 transition">HTML</div>
+      <div class="bg-[#cbd5e0] px-6 py-3 rounded-full shadow hover:scale-105 transition">Tailwind CSS</div>
+      <div class="bg-[#a0aec0] px-6 py-3 rounded-full shadow hover:scale-105 transition">JavaScript</div>
+      <div class="bg-[#718096] px-6 py-3 rounded-full shadow hover:scale-105 transition">Figma</div>
+    </div>
+  </section>
+
+<section class="px-6 py-12 bg-[#f5faff]">
+  <h2 class="text-2xl font-bold text-center mb-10">Application Screens</h2>
+
+  <div class="max-w-4xl mx-auto bg-white rounded-xl shadow-md p-6 relative">
+    <div class="relative w-full h-[600px] overflow-hidden" id="screenContainer">
+      
+      <!-- Main screen -->
+      <div class="absolute left-0 top-0 w-[300px] h-full z-10 transition-all duration-700 ease-in-out" id="mainWrapper">
+        <img id="mainImage" src="img/Loading Screen.png" alt="Main Screen"
+          class="w-full h-full rounded-xl object-cover shadow-lg">
+      </div>
+
+      <!-- Preview screen (kecil di kanan tengah) -->
+      <div class="absolute right-4 top-1/2 -translate-y-1/2 w-[120px] h-[240px] transition-all duration-700 ease-in-out z-0" id="previewWrapper">
+        <img id="previewImage" src="img/Loading Screen2.png" alt="Preview"
+          class="w-full h-full rounded-md object-cover shadow-md">
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<script>
+  const screens = [
+    "img/Loading Screen.png",
+    "img/Loading Screen2.png",
+    "img/Loading Screen3.png"
+  ];
+
+  let currentIndex = 0;
+
+  const mainImage = document.getElementById("mainImage");
+  const previewImage = document.getElementById("previewImage");
+  const mainWrapper = document.getElementById("mainWrapper");
+  const previewWrapper = document.getElementById("previewWrapper");
+  const screenContainer = document.getElementById("screenContainer");
+
+  screenContainer.addEventListener("mouseenter", () => {
+    const nextIndex = (currentIndex + 1) % screens.length;
+
+    // Animasi geser dan zoom
+    mainWrapper.style.transform = "translateX(-120%)";
+    previewWrapper.style.transform = "translate(-320px, -50%) scale(2.5)";
+    previewWrapper.style.zIndex = "20";
+
+    setTimeout(() => {
+      // Reset posisi dan konten
+      mainWrapper.style.transition = "none";
+      previewWrapper.style.transition = "none";
+
+      mainImage.src = screens[nextIndex];
+      const nextPreviewIndex = (nextIndex + 1) % screens.length;
+      previewImage.src = screens[nextPreviewIndex];
+
+      mainWrapper.style.transform = "translateX(0)";
+      previewWrapper.style.transform = "translate(0, -50%) scale(1)";
+      previewWrapper.style.zIndex = "0";
+
+      setTimeout(() => {
+        mainWrapper.style.transition = "transform 0.7s ease-in-out";
+        previewWrapper.style.transition = "transform 0.7s ease-in-out";
+      }, 50);
+
+      currentIndex = nextIndex;
+    }, 700);
+  });
+</script>
+
+
+</body>
+</html>

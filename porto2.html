@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Detail Project - Teras Budaya</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          animation: {
+            fade: "fadeIn 1s ease-in-out",
+          },
+          keyframes: {
+            fadeIn: {
+              "0%": { opacity: 0 },
+              "100%": { opacity: 1 },
+            }
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-[#f5faff] text-gray-800 font-sans">
+
+  <div class="max-w-5xl mx-auto px-4 py-10 animate-fade">
+    <!-- Back Button -->
+    <a href="index.html" class="text-blue-600 hover:underline mb-4 inline-block">
+      ← Back to Portfolio
+    </a>
+
+    <!-- Title -->
+    <h1 class="text-3xl font-bold text-[#f0a202] mb-2">Teras Budaya</h1>
+    <p class="text-lg text-gray-600 mb-6">
+      A cultural platform for discovering Indonesian heritage and events.
+    </p>
+
+    <!-- Project Image -->
+    <div class="w-full h-[300px] overflow-hidden rounded-lg shadow-lg mb-8">
+      <img src="img/projectIL1.png" alt="Teras Budaya Screenshot" class="object-cover w-full h-full transition hover:scale-105 duration-500">
+    </div>
+
+    <!-- Tabs -->
+    <div class="flex space-x-4 mb-6">
+      <button onclick="showTab('features')" class="tab-btn bg-[#f0a202] text-white px-4 py-2 rounded hover:bg-[#db9100]">Features</button>
+      <button onclick="showTab('tools')" class="tab-btn bg-white border border-[#f0a202] text-[#f0a202] px-4 py-2 rounded hover:bg-[#fff2e0]">Tools Used</button>
+      <button onclick="showTab('demo')" class="tab-btn bg-white border border-[#f0a202] text-[#f0a202] px-4 py-2 rounded hover:bg-[#fff2e0]">Demo</button>
+    </div>
+
+    <!-- Tab Content -->
+    <div id="features" class="tab-content">
+      <h2 class="text-xl font-semibold mb-2">Main Features</h2>
+      <ul class="list-disc list-inside space-y-1">
+        <li>Browse Indonesian cultural events and traditions</li>
+        <li>Filter events by region or category</li>
+        <li>Interactive cultural map for exploration</li>
+        <li>Save favorite events for quick access</li>
+        <li>Multilingual support (English & Bahasa Indonesia)</li>
+      </ul>
+    </div>
+
+    <div id="tools" class="tab-content hidden">
+      <h2 class="text-xl font-semibold mb-2">Tools & Technologies</h2>
+      <div class="grid grid-cols-2 sm:grid-cols-3 gap-4 mt-3">
+        <span class="bg-gray-100 px-3 py-2 rounded shadow">HTML5</span>
+        <span class="bg-gray-100 px-3 py-2 rounded shadow">Tailwind CSS</span>
+        <span class="bg-gray-100 px-3 py-2 rounded shadow">JavaScript</span>
+        <span class="bg-gray-100 px-3 py-2 rounded shadow">Figma (UI/UX)</span>
+        <span class="bg-gray-100 px-3 py-2 rounded shadow">JSON API</span>
+        <span class="bg-gray-100 px-3 py-2 rounded shadow">Git & GitHub</span>
+      </div>
+    </div>
+
+    <div id="demo" class="tab-content hidden">
+      <h2 class="text-xl font-semibold mb-2">Live Demo</h2>
+      <p class="mb-4">Click the button below to see the live prototype of Teras Budaya:</p>
+      <a href="#" target="_blank" class="inline-block bg-[#f0a202] text-white px-5 py-2 rounded hover:bg-[#db9100] transition">
+        Launch Demo →
+      </a>
+    </div>
+  </div>
+
+  <!-- Script: Tabs -->
+  <script>
+    function showTab(tabId) {
+      document.querySelectorAll(".tab-content").forEach(el => el.classList.add("hidden"));
+      document.getElementById(tabId).classList.remove("hidden");
+
+      document.querySelectorAll(".tab-btn").forEach(btn => btn.classList.remove("bg-[#f0a202]", "text-white"));
+      event.target.classList.add("bg-[#f0a202]", "text-white");
+    }
+  </script>
+
+</body>
+</html>

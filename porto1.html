@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/uicons-brands/css/uicons-brands.css">
+    <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/uicons-solid-rounded/css/uicons-solid-rounded.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <title>Potofolio | MyPorto</title>
+</head>
+<body style="font-family: 'Poppins', sans-serif;">
+    <!-- Navbar -->
+  <nav class="fixed top-0 w-full z-50 bg-white shadow-xl">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between h-16 items-center">
+        
+        <!-- Logo -->
+        <div class="flex items-center">
+          <span class="text-xl font-bold text-[#5E3BEE]">MyPorto</span>
+        </div>
+
+        <!-- Navigation Links (Hidden on mobile) -->
+        <div class="hidden md:flex items-center space-x-6">
+          <a href="index.html" class="text-gray-700 hover:text-purple-600">Home</a>
+          <a href="portofolio.html" class="text-gray-700 hover:text-purple-600">Portofolio</a>
+          <a href="aboutme.html" class="text-gray-700 hover:text-purple-600">About Me</a>
+        </div>
+
+        <!-- Contact Button -->
+        <div class="hidden md:flex items-center space-x-6">
+          <a href="index.php" class="border border-[#5E3BEE] text-[#5E3BEE] px-4 py-2 rounded-md hover:bg-[#452fc5] hover:text-white transition">
+            Contact
+          </a>
+        </div>
+
+        <!-- Mobile Menu Button -->
+        <div class="md:hidden flex items-center">
+          <button id="mobile-menu-button" class="text-gray-700 focus:outline-none text-2xl">
+            ☰
+          </button>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden md:hidden px-4 pb-4">
+      <a href="index.php" class="block py-2 text-gray-700 hover:text-purple-600">Home</a>
+      <a href="port.php" class="block py-2 text-gray-700 hover:text-purple-600">Portofolio</a>
+      <a href="#" class="block py-2 text-gray-700 hover:text-purple-600">About Me</a>
+      <a href="index.php" class="block py-2 bg-[#5E3BEE] text-white rounded-md text-center hover:bg-[#452fc5] transition">Contact</a>
+    </div>
+  </nav>
+  <div class="h-15 bg-gradient-to-b from-gray-200 to-transparent"></div>
+
+  <div class="bg-white px-18 py-2 text-sm text-gray-500">
+    <a href="portofolio.html" class="hover:underline">Portofolio</a>
+    <span class="mx-1">&gt;</span>
+    <span class="text-gray-700">Teras Budaya</span>
+  </div>
+
+  <div class="min-h-[50px] w-full flex flex-col items-center justify-center gap-10 px-6 py-10 bg-white">
+<!-- Grid Cards -->
+
+        <div class="bg-[#f5faff] min-h-[100px] w-[800px] rounded-lg shadow-sm hover:shadow-lg transition duration-300  flex flex-row items-start ">
+        <a href="porto1.html" >
+          <img class="rounded-lg w-full max-h-70" src="img/projectIL1.png" alt="Code">
+          <div class="items-start justify-center p-6">  
+            <h3 class="text-lg font-semibold text-[#f0a202] ">Teras Budaya</h3>
+            <h4 class="text-sm">Teras Budaya is a platform for exploring Indonesian culture, allowing users to explore cultural events.</h4>
+            <br>
+            <a href="porto1.html" class=" px-4 py-2 bg-[#f0a202] text-white font-semibold rounded-md text-center hover:bg-white hover:text-[#f0a202]  hover:border border-[#f0a202]  texttransition ">
+                View Project
+            </a>
+          </div>
+        </a>  
+        </div>
+
+        
+
+    <!-- </div> -->
+</div>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Interactive Project Detail</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          keyframes: {
+            pop: {
+              '0%': { transform: 'scale(0)' },
+              '100%': { transform: 'scale(1)' },
+            }
+          },
+          animation: {
+            pop: 'pop 0.3s ease-out',
+          },
+        },
+      },
+    };
+  </script>
+</head>
+<body class="bg-white text-gray-800 font-sans">
+
+  <!-- Header Section -->
+  <section class="flex flex-col lg:flex-row items-center justify-start gap-6 px-10 py-10 bg-[#f5faff]">
+    <img src="img/projectIL1.png" alt="Logo" class="w-28 h-28 object-contain" />
+    <div class="flex-1 max-w-2xl">
+      <h1 class="text-3xl font-bold text-[#3b3b3b] mb-2">Teras Budaya</h1>
+      <p class="text-md text-gray-600">
+        Teras Budaya is a platform that allows users to explore and celebrate Indonesian cultural richness. It features
+        curated cultural events, articles, and a personalized experience for enthusiasts.
+      </p>
+    </div>
+  </section>
+
+  <!-- Tools Section -->
+  <section class="bg-white py-12 px-6">
+    <h2 class="text-2xl font-bold text-center mb-8">Tools Used</h2>
+    <div class="flex justify-center gap-8 flex-wrap animate-bounce">
+      <div class="bg-[#e2e8f0] px-6 py-3 rounded-full shadow hover:scale-105 transition">HTML</div>
+      <div class="bg-[#cbd5e0] px-6 py-3 rounded-full shadow hover:scale-105 transition">Tailwind CSS</div>
+      <div class="bg-[#a0aec0] px-6 py-3 rounded-full shadow hover:scale-105 transition">JavaScript</div>
+      <div class="bg-[#718096] px-6 py-3 rounded-full shadow hover:scale-105 transition">Figma</div>
+    </div>
+  </section>
+
+  <!-- Screens Section -->
+  <section class="px-6 py-12 bg-[#f5faff]">
+    <h2 class="text-2xl font-bold text-center mb-10">Application Screens</h2>
+
+    <div class="space-y-20 max-w-5xl mx-auto">
+      <!-- Screen Block -->
+      <div class="flex flex-col md:flex-row items-center gap-8">
+        <div class="flex-1 text-left">
+          <h3 class="text-xl font-semibold mb-2">1. Onboarding & Authentication</h3>
+        </div>
+        <div class="flex-1">
+          <img onclick="openPopup('popup1')" src="img/screen1.png" class="rounded-xl shadow-md cursor-pointer hover:scale-105 transition w-full max-w-xs mx-auto" />
+        </div>
+      </div>
+
+      <div class="flex flex-col md:flex-row items-center gap-8">
+        <div class="flex-1 text-left">
+          <h3 class="text-xl font-semibold mb-2">2. Home & Explore</h3>
+        </div>
+        <div class="flex-1">
+          <img onclick="openPopup('popup2')" src="img/screen2.png" class="rounded-xl shadow-md cursor-pointer hover:scale-105 transition w-full max-w-xs mx-auto" />
+        </div>
+      </div>
+
+      <div class="flex flex-col md:flex-row items-center gap-8">
+        <div class="flex-1 text-left">
+          <h3 class="text-xl font-semibold mb-2">3. Education & Forum</h3>
+        </div>
+        <div class="flex-1">
+          <img onclick="openPopup('popup3')" src="img/screen3.png" class="rounded-xl shadow-md cursor-pointer hover:scale-105 transition w-full max-w-xs mx-auto" />
+        </div>
+      </div>
+
+      <div class="flex flex-col md:flex-row items-center gap-8">
+        <div class="flex-1 text-left">
+          <h3 class="text-xl font-semibold mb-2">4. Profile & Milestone</h3>
+        </div>
+        <div class="flex-1">
+          <img onclick="openPopup('popup4')" src="img/screen4.png" class="rounded-xl shadow-md cursor-pointer hover:scale-105 transition w-full max-w-xs mx-auto" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Popups (Lightbox Style) -->
+  <div id="popup1" class="fixed inset-0 flex items-center justify-center z-50 bg-black/40 hidden">
+    <div class="bg-white p-4 rounded-lg animate-pop shadow-lg relative">
+      <img src="img/screen1.png" alt="Popup 1" class="max-w-xs rounded-lg" />
+    </div>
+  </div>
+
+  <div id="popup2" class="fixed inset-0 flex items-center justify-center z-50 bg-black/40 hidden">
+    <div class="bg-white p-4 rounded-lg animate-pop shadow-lg relative">
+      <img src="img/screen2.png" alt="Popup 2" class="max-w-xs rounded-lg" />
+    </div>
+  </div>
+
+  <div id="popup3" class="fixed inset-0 flex items-center justify-center z-50 bg-black/40 hidden">
+    <div class="bg-white p-4 rounded-lg animate-pop shadow-lg relative">
+      <img src="img/screen3.png" alt="Popup 3" class="max-w-xs rounded-lg" />
+    </div>
+  </div>
+
+  <div id="popup4" class="fixed inset-0 flex items-center justify-center z-50 bg-black/40 hidden">
+    <div class="bg-white p-4 rounded-lg animate-pop shadow-lg relative">
+      <img src="img/screen4.png" alt="Popup 4" class="max-w-xs rounded-lg" />
+    </div>
+  </div>
+
+  <!-- JavaScript for Popups -->
+  <script>
+    function openPopup(id) {
+      document.querySelectorAll('.fixed').forEach(p => p.style.display = 'none');
+      const popup = document.getElementById(id);
+      if (popup) popup.style.display = 'flex';
+
+      popup.addEventListener('click', (e) => {
+        if (e.target === popup) popup.style.display = 'none';
+      });
+    }
+  </script>
+
+</body>
+</html>
+
+
+    <!-- Footer -->
+  <footer class="bg-[#f5faff] shadow-md border-t border-gray-200 mt-10">
+    <div class="container mx-auto px-6 py-4 flex flex-col md:flex-row justify-between items-center">
+      <!-- Logo/Teks -->
+      <div class="text-xl font-semibold text-[#5E3BEE]">MyPorto</div>
+      <div>@2025 by FarisDani</div>
+      <!-- Social Icons -->
+      <div class="flex space-x-4 mt-4 md:mt-0">
+        <a href="http://www.linkedin.com/in/faris-dani-rizkianto-rizkianto-809629310/" target="_blank" class="text-gray-600 hover:text-[#0077B5] transition">
+          <i class="fab fa-linkedin fa-lg"></i>
+        </a>
+        <a href="https://github.com/FarisDani" target="_blank" class="text-gray-600 hover:text-[#0077B5] transition">
+          <i class="fab fa-github fa-lg"></i>
+        </a>
+        <!-- Tambahkan lebih banyak ikon jika diperlukan -->
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Mobile menu toggle
+    document.getElementById('mobile-menu-button').addEventListener('click', function () {
+      document.getElementById('mobile-menu').classList.toggle('hidden');
+    });
+  </script>
+
+</body>
+</html>

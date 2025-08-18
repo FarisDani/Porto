@@ -6,7 +6,7 @@
 
 
 
-// JS Animasi Screen    
+// JS Animasi Screen 
 const { createApp } = Vue;
 
 // App 1: Onboarding Screens
@@ -14,9 +14,9 @@ createApp({
   data() {
     return {
       screens: [
-        "img/TB/Loading Screen.png",
+        "img/TB/Loading Screen1.png",
         "img/TB/Loading Screen2.png",
-        "img/TB/Loading Screen5.png",
+        "img/TB/Loading Screen3.png",
       ],
       currentIndex: 0
     };
@@ -156,3 +156,155 @@ createApp({
     }, 3000);
   }
 }).mount('#app-profile');
+
+// Animasi PawPals
+// App 1: Onboarding Screens
+createApp({
+  data() {
+    return {
+      screens: [
+        "img/PP/Onboarding1.png",
+        "img/PP/Onboarding2.png",
+        "img/PP/Onboarding3.png",
+      ],
+      currentIndex: 0
+    };
+  },
+  methods: {
+    getPosition(index) {
+      const len = this.screens.length;
+      const center = this.currentIndex;
+      const left = (center - 1 + len) % len;
+      const right = (center + 1) % len;
+
+      if (index === center) {
+        return "left-1/2 -translate-x-1/2 scale-100 z-30 opacity-100";
+      } else if (index === left) {
+        return "left-[10%] scale-90 z-20 opacity-80";
+      } else if (index === right) {
+        return "left-[75%] -translate-x-1/2 scale-90 z-20 opacity-80";
+      } else {
+        return "hidden";
+      }
+    }
+  },
+  mounted() {
+    setInterval(() => {
+      this.currentIndex = (this.currentIndex + 1) % this.screens.length;
+    }, 3000);
+  }
+}).mount('#app-onboarding-pp');
+
+// App 2: Home Screens
+
+createApp({
+  data() {
+    return {
+      screens: [
+        "img/PP/Home1.png",
+        "img/PP/Home2.png",
+        "img/PP/Home3.png",
+      ],
+      currentIndex: 0
+    };
+  },
+  methods: {
+    getPosition(index) {
+      const len = this.screens.length;
+      const center = this.currentIndex;
+      const left = (center - 1 + len) % len;
+      const right = (center + 1) % len;
+
+      if (index === center) {
+        return "left-1/2 -translate-x-1/2 scale-100 z-30 opacity-100";
+      } else if (index === left) {
+        return "left-[10%] scale-90 z-20 opacity-80";
+      } else if (index === right) {
+        return "left-[75%] -translate-x-1/2 scale-90 z-20 opacity-80";
+      } else {
+        return "hidden";
+      }
+    }
+  },
+  mounted() {
+    setInterval(() => {
+      this.currentIndex = (this.currentIndex + 1) % this.screens.length;
+    }, 3000);
+  }
+}).mount('#app-home-pp');
+
+// App 3: Community Screens
+
+createApp({
+  data() {
+    return {
+      screens: [
+        "img/PP/Community1.png",
+        "img/PP/Community2.png",
+        "img/PP/Community3.png",
+      ],
+      currentIndex: 0
+    };
+  },
+  methods: {
+    getPosition(index) {
+      const len = this.screens.length;
+      const center = this.currentIndex;
+      const left = (center - 1 + len) % len;
+      const right = (center + 1) % len;
+
+      if (index === center) {
+        return "left-1/2 -translate-x-1/2 scale-100 z-30 opacity-100";
+      } else if (index === left) {
+        return "left-[10%] scale-90 z-20 opacity-80";
+      } else if (index === right) {
+        return "left-[75%] -translate-x-1/2 scale-90 z-20 opacity-80";
+      } else {
+        return "hidden";
+      }
+    }
+  },
+  mounted() {
+    setInterval(() => {
+      this.currentIndex = (this.currentIndex + 1) % this.screens.length;
+    }, 3000);
+  }
+}).mount('#app-community-pp');
+
+// App 4: Schedule & Profile Screens
+
+createApp({
+  data() {
+    return {
+      screens: [
+        "img/PP/Schedule1.png",
+        "img/PP/Schedule2.png",
+        "img/PP/Schedule3.png",
+      ],
+      currentIndex: 0
+    };
+  },
+  methods: {
+    getPosition(index) {
+      const len = this.screens.length;
+      const center = this.currentIndex;
+      const left = (center - 1 + len) % len;
+      const right = (center + 1) % len;
+
+      if (index === center) {
+        return "left-1/2 -translate-x-1/2 scale-100 z-30 opacity-100";
+      } else if (index === left) {
+        return "left-[10%] scale-90 z-20 opacity-80";
+      } else if (index === right) {
+        return "left-[75%] -translate-x-1/2 scale-90 z-20 opacity-80";
+      } else {
+        return "hidden";
+      }
+    }
+  },
+  mounted() {
+    setInterval(() => {
+      this.currentIndex = (this.currentIndex + 1) % this.screens.length;
+    }, 3000);
+  }
+}).mount('#app-schedule-pp');

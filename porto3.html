@@ -129,10 +129,10 @@
 
 <!-- Application Screens 1: Dashboard -->
 <section class="px-6 py-12 bg-[#27B2DE] bg-opacity-50">
-  <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-12" id="app-dashboard-mk">
+  <div class="max-w-6xl mx-auto flex flex-col lg:flex-row items-center gap-12" id="app-dashboard-mk">
 
     <!-- Kiri: Judul -->
-    <div class="w-full md:w-1/2 text-center">
+    <div class="w-full lg:w-1/2 text-center">
       <h2 class="text-3xl font-bold mb-6"> 
         <span class="text-[#162DA5]">Dashboard</span> Page
       </h2>
@@ -142,7 +142,7 @@
     </div>
 
     <!-- Kanan: Gambar panjang auto-scroll -->
-    <div class="w-full md:w-1/2 h-[600px] overflow-hidden rounded-xl p-6 relative group"
+    <div class="w-full lg:w-1/2 h-[600px] overflow-hidden rounded-xl p-6 relative group"
          @mouseenter="pauseScroll = true" @mouseleave="pauseScroll = false">
       <div ref="scrollContainer"
            class="transition-transform duration-[300ms] ease-linear"
@@ -159,10 +159,10 @@
 
 <!-- Application Screens 2: Search -->
 <section class="px-6 py-12 bg-white bg-opacity-50">
-  <div class="max-w-6xl mx-auto flex flex-col-reverse sm:flex-row items-center gap-8 sm:gap-12" id="app-search-mk">
+  <div class="max-w-6xl mx-auto flex flex-col-reverse lg:flex-row items-center gap-8 lg:gap-12" id="app-search-mk">
 
     <!-- Kanan: Gambar panjang auto-scroll -->
-    <div class="w-full sm:w-1/2 h-[400px] sm:h-[600px] overflow-hidden rounded-xl p-4 sm:p-6 relative group"
+    <div class="w-full lg:w-1/2 h-[400px] lg:h-[600px] overflow-hidden rounded-xl p-4 lg:p-6 relative group"
          @mouseenter="pauseScroll = true" @mouseleave="pauseScroll = false">
       <div ref="scrollContainer"
            class="transition-transform duration-[200ms] ease-linear"
@@ -174,7 +174,7 @@
     </div>
 
     <!-- Kiri: Judul -->
-    <div class="w-full sm:w-1/2 text-center sm:text-left">
+    <div class="w-full lg:w-1/2 text-center lg:text-left">
       <h2 class="text-3xl font-bold mb-6"> 
         <span class="text-[#162DA5]">Search</span> Page
       </h2>

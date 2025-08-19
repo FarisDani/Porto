@@ -131,10 +131,10 @@
 
 <!-- Application Screens 1: Onboarding -->
 <section class="px-6 py-12 bg-[#F9DA9A] bg-opacity-50">
-  <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-12" id="app-onboarding-pp">
+  <div class="max-w-6xl mx-auto flex flex-col lg:flex-row items-center gap-12" id="app-onboarding-pp">
 
     <!-- Kiri: Judul -->
-    <div class="w-full md:w-1/2 w-full lg:w-1/2 text-center lg:text-left">
+    <div class="w-full lg:w-1/2 w-full lg:w-1/2 text-center lg:text-left">
       <h2 class="text-3xl font-bold mb-6"> <span class="text-[#fd6220]">Onboarding</span> Screens</h2>
       <p class="text-gray-700">
        Introduce users to PawPals' mission and core features, guiding them through a smooth and welcoming first-time experience.
@@ -142,11 +142,11 @@
     </div>
 
     <!-- Kanan: Gambar animasi sliding -->
-    <div class="w-full md:w-1/2 rounded-xl p-6 relative h-[600px] overflow-hidden">
+    <div class="w-full lg:w-1/2 rounded-xl p-6 relative h-[600px] overflow-hidden">
       <div v-for="(screen, index) in screens" :key="index"
            class="absolute top-1/2 transform -translate-y-1/2 transition-all duration-700 ease-in-out"
            :class="getPosition(index)">
-        <img :src="screen" class="w-[280px] h-[560px] rounded-xl object-cover shadow-xl" />
+        <img :src="screen" class="w-[280px] h-[560px] rounded-xl object-cover shadow-xl mx-auto lg:mx-0" />
       </div>
     </div>
 
@@ -154,21 +154,21 @@
 </section>
 
 
-<!-- Application Screens 2: Home & Explore -->
+<!-- Application Screens 2: Home & Article -->
 <section class="px-6 py-12 bg-opacity-50">
-  <div class="max-w-6xl mx-auto flex flex-col-reverse md:flex-row items-center gap-12" id="app-home-pp">
+  <div class="max-w-6xl mx-auto flex flex-col-reverse lg:flex-row items-center gap-12" id="app-home-pp">
 
     <!-- Kanan: Gambar animasi sliding -->
-    <div class="w-full md:w-1/2 rounded-xl p-6 relative h-[600px] overflow-hidden">
+    <div class="w-full lg:w-1/2 rounded-xl p-6 relative h-[600px] overflow-hidden">
       <div v-for="(screen, index) in screens" :key="index"
            class="absolute top-1/2 transform -translate-y-1/2 transition-all duration-700 ease-in-out"
            :class="getPosition(index)">
-        <img :src="screen" class="w-[280px] h-[560px] rounded-xl object-cover shadow-xl" />
+        <img :src="screen" class="w-[280px] h-[560px] rounded-xl object-cover shadow-xl mx-auto lg:mx-0" />
       </div>
     </div>
 
     <!-- Kiri: Judul -->
-    <div class="w-full md:w-1/2 w-full lg:w-1/2 text-center lg:text-left">
+    <div class="w-full lg:w-1/2 w-full lg:w-1/2 text-center lg:text-left">
       <h2 class="text-3xl font-bold mb-6"> <span class="text-[#fd6220]">Home & Article</span> Screens</h2>
       <p class="text-gray-700">
       Provide pet owners with insightful articles and a centralized dashboard for quick access to essential pet care information.
@@ -179,12 +179,12 @@
 </section>
 
 
-<!-- Application Screens 3: Education & Forum -->
+<!-- Application Screens 3: Community -->
 <section class="px-6 py-12 bg-[#F9DA9A] bg-opacity-50">
-  <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-12" id="app-community-pp">
+  <div class="max-w-6xl mx-auto flex flex-col lg:flex-row items-center gap-12" id="app-community-pp">
 
     <!-- Kiri: Judul -->
-    <div class="w-full md:w-1/2 w-full lg:w-1/2 text-center lg:text-left">
+    <div class="w-full lg:w-1/2 w-full lg:w-1/2 text-center lg:text-left">
       <h2 class="text-3xl font-bold mb-6"> <span class="text-[#fd6220]">Community</span> Screens</h2>
       <p class="text-gray-700">
        Enable users to connect, share, and seek advice within a supportive pet-loving community.
@@ -192,11 +192,11 @@
     </div>
 
     <!-- Kanan: Gambar animasi sliding -->
-    <div class="w-full md:w-1/2 rounded-xl p-6 relative h-[600px] overflow-hidden">
+    <div class="w-full lg:w-1/2 rounded-xl p-6 relative h-[600px] overflow-hidden">
       <div v-for="(screen, index) in screens" :key="index"
            class="absolute top-1/2 transform -translate-y-1/2 transition-all duration-700 ease-in-out"
            :class="getPosition(index)">
-        <img :src="screen" class="w-[280px] h-[560px] rounded-xl object-cover shadow-xl" />
+        <img :src="screen" class="w-[280px] h-[560px] rounded-xl object-cover shadow-xl mx-auto lg:mx-0" />
       </div>
     </div>
 
@@ -206,19 +206,19 @@
 
 <!-- Application Screens 4: Schedule & Profile -->
 <section class="px-6 py-12 bg-opacity-50">
-  <div class="max-w-6xl mx-auto flex flex-col-reverse md:flex-row items-center gap-12" id="app-schedule-pp">
+  <div class="max-w-6xl mx-auto flex flex-col-reverse lg:flex-row items-center gap-12" id="app-schedule-pp">
 
     <!-- Kanan: Gambar animasi sliding -->
-    <div class="w-full md:w-1/2 rounded-xl p-6 relative h-[600px] overflow-hidden">
+    <div class="w-full lg:w-1/2 rounded-xl p-6 relative h-[600px] overflow-hidden">
       <div v-for="(screen, index) in screens" :key="index"
            class="absolute top-1/2 transform -translate-y-1/2 transition-all duration-700 ease-in-out"
            :class="getPosition(index)">
-        <img :src="screen" class="w-[280px] h-[560px] rounded-xl object-cover shadow-xl" />
+        <img :src="screen" class="w-[280px] h-[560px] rounded-xl object-cover shadow-xl mx-auto lg:mx-0" />
       </div>
     </div>
 
     <!-- Kiri: Judul -->
-    <div class="w-full md:w-1/2 w-full lg:w-1/2 text-center lg:text-left">
+    <div class="w-full lg:w-1/2 w-full lg:w-1/2 text-center lg:text-left">
       <h2 class="text-3xl font-bold mb-6"> <span class="text-[#fd6220]">Schedule & Profile</span> Screens</h2>
       <p class="text-gray-700">
        Help users manage pet activities and personalize their experience with scheduling tools and detailed pet profiles.

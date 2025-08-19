@@ -27,12 +27,12 @@
         <div class="hidden md:flex items-center space-x-6">
           <a href="index.html" class="text-gray-700 hover:text-purple-600">Home</a>
           <a href="portofolio.html" class="text-gray-700 hover:text-purple-600">Portofolio</a>
-          <a href="aboutme.html" class="text-gray-700 hover:text-purple-600">About Me</a>
+          <a href="aboutme.html#contact" class="text-gray-700 hover:text-purple-600">About Me</a>
         </div>
 
         <!-- Contact Button -->
         <div class="hidden md:flex items-center space-x-6">
-          <a href="index.html" class="border border-[#5E3BEE] text-[#5E3BEE] px-4 py-2 rounded-md hover:bg-[#452fc5] hover:text-white transition">
+          <a href="aboutme.html#contact" class="border border-[#5E3BEE] text-[#5E3BEE] px-4 py-2 rounded-md hover:bg-[#452fc5] hover:text-white transition">
             Contact
           </a>
         </div>
@@ -129,20 +129,20 @@
 
 <!-- Application Screens 1: Dashboard -->
 <section class="px-6 py-12 bg-[#27B2DE] bg-opacity-50">
-  <div class="max-w-6xl mx-auto flex flex-row items-center gap-12" id="app-dashboard-mk">
+  <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-12" id="app-dashboard-mk">
 
     <!-- Kiri: Judul -->
-    <div class="w-1/2">
+    <div class="w-full md:w-1/2 text-center">
       <h2 class="text-3xl font-bold mb-6"> 
         <span class="text-[#162DA5]">Dashboard</span> Page
       </h2>
       <p class="text-gray-700">
         Displays personalized mentor suggestions, recent interactions, and quick access to platform features.
-    </p>
+      </p>
     </div>
 
     <!-- Kanan: Gambar panjang auto-scroll -->
-    <div class="w-1/2 h-[600px] overflow-hidden rounded-xl p-6 relative group"
+    <div class="w-full md:w-1/2 h-[600px] overflow-hidden rounded-xl p-6 relative group"
          @mouseenter="pauseScroll = true" @mouseleave="pauseScroll = false">
       <div ref="scrollContainer"
            class="transition-transform duration-[300ms] ease-linear"
@@ -156,12 +156,13 @@
   </div>
 </section>
 
+
 <!-- Application Screens 2: Search -->
 <section class="px-6 py-12 bg-white bg-opacity-50">
-  <div class="max-w-6xl mx-auto flex flex-row items-center gap-12" id="app-search-mk">
+  <div class="max-w-6xl mx-auto flex flex-col-reverse sm:flex-row items-center gap-8 sm:gap-12" id="app-search-mk">
 
     <!-- Kanan: Gambar panjang auto-scroll -->
-    <div class="w-1/2 h-[600px] overflow-hidden rounded-xl p-6 relative group"
+    <div class="w-full sm:w-1/2 h-[400px] sm:h-[600px] overflow-hidden rounded-xl p-4 sm:p-6 relative group"
          @mouseenter="pauseScroll = true" @mouseleave="pauseScroll = false">
       <div ref="scrollContainer"
            class="transition-transform duration-[200ms] ease-linear"
@@ -173,13 +174,13 @@
     </div>
 
     <!-- Kiri: Judul -->
-    <div class="w-1/2">
+    <div class="w-full sm:w-1/2 text-center sm:text-left">
       <h2 class="text-3xl font-bold mb-6"> 
         <span class="text-[#162DA5]">Search</span> Page
       </h2>
       <p class="text-gray-700">
-       Enables users to browse and filter mentors based on expertise, experience, and goals.
-    </p>
+        Enables users to browse and filter mentors based on expertise, experience, and goals.
+      </p>
     </div>
 
   </div>
@@ -187,19 +188,20 @@
 
 <!-- Application Screens 3: Mentor -->
 <section class="px-6 py-12 bg-[#27B2DE] bg-opacity-50">
-  <div class="max-w-6xl mx-auto flex flex-row items-center gap-12" id="app-mentor-mk">
+  <div class="max-w-6xl mx-auto flex flex-col lg:flex-row items-center gap-12" id="app-mentor-mk">
 
     <!-- Kiri: Judul -->
-    <div class="w-1/2">
+    <div class="w-full lg:w-1/2 text-center">
       <h2 class="text-3xl font-bold mb-6"> 
         <span class="text-[#162DA5]">Mentor Detail</span> Page
       </h2>
       <p class="text-gray-700">
-        Provides in-depth information about each mentor, including bio, skills, availability, and reviews.</p>
+        Provides in-depth information about each mentor, including bio, skills, availability, and reviews.
+      </p>
     </div>
 
     <!-- Kanan: Gambar panjang auto-scroll -->
-    <div class="w-1/2 h-[600px] overflow-hidden rounded-xl p-6 relative group"
+    <div class="w-full lg:w-1/2 h-[600px] overflow-hidden rounded-xl p-6 relative group"
          @mouseenter="pauseScroll = true" @mouseleave="pauseScroll = false">
       <div ref="scrollContainer"
            class="transition-transform duration-[300ms] ease-linear"
@@ -213,12 +215,12 @@
   </div>
 </section>
 
-<!-- Application Screens 4: Profile -->
+<!-- Application Screens 4: Profile Section -->
 <section class="px-6 py-12 bg-white bg-opacity-50">
-  <div class="max-w-6xl mx-auto flex flex-row items-center gap-12" id="app-profile-mk">
+  <div class="max-w-6xl mx-auto flex flex-col-reverse lg:flex-row items-center gap-12" id="app-profile-mk">
 
     <!-- Kanan: Gambar panjang auto-scroll -->
-    <div class="w-1/2 h-[600px] overflow-hidden rounded-xl p-6 relative group"
+    <div class="w-full lg:w-1/2 h-[600px] overflow-hidden rounded-xl p-6 relative group"
          @mouseenter="pauseScroll = true" @mouseleave="pauseScroll = false">
       <div ref="scrollContainer"
            class="transition-transform duration-[200ms] ease-linear"
@@ -230,17 +232,18 @@
     </div>
 
     <!-- Kiri: Judul -->
-    <div class="w-1/2">
-      <h2 class="text-3xl font-bold mb-6"> 
+    <div class="w-full lg:w-1/2">
+      <h2 class="text-3xl font-bold mb-6 text-center"> 
         <span class="text-[#162DA5]">Profile</span> Page
       </h2>
       <p class="text-gray-700">
-      Showcases individual profiles with editable personal data, session history, and user preferences.
-    </p>
+        Showcases individual profiles with editable personal data, session history, and user preferences.
+      </p>
     </div>
 
   </div>
 </section>
+
 
 
 <p class="max-w-3xl mx-auto mt-10 px-6 py-4 bg-[#27B2DE] bg-opacity-30 border-l-4 border-[#162DA5] rounded-lg text-base text-gray-800 leading-relaxed shadow-md">

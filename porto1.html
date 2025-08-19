@@ -32,7 +32,7 @@
 
         <!-- Contact Button -->
         <div class="hidden md:flex items-center space-x-6">
-          <a href="index.html" class="border border-[#5E3BEE] text-[#5E3BEE] px-4 py-2 rounded-md hover:bg-[#452fc5] hover:text-white transition">
+          <a href="aboutme.html#contact" class="border border-[#5E3BEE] text-[#5E3BEE] px-4 py-2 rounded-md hover:bg-[#452fc5] hover:text-white transition">
             Contact
           </a>
         </div>
@@ -52,7 +52,7 @@
       <a href="index.html" class="block py-2 text-gray-700 hover:text-purple-600">Home</a>
       <a href="portofolio.html" class="block py-2 text-gray-700 hover:text-purple-600">Portofolio</a>
       <a href="aboutme.html" class="block py-2 text-gray-700 hover:text-purple-600">About Me</a>
-      <a href="index.html" class="block py-2 bg-[#5E3BEE] text-white rounded-md text-center hover:bg-[#452fc5] transition">Contact</a>
+      <a href="aboutme.html#contact" class="block py-2 bg-[#5E3BEE] text-white rounded-md text-center hover:bg-[#452fc5] transition">Contact</a>
     </div>
   </nav>
 
@@ -129,44 +129,49 @@
 
 <!-- Application Screens 1: Onboarding -->
 <section class="px-6 py-12 bg-[#F9DA9A] bg-opacity-50">
-  <div class="max-w-6xl mx-auto flex flex-row items-center gap-12" id="app-onboarding">
+  <div class="max-w-6xl mx-auto flex flex-col lg:flex-row items-center gap-12" id="app-onboarding">
 
     <!-- Kiri: Judul -->
-    <div class="w-1/2">
-      <h2 class="text-3xl font-bold mb-6"> <span class="text-[#f0a202]">Onboarding</span> Screens</h2>
+    <div class="w-full lg:w-1/2 text-center lg:text-left">
+      <h2 class="text-3xl font-bold mb-6">
+        <span class="text-[#f0a202]">Onboarding</span> Screens
+      </h2>
       <p class="text-gray-700">
         Introduce users to the cultural richness and unique features of the app through engaging welcome screens.
       </p>
     </div>
 
     <!-- Kanan: Gambar animasi sliding -->
-    <div class="w-1/2 rounded-xl p-6 relative h-[600px] overflow-hidden">
+    <div class="w-full lg:w-1/2 rounded-xl p-6 relative h-[600px] overflow-hidden">
       <div v-for="(screen, index) in screens" :key="index"
            class="absolute top-1/2 transform -translate-y-1/2 transition-all duration-700 ease-in-out"
            :class="getPosition(index)">
-        <img :src="screen" class="w-[280px] h-[560px] rounded-xl object-cover shadow-xl" />
+        <img :src="screen" class="w-[280px] h-[560px] rounded-xl object-cover shadow-xl mx-auto lg:mx-0" />
       </div>
     </div>
 
   </div>
 </section>
 
-<!-- Application Screens 2: Home & Explore -->
-<section class="px-6 py-12  bg-opacity-50">
-  <div class="max-w-6xl mx-auto flex flex-row items-center gap-12" id="app-home">
 
-    <!-- Kanan: Gambar animasi sliding -->
-    <div class="w-1/2 rounded-xl p-6 relative h-[600px] overflow-hidden">
+<!-- Application Screens 2: Home & Explore -->
+<section class="px-6 py-12 bg-opacity-50">
+  <div class="max-w-6xl mx-auto flex flex-col-reverse md:flex-row items-center gap-12" id="app-home">
+
+    <!-- Gambar -->
+    <div class="w-full md:w-1/2 rounded-xl p-6 relative h-[600px] overflow-hidden">
       <div v-for="(screen, index) in screens" :key="index"
            class="absolute top-1/2 transform -translate-y-1/2 transition-all duration-700 ease-in-out"
            :class="getPosition(index)">
-        <img :src="screen" class="w-[280px] h-[560px] rounded-xl object-cover shadow-xl" />
+        <img :src="screen" class="w-full max-w-[280px] h-[560px] rounded-xl object-cover shadow-xl mx-auto" />
       </div>
     </div>
 
-    <!-- Kiri: Judul -->
-    <div class="w-1/2">
-      <h2 class="text-3xl font-bold mb-6"> <span class="text-[#f0a202]">Home & Explore</span> Screens</h2>
+    <!-- Teks -->
+    <div class="w-full md:w-1/2 text-center md:text-left">
+      <h2 class="text-3xl font-bold mb-6">
+        <span class="text-[#f0a202]">Home & Explore</span> Screens
+      </h2>
       <p class="text-gray-700">
         Discover traditional arts, events, and nearby cultural activities from the personalized home and explore sections.
       </p>
@@ -175,49 +180,54 @@
   </div>
 </section>
 
+
 <!-- Application Screens 3: Education & Forum -->
 <section class="px-6 py-12 bg-[#F9DA9A] bg-opacity-50">
-  <div class="max-w-6xl mx-auto flex flex-row items-center gap-12" id="app-education">
+  <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-12 md:gap-12" id="app-education">
 
     <!-- Kiri: Judul -->
-    <div class="w-1/2">
-      <h2 class="text-3xl font-bold mb-6"> <span class="text-[#f0a202]">Education & Forum</span> Screens</h2>
+    <div class="w-full md:w-1/2 text-center md:text-left">
+      <h2 class="text-3xl font-bold mb-6">
+        <span class="text-[#f0a202]">Education & Forum</span> Screens
+      </h2>
       <p class="text-gray-700">
         Learn about local traditions and connect with the community through interactive lessons and open discussions.
       </p>
     </div>
 
     <!-- Kanan: Gambar animasi sliding -->
-    <div class="w-1/2 rounded-xl p-6 relative h-[600px] overflow-hidden">
+    <div class="w-full md:w-1/2 rounded-xl p-6 relative h-[600px] overflow-hidden mt-8 md:mt-0">
       <div v-for="(screen, index) in screens" :key="index"
            class="absolute top-1/2 transform -translate-y-1/2 transition-all duration-700 ease-in-out"
            :class="getPosition(index)">
-        <img :src="screen" class="w-[280px] h-[560px] rounded-xl object-cover shadow-xl" />
+        <img :src="screen" class="w-[280px] h-[560px] rounded-xl object-cover shadow-xl mx-auto" />
       </div>
     </div>
 
   </div>
 </section>
 
-<!-- Application Screens 4: Profile & Milestone -->
+<!-- Application Screens 4: Profile & Milestone  -->
 <section class="px-6 py-12 bg-opacity-50">
-  <div class="max-w-6xl mx-auto flex flex-row items-center gap-12" id="app-profile">
+  <div class="max-w-6xl mx-auto flex flex-col-reverse md:flex-row items-center gap-12" id="app-profile">
 
-    <!-- Kanan: Gambar animasi sliding -->
-    <div class="w-1/2 rounded-xl p-6 relative h-[600px] overflow-hidden">
+    <!-- Gambar -->
+    <div class="w-full md:w-1/2 rounded-xl p-6 relative h-[600px] overflow-hidden">
       <div v-for="(screen, index) in screens" :key="index"
            class="absolute top-1/2 transform -translate-y-1/2 transition-all duration-700 ease-in-out"
            :class="getPosition(index)">
-        <img :src="screen" class="w-[280px] h-[560px] rounded-xl object-cover shadow-xl" />
+        <img :src="screen" class="w-full max-w-[280px] h-[560px] rounded-xl object-cover shadow-xl mx-auto" />
       </div>
     </div>
 
-    <!-- Kiri: Judul -->
-    <div class="w-1/2">
-      <h2 class="text-3xl font-bold mb-6"> <span class="text-[#f0a202]">Profile & Milestone</span> Screens</h2>
+    <!-- Teks -->
+    <div class="w-full md:w-1/2 text-center md:text-left">
+      <h2 class="text-3xl font-bold mb-6">
+        <span class="text-[#f0a202]">Profile & Milestone</span> Screens
+      </h2>
       <p class="text-gray-700">
         Track your cultural journey, achievements, and participation milestones in a personalized user profile.
-      </p>
+     </p>
     </div>
 
   </div>

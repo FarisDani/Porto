@@ -207,10 +207,10 @@
         
           <img class="w-full h-full h-10 w-10 mb-3 rounded-lg" src="projectITC3 (2).png" alt="Code">
           <div class="items-start justify-center p-6">  
-            <h3 class="text-lg font-semibold text-[#5E3BEE] ">Mentor Kita</h3>
+            <h3 class="text-lg font-semibold text-[#27B2DE] ">Mentor Kita</h3>
             <h4 class="text-sm">Mentor Kita is a web-based platform developed by my team to help users find mentors tailored to their personal goals and interests.</h4>
             <br>
-            <a href="mentorkita.php" class=" px-4 py-2 bg-[#5E3BEE] text-white font-semibold rounded-md text-center hover:bg-white hover:text-[#5E3BEE] hover:border border-[#5E3BEE]  texttransition ">
+            <a href="mentorkita.php" class=" px-4 py-2 bg-[#27B2DE] text-white font-semibold rounded-md text-center hover:bg-white hover:text-[#27B2DE] hover:border border-[#27B2DE]  texttransition ">
                 View Project
             </a>
           </div>

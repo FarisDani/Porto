@@ -308,3 +308,172 @@ createApp({
     }, 3000);
   }
 }).mount('#app-schedule-pp');
+
+// Animasi Scroll MK
+// Dashboard
+createApp({
+    data() {
+      return {
+        scrollOffset: 0,
+        direction: 1,
+        pauseScroll: false,
+        imageHeight: 0,
+        containerHeight: 600,
+        speed: 1, // pixel per step
+      };
+    },
+    mounted() {
+      const img = this.$refs.scrollImage;
+
+      const updateImageHeight = () => {
+        this.imageHeight = img.offsetHeight;
+      };
+
+      img.onload = updateImageHeight;
+
+      if (img.complete) {
+        updateImageHeight();
+      }
+
+      // Mulai scroll
+      setInterval(() => {
+        if (this.pauseScroll) return;
+
+        const maxScroll = this.imageHeight - this.containerHeight;
+
+        if (this.scrollOffset >= maxScroll) {
+          this.direction = -1;
+        } else if (this.scrollOffset <= 0) {
+          this.direction = 1;
+        }
+
+        this.scrollOffset += this.speed * this.direction;
+      }, 30);
+    }
+  }).mount('#app-dashboard-mk');
+
+  // Dashboard
+createApp({
+    data() {
+      return {
+        scrollOffset: 0,
+        direction: 1,
+        pauseScroll: false,
+        imageHeight: 0,
+        containerHeight: 600,
+        speed: 1, // pixel per step
+      };
+    },
+    mounted() {
+      const img = this.$refs.scrollImage;
+
+      const updateImageHeight = () => {
+        this.imageHeight = img.offsetHeight;
+      };
+
+      img.onload = updateImageHeight;
+
+      if (img.complete) {
+        updateImageHeight();
+      }
+
+      // Mulai scroll
+      setInterval(() => {
+        if (this.pauseScroll) return;
+
+        const maxScroll = this.imageHeight - this.containerHeight;
+
+        if (this.scrollOffset >= maxScroll) {
+          this.direction = -1;
+        } else if (this.scrollOffset <= 0) {
+          this.direction = 1;
+        }
+
+        this.scrollOffset += this.speed * this.direction;
+      }, 30);
+    }
+  }).mount('#app-search-mk');
+
+    // Mentor
+createApp({
+    data() {
+      return {
+        scrollOffset: 0,
+        direction: 1,
+        pauseScroll: false,
+        imageHeight: 0,
+        containerHeight: 600,
+        speed: 1, // pixel per step
+      };
+    },
+    mounted() {
+      const img = this.$refs.scrollImage;
+
+      const updateImageHeight = () => {
+        this.imageHeight = img.offsetHeight;
+      };
+
+      img.onload = updateImageHeight;
+
+      if (img.complete) {
+        updateImageHeight();
+      }
+
+      // Mulai scroll
+      setInterval(() => {
+        if (this.pauseScroll) return;
+
+        const maxScroll = this.imageHeight - this.containerHeight;
+
+        if (this.scrollOffset >= maxScroll) {
+          this.direction = -1;
+        } else if (this.scrollOffset <= 0) {
+          this.direction = 1;
+        }
+
+        this.scrollOffset += this.speed * this.direction;
+      }, 30);
+    }
+  }).mount('#app-mentor-mk');
+
+    // Profile
+createApp({
+    data() {
+      return {
+        scrollOffset: 0,
+        direction: 1,
+        pauseScroll: false,
+        imageHeight: 0,
+        containerHeight: 600,
+        speed: 1, // pixel per step
+      };
+    },
+    mounted() {
+      const img = this.$refs.scrollImage;
+
+      const updateImageHeight = () => {
+        this.imageHeight = img.offsetHeight;
+      };
+
+      img.onload = updateImageHeight;
+
+      if (img.complete) {
+        updateImageHeight();
+      }
+
+      // Mulai scroll
+      setInterval(() => {
+        if (this.pauseScroll) return;
+
+        const maxScroll = this.imageHeight - this.containerHeight;
+
+        if (this.scrollOffset >= maxScroll) {
+          this.direction = -1;
+        } else if (this.scrollOffset <= 0) {
+          this.direction = 1;
+        }
+
+        this.scrollOffset += this.speed * this.direction;
+      }, 30);
+    }
+  }).mount('#app-profile-mk');

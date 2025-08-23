@@ -10,7 +10,8 @@
     <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/uicons-brands/css/uicons-brands.css">
     <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/uicons-solid-rounded/css/uicons-solid-rounded.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
-    
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
 </head>
 <body class="bg-white text-gray-800 font-sans">
     <!-- Navbar -->
@@ -68,28 +69,26 @@
   <!-- Konten -->
   <div class="relative z-10 flex flex-col lg:flex-row items-center justify-center gap-10 max-w-7xl mx-auto">
     <!-- Logo -->
-    <img src="img/Logo PawPals.png" alt="Logo" class="w-45 h-45 object-contain" />
+    <img src="img/Logo PawPals.png" alt="Logo" class="w-45 h-45 object-contain" data-aos="fade-in"/>
 
     <!-- Teks -->
-    <div class="flex-1 max-w-2xl text-white">
+    <div class="flex-1 max-w-2xl text-white" data-aos="fade-left">
       <h1 class="text-4xl font-bold mb-3"><span class="text-[#fd6220]">Paw</span>Pals</h1>
       <p class="text-lg font-semibold text-gray-200">
        PawPals is a pet care platform designed to support pet owners in managing their pets' well-being. It offers features such as informational pages, problem category listings, community forums, and pet activity scheduling to help optimize pet care routines.
       </p>
       <div class="flex flex-col lg:flex-row items-center gap-5 lg:gap-5 mt-10">
-  <p class="text-lg font-semibold text-gray-200">Made with</p>
-  
-  <div class="flex justify-center gap-4 flex-wrap">
-    <i class="fi fi-brands-figma text-black font-semibold bg-[#fd6220] px-5 py-3 rounded-full shadow hover:scale-105 transition">
-      Figma
-    </i>
-  </div>
-  <div class="flex justify-center gap-4 flex-wrap">
-    <i class="fi fi-brands-android text-black font-semibold bg-[#fd6220] px-5 py-3 rounded-full shadow hover:scale-105 transition"> Jetpack Compose</i>
-  </div>
-</div>
-
-      
+        <p class="text-lg font-semibold text-gray-200">Made with</p>
+        
+        <div class="flex justify-center gap-4 flex-wrap">
+          <i class="fi fi-brands-figma text-black font-semibold bg-[#fd6220] px-5 py-3 rounded-full shadow hover:scale-105 transition" data-aos="zoom-in">
+            Figma
+          </i>
+        </div>
+        <div class="flex justify-center gap-4 flex-wrap">
+          <i class="fi fi-brands-android text-black font-semibold bg-[#fd6220] px-5 py-3 rounded-full shadow hover:scale-105 transition" data-aos="zoom-in" data-aos-delay="200"> Jetpack Compose</i>
+        </div>
+      </div> 
     </div>
   </div>
 </section>
@@ -100,7 +99,7 @@
   <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2 items-center justify-center">
     
     <!-- Feature 1 -->
-    <div class="p-6 flex flex-col items-center">
+    <div class="p-6 flex flex-col items-center" data-aos="zoom-in" >
       <div class="w-fit bg-[#F9DA9A] p-3 rounded-md mb-4 text-2xl">
         🎟️
       </div>
@@ -109,7 +108,7 @@
     </div>
 
     <!-- Feature 2 -->
-    <div class="p-6 flex flex-col items-center">
+    <div class="p-6 flex flex-col items-center" data-aos="zoom-in" data-aos-delay="200">
       <div class="w-fit bg-[#F9DA9A] p-3 rounded-md mb-4 text-2xl">
         💬
       </div>
@@ -118,7 +117,7 @@
     </div>
 
     <!-- Feature 3 -->
-    <div class="p-6 flex flex-col items-center">
+    <div class="p-6 flex flex-col items-center" data-aos="zoom-in" data-aos-delay="300">
       <div class="w-fit bg-[#F9DA9A] p-3 rounded-md mb-4 text-2xl">
         🏆
       </div>
@@ -134,7 +133,7 @@
   <div class="max-w-6xl mx-auto flex flex-col lg:flex-row items-center gap-12" id="app-onboarding-pp">
 
     <!-- Kiri: Judul -->
-    <div class="w-full lg:w-1/2 w-full lg:w-1/2 text-center lg:text-left">
+    <div class="w-full lg:w-1/2 w-full lg:w-1/2 text-center lg:text-left" data-aos="fade-right">
       <h2 class="text-3xl font-bold mb-6"> <span class="text-[#fd6220]">Onboarding</span> Screens</h2>
       <p class="text-gray-700">
        Introduce users to PawPals' mission and core features, guiding them through a smooth and welcoming first-time experience.
@@ -168,7 +167,7 @@
     </div>
 
     <!-- Kiri: Judul -->
-    <div class="w-full lg:w-1/2 w-full lg:w-1/2 text-center lg:text-left">
+    <div class="w-full lg:w-1/2 w-full lg:w-1/2 text-center lg:text-left" data-aos="fade-left">
       <h2 class="text-3xl font-bold mb-6"> <span class="text-[#fd6220]">Home & Article</span> Screens</h2>
       <p class="text-gray-700">
       Provide pet owners with insightful articles and a centralized dashboard for quick access to essential pet care information.
@@ -184,7 +183,7 @@
   <div class="max-w-6xl mx-auto flex flex-col lg:flex-row items-center gap-12" id="app-community-pp">
 
     <!-- Kiri: Judul -->
-    <div class="w-full lg:w-1/2 w-full lg:w-1/2 text-center lg:text-left">
+    <div class="w-full lg:w-1/2 w-full lg:w-1/2 text-center lg:text-left" data-aos="fade-right">
       <h2 class="text-3xl font-bold mb-6"> <span class="text-[#fd6220]">Community</span> Screens</h2>
       <p class="text-gray-700">
        Enable users to connect, share, and seek advice within a supportive pet-loving community.
@@ -203,7 +202,6 @@
   </div>
 </section>
 
-
 <!-- Application Screens 4: Schedule & Profile -->
 <section class="px-6 py-12 bg-opacity-50">
   <div class="max-w-6xl mx-auto flex flex-col-reverse lg:flex-row items-center gap-12" id="app-schedule-pp">
@@ -218,7 +216,7 @@
     </div>
 
     <!-- Kiri: Judul -->
-    <div class="w-full lg:w-1/2 w-full lg:w-1/2 text-center lg:text-left">
+    <div class="w-full lg:w-1/2 w-full lg:w-1/2 text-center lg:text-left" data-aos="fade-left">
       <h2 class="text-3xl font-bold mb-6"> <span class="text-[#fd6220]">Schedule & Profile</span> Screens</h2>
       <p class="text-gray-700">
        Help users manage pet activities and personalize their experience with scheduling tools and detailed pet profiles.
@@ -228,14 +226,12 @@
   </div>
 </section>
 
-
-<p class="max-w-3xl mx-auto mt-10 px-6 py-4 bg-[#F9DA9A] bg-opacity-30 border-l-4 border-[#fd6220] rounded-lg text-base text-gray-800 leading-relaxed shadow-md">
+<p class="max-w-3xl mx-auto mt-10 px-6 py-4 bg-[#F9DA9A] bg-opacity-30 border-l-4 border-[#fd6220] rounded-lg text-base text-gray-800 leading-relaxed shadow-md" data-aos="fade-up">
   <strong>PawPals</strong> is a final project of the MSIB Batch 6 program under Infinite Learning, developed by the Varsha team in the Mobile Division, with collaboration from the Web Division. This project represents a massive collaborative effort combining Android Development and UI/UX Design to create a comprehensive pet care platform.
 </p>
 
-
-    <!-- Footer -->
-  <footer class="bg-[#f5faff] shadow-md border-t border-gray-200 mt-10">
+<!-- Footer -->
+<footer class="bg-[#f5faff] shadow-md border-t border-gray-200 mt-10">
     <div class="container mx-auto px-6 py-4 flex flex-col md:flex-row justify-between items-center">
       <!-- Logo/Teks -->
       <div class="text-xl font-semibold text-[#5E3BEE]">MyPorto</div>
@@ -252,8 +248,8 @@
       </div>
     </div>
   </footer>
-
-  <script src="js/script.js"></script>
+  
+<script src="js/script.js"></script>
 
 </body>
 </html>

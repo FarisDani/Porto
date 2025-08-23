@@ -1,56 +1,71 @@
-// PRogress Bar
-let progress = 0;
-const bar = document.getElementById('loading-bar');
-const preloader = document.getElementById('preloader');
-const content = document.getElementById('main-content');
-
-const simulateLoading = setInterval(() => {
-  if (progress >= 100) {
-    clearInterval(simulateLoading);
-
-    // Sembunyikan preloader
-    preloader.style.display = 'none';
-
-    // Tampilkan konten
-    content.classList.remove('opacity-0', 'pointer-events-none', 'hidden');
-    content.classList.add('opacity-100');
-
-    // Aktifkan CSS AOS
-    document.getElementById('aos-css').removeAttribute('disabled');
-
-    // Delay sedikit sebelum AOS init agar elemen sudah muncul di layar
-    setTimeout(() => {
-      const script = document.createElement('script');
-      script.src = 'https://unpkg.com/aos@2.3.4/dist/aos.js';
-      script.onload = () => {
-        AOS.init({
-          duration: 1000,
-          once: true,
-          offset: 100
-        });
-        AOS.refresh();
-      };
-      document.body.appendChild(script);
-    }, 100); // Delay sebentar agar DOM terlihat
-
-    return;
-  }
-
-  progress += 5;
-  bar.style.width = progress + '%';
-}, 100);
-
-//Inisialisai AOS
-    AOS.init({
-    duration: 1000,
-    once: true,
-    offset: 100
-  });
-
 // Mobile menu toggle
     document.getElementById('mobile-menu-button').addEventListener('click', function () {
       document.getElementById('mobile-menu').classList.toggle('hidden');
     });
+
+// Inisialisasi AOS hanya jika belum diinisialisasi oleh preloader
+if (typeof AOS !== 'undefined' && !AOS._initialized) {
+  AOS.init({
+    duration: 1000,
+    once: true,
+    offset: 100
+  });
+  AOS.refresh();
+}
+
+    
+// Progress Bar
+let progress = 0;
+const bar = document.getElementById('loading-bar');
+const preloader = document.getElementById('preloader');
+const content = document.getElementById('main-content');
+const hasLoaded = sessionStorage.getItem('hasLoaded');
+
+// Jalankan hanya jika elemen preloader dan main-content tersedia
+if (preloader && content && bar) {
+  if (hasLoaded) {
+    // Langsung tampilkan konten tanpa progress
+    preloader.style.display = 'none';
+    content.classList.remove('opacity-0', 'pointer-events-none', 'hidden');
+    content.classList.add('opacity-100');
+    document.getElementById('aos-css')?.removeAttribute('disabled');
+
+    const script = document.createElement('script');
+    script.src = 'https://unpkg.com/aos@2.3.4/dist/aos.js';
+    script.onload = () => {
+      AOS.init({ duration: 1000, once: true, offset: 100 });
+      AOS.refresh();
+    };
+    document.body.appendChild(script);
+  } else {
+    const simulateLoading = setInterval(() => {
+      if (progress >= 100) {
+        clearInterval(simulateLoading);
+
+        preloader.style.display = 'none';
+        content.classList.remove('opacity-0', 'pointer-events-none', 'hidden');
+        content.classList.add('opacity-100');
+        document.getElementById('aos-css')?.removeAttribute('disabled');
+        sessionStorage.setItem('hasLoaded', 'true');
+
+        setTimeout(() => {
+          const script = document.createElement('script');
+          script.src = 'https://unpkg.com/aos@2.3.4/dist/aos.js';
+          script.onload = () => {
+            AOS.init({ duration: 1000, once: true, offset: 100 });
+            AOS.refresh();
+          };
+          document.body.appendChild(script);
+        }, 100);
+        return;
+      }
+      progress += 5;
+      bar.style.width = progress + '%';
+    }, 100);
+  }
+}
+
+
 
 // JS Animasi Screen 
 const { createApp } = Vue;
@@ -523,4 +538,3 @@ createApp({
       }, 30);
     }
   }).mount('#app-profile-mk');
-

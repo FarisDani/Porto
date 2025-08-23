@@ -7,114 +7,82 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/uicons-brands/css/uicons-brands.css">
     <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/uicons-solid-rounded/css/uicons-solid-rounded.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link href="https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css">
+    <script  src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
     <title>About Me | MyPorto</title>
 </head>
 <body style="font-family: 'Poppins', sans-serif;">
 
-  <!-- Navbar -->
-  <nav class="fixed top-0 w-full z-50 bg-white shadow-xl">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex justify-between h-16 items-center">
-        
-        <!-- Logo -->
-        <div class="flex items-center">
-          <span class="text-xl font-bold text-[#5E3BEE]">MyPorto</span>
-        </div>
-
-        <!-- Navigation Links (Hidden on mobile) -->
-        <div class="hidden md:flex items-center space-x-6">
-          <a href="index.html" class="text-gray-700 hover:text-purple-600">Home</a>
-          <a href="portofolio.html" class="text-gray-700 hover:text-purple-600">Portofolio</a>
-          <a href="aboutme.html" class="text-gray-700 hover:text-purple-600">About Me</a>
-        </div>
-
-        <!-- Contact Button -->
-        <div class="hidden md:flex items-center space-x-6">
-          <a href="#contact" class="border border-[#5E3BEE] text-[#5E3BEE] px-4 py-2 rounded-md hover:bg-[#452fc5] hover:text-white transition">
-            Contact
-          </a>
-        </div>
-
-        <!-- Mobile Menu Button -->
-        <div class="md:hidden flex items-center">
-          <button id="mobile-menu-button" class="text-gray-700 focus:outline-none text-2xl">
-            ☰
-          </button>
-        </div>
-
+<!-- Navbar -->
+<nav class="fixed top-0 w-full z-50 bg-white shadow-xl" data-aos="fade-down">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex justify-between h-16 items-center">
+      <div class="flex items-center">
+        <span class="text-xl font-bold text-[#5E3BEE]">MyPorto</span>
+      </div>
+      <div class="hidden md:flex items-center space-x-6">
+        <a href="index.html" class="text-gray-700 hover:text-purple-600">Home</a>
+        <a href="portofolio.html" class="text-gray-700 hover:text-purple-600">Portofolio</a>
+        <a href="aboutme.html" class="text-gray-700 hover:text-purple-600">About Me</a>
+      </div>
+      <div class="hidden md:flex items-center space-x-6">
+        <a href="#contact" class="border border-[#5E3BEE] text-[#5E3BEE] px-4 py-2 rounded-md hover:bg-[#452fc5] hover:text-white transition">Contact</a>
+      </div>
+      <div class="md:hidden flex items-center">
+        <button id="mobile-menu-button" class="text-gray-700 focus:outline-none text-2xl">☰</button>
       </div>
     </div>
-
-    <!-- Mobile Menu -->
-    <div id="mobile-menu" class="hidden md:hidden px-4 pb-4">
-      <a href="index.html" class="block py-2 text-gray-700 hover:text-purple-600">Home</a>
-      <a href="portofolio.html" class="block py-2 text-gray-700 hover:text-purple-600">Portofolio</a>
-      <a href="aboutme.html" class="block py-2 text-gray-700 hover:text-purple-600">About Me</a>
-      <a href="#contact" class="block py-2 bg-[#5E3BEE] text-white rounded-md text-center hover:bg-[#452fc5] transition">Contact</a>
-    </div>
-  </nav>
-  <div class="h-15 bg-gradient-to-b from-gray-200 to-transparent"></div>
-
-  <!-- <div class="bg-white px-18 py-2 text-sm text-gray-500">
-    <a href="aboutme.html   " class="hover:underline">About Me</a>
-  </div> -->
-
-    <!-- Hero Section 3 -->
-    <div class="min-h-[500px] w-full flex flex-col md:flex-row items-center justify-center gap-6 p-6">
-    
-     <!-- Image -->
-    <div class="w-full md:w-1/2 flex items-center justify-center">
-      <img class="max-w-1/2 h-1/2 rounded-lg" src="img/AboutMe.png" alt="fotoAboutMe">
-    </div>
-
-    <!-- Text -->
-    <div class="w-full md:w-1/3 flex flex-col items-start justify-center gap-4">
-      
-      <h2 class="text-gray-800 text-4xl md:text-5xl font-semibold leading-tight">
-        About Me
-      </h2>
-      <h3>Hello, i am Faris Dani Rizkianto</h3>
-      <p class="text-gray-600 mt-2">
-         A student at Universitas Pembangunan Vataran Yogyakarta, actively involved in the IT Club under the UI/UX division. Interested in applying the knowledge and skills gained throughout academic studies, particularly in the field of user interface and experience design.
-        Currently focusing on Front-End development and UI/UX design, with a deep interest in creating user-friendly, responsive, and aesthetically pleasing digital interfaces. Actively learning and improving skills in technologies such as HTML, CSS, JavaScript, and design tools like Figma to support a career in the creative and development side of technology.
-      </p>
-      <!-- <a href="contact.html" class="block px-4 py-2 border border-[#5E3BEE] text-[#5E3BEE] rounded-md text-center hover:bg-[#452fc5] hover:text-white transition">More About Me</a> -->
-    </div>
-
   </div>
+  <div id="mobile-menu" class="hidden md:hidden px-4 pb-4">
+    <a href="index.html" class="block py-2 text-gray-700 hover:text-purple-600">Home</a>
+    <a href="portofolio.html" class="block py-2 text-gray-700 hover:text-purple-600">Portofolio</a>
+    <a href="aboutme.html" class="block py-2 text-gray-700 hover:text-purple-600">About Me</a>
+    <a href="#contact" class="block py-2 bg-[#5E3BEE] text-white rounded-md text-center hover:bg-[#452fc5] transition">Contact</a>
+  </div>
+</nav>
 
-  <div class="flex flex-col items-center justify-center min-h-[500px] bg-white">
+<div class="h-15 bg-gradient-to-b from-gray-200 to-transparent"></div>
+
+<!-- Hero Section -->
+<div class="min-h-[500px] w-full flex flex-col md:flex-row items-center justify-center gap-6 p-6" data-aos="fade-up">
+  <div class="w-full md:w-1/2 flex items-center justify-center" data-aos="zoom-in">
+    <img class="max-w-1/2 h-1/2 rounded-lg" src="img/AboutMe.png" alt="fotoAboutMe">
+  </div>
+  <div class="w-full md:w-1/3 flex flex-col items-start justify-center gap-4" data-aos="fade-left">
+    <h2 class="text-gray-800 text-4xl md:text-5xl font-semibold leading-tight">About Me</h2>
+    <h3>Hello, i am Faris Dani Rizkianto</h3>
+    <p class="text-gray-600 mt-2">
+      A student at Universitas Pembangunan Vataran Yogyakarta, actively involved in the IT Club under the UI/UX division. Interested in applying the knowledge and skills gained throughout academic studies, particularly in the field of user interface and experience design.
+      Currently focusing on Front-End development and UI/UX design, with a deep interest in creating user-friendly, responsive, and aesthetically pleasing digital interfaces. Actively learning and improving skills in technologies such as HTML, CSS, JavaScript, and design tools like Figma to support a career in the creative and development side of technology.
+    </p>
+  </div>
+</div>
+
+<!-- Timeline -->
+<div class="flex flex-col items-center justify-center min-h-[500px] bg-white" data-aos="fade-up">
   <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
-    
-    <!-- Timeline 1 -->
-    <div>
+    <div data-aos="flip-left">
       <div class="pl-4">
         <h2 class="text-xl font-semibold">2016 — 2018</h2>
-        <p class="text-gray-500 text-sm">SMPN 1 Boyolali<span class="italic"></span></p>
+        <p class="text-gray-500 text-sm">SMPN 1 Boyolali</p>
       </div>
     </div>
-
-    <!-- Timeline 2 -->
-    <div>
+    <div data-aos="flip-right">
       <div class="border-l-4 border-[#5E3BEE] pl-4">
         <h2 class="text-xl font-semibold">2018 — 2021</h2>
         <p class="text-gray-500 text-sm">SMAN 1 Boyolali <span class="italic">MIPA</span></p>
       </div>
     </div>
-
-    <!-- Timeline 3 -->
-    <div>
+    <div data-aos="flip-right">
       <div class="border-l-4 border-[#5E3BEE] pl-4">
         <h2 class="text-xl font-semibold">2021 — 2025</h2>
         <p class="text-gray-500 text-sm">UPN "Veteran" Yogyakarta <span class="italic">Informatics</span></p>
       </div>
     </div>
   </div>
-
-  <!-- Button -->
-  <div class="mt-8 pt-10">
+  <div class="mt-8 pt-10" data-aos="zoom-in">
     <a href="cv/CV Faris Eng.pdf" download>
       <button class="bg-[#5E3BEE] text-white px-6 py-2 rounded-md shadow hover:bg-white hover:text-[#5E3BEE] hover:border-[#5E3BEE] transition">
         Download CV
@@ -123,30 +91,21 @@
   </div>
 </div>
 
-
-<div class="flex flex-col md:flex-row justify-center items-center gap-10 py-10" id="contact">
-
-  <!-- Email -->
-  <div class="flex flex-col items-center text-center">
+<!-- Contact Section -->
+<div class="flex flex-col md:flex-row justify-center items-center gap-10 py-10" id="contact" data-aos="fade-up">
+  <div class="flex flex-col items-center text-center" data-aos="fade-right">
     <div class="w-14 h-14 flex items-center justify-center rounded-full bg-[#f5faff] shadow-md">
       <i class="fi fi-rr-envelope text-2xl text-[#5E3BEE] leading-none"></i>
     </div>
     <p class=" mt-4">farisdani84@gmail.com</p>
   </div>
-
-  <!-- Address -->
-  <div class="flex flex-col items-center text-center">
+  <div class="flex flex-col items-center text-center" data-aos="fade-up">
     <div class="w-14 h-14 flex items-center justify-center rounded-full bg-[#f5faff] shadow-md">
       <i class="fi fi-rr-marker text-2xl text-[#5E3BEE] leading-none"></i>
     </div>
-    <p class=" mt-4 w-[300px]">
-      Nepen, Teras, 
-      Boyolali, Central Java
-    </p>
+    <p class=" mt-4 w-[300px]">Nepen, Teras, Boyolali, Central Java</p>
   </div>
-
-  <!-- Phone -->
-  <div class="flex flex-col items-center text-center">
+  <div class="flex flex-col items-center text-center" data-aos="fade-right">
     <div class="w-14 h-14 flex items-center justify-center rounded-full bg-[#f5faff] shadow-md">
       <i class="fi fi-rr-phone-call text-2xl text-[#5E3BEE] leading-none"></i>
     </div>
@@ -154,28 +113,23 @@
   </div>
 </div>
 
-
-
-    <!-- Footer -->
-  <footer class="bg-[#f5faff] shadow-md border-t border-gray-200 mt-10">
-    <div class="container mx-auto px-6 py-4 flex flex-col md:flex-row justify-between items-center">
-      <!-- Logo/Teks -->
-      <div class="text-xl font-semibold text-[#5E3BEE]">MyPorto</div>
-      <div>©2025 by FarisDani</div>
-      <!-- Social Icons -->
-      <div class="flex space-x-4 mt-4 md:mt-0">
-        <a href="http://www.linkedin.com/in/faris-dani-rizkianto-rizkianto-809629310/" target="_blank" class="text-gray-600 hover:text-[#0077B5] transition">
-          <i class="fab fa-linkedin fa-lg"></i>
-        </a>
-        <a href="https://github.com/FarisDani" target="_blank" class="text-gray-600 hover:text-[#0077B5] transition">
-          <i class="fab fa-github fa-lg"></i>
-        </a>
-        <!-- Tambahkan lebih banyak ikon jika diperlukan -->
-      </div>
+<!-- Footer -->
+<footer class="bg-[#f5faff] shadow-md border-t border-gray-200 mt-10" data-aos="fade-up">
+  <div class="container mx-auto px-6 py-4 flex flex-col md:flex-row justify-between items-center">
+    <div class="text-xl font-semibold text-[#5E3BEE]">MyPorto</div>
+    <div>©2025 by FarisDani</div>
+    <div class="flex space-x-4 mt-4 md:mt-0">
+      <a href="http://www.linkedin.com/in/faris-dani-rizkianto-rizkianto-809629310/" target="_blank" class="text-gray-600 hover:text-[#0077B5] transition">
+        <i class="fab fa-linkedin fa-lg"></i>
+      </a>
+      <a href="https://github.com/FarisDani" target="_blank" class="text-gray-600 hover:text-[#0077B5] transition">
+        <i class="fab fa-github fa-lg"></i>
+      </a>
     </div>
-  </footer>
+  </div>
+</footer>
 
-  <script src="js/script.js"></script>
+<script src="js/script.js"></script>
 
 </body>
 </html>

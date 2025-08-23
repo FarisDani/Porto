@@ -1,10 +1,48 @@
- // Mobile menu toggle
+let progress = 0;
+const bar = document.getElementById('loading-bar');
+const preloader = document.getElementById('preloader');
+const content = document.getElementById('main-content');
+
+const simulateLoading = setInterval(() => {
+  if (progress >= 100) {
+    clearInterval(simulateLoading);
+
+    // Sembunyikan preloader
+    preloader.style.display = 'none';
+
+    // Tampilkan konten
+    content.classList.remove('opacity-0', 'pointer-events-none', 'hidden');
+    content.classList.add('opacity-100');
+
+    // Aktifkan CSS AOS
+    document.getElementById('aos-css').removeAttribute('disabled');
+
+    // Delay sedikit sebelum AOS init agar elemen sudah muncul di layar
+    setTimeout(() => {
+      const script = document.createElement('script');
+      script.src = 'https://unpkg.com/aos@2.3.4/dist/aos.js';
+      script.onload = () => {
+        AOS.init({
+          duration: 1000,
+          once: true,
+          offset: 100
+        });
+        AOS.refresh();
+      };
+      document.body.appendChild(script);
+    }, 100); // Delay sebentar agar DOM terlihat
+
+    return;
+  }
+
+  progress += 5;
+  bar.style.width = progress + '%';
+}, 100);
+
+// Mobile menu toggle
     document.getElementById('mobile-menu-button').addEventListener('click', function () {
       document.getElementById('mobile-menu').classList.toggle('hidden');
     });
-
-
-
 
 // JS Animasi Screen 
 const { createApp } = Vue;
@@ -477,3 +515,9 @@ createApp({
       }, 30);
     }
   }).mount('#app-profile-mk');
+
+    AOS.init({
+    duration: 1000,
+    once: true,
+    offset: 100
+  });

@@ -1,3 +1,4 @@
+// PRogress Bar
 let progress = 0;
 const bar = document.getElementById('loading-bar');
 const preloader = document.getElementById('preloader');
@@ -38,6 +39,13 @@ const simulateLoading = setInterval(() => {
   progress += 5;
   bar.style.width = progress + '%';
 }, 100);
+
+//Inisialisai AOS
+    AOS.init({
+    duration: 1000,
+    once: true,
+    offset: 100
+  });
 
 // Mobile menu toggle
     document.getElementById('mobile-menu-button').addEventListener('click', function () {
@@ -516,8 +524,3 @@ createApp({
     }
   }).mount('#app-profile-mk');
 
-    AOS.init({
-    duration: 1000,
-    once: true,
-    offset: 100
-  });

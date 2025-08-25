@@ -13,7 +13,7 @@
     <script  src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
     <title>About Me | MyPorto</title>
 </head>
-<body style="font-family: 'Poppins', sans-serif;">
+<body style="font-family: 'Poppins', sans-serif;" class="flex flex-col min-h-screen">
 
 <!-- Navbar -->
 <nav class="fixed top-0 w-full z-50 bg-white shadow-xl" data-aos="fade-down">
@@ -43,10 +43,14 @@
   </div>
 </nav>
 
+<main class="flex-grow">
+
+
+
 <div class="h-15 bg-gradient-to-b from-gray-200 to-transparent"></div>
 
 <!-- Hero Section -->
-<div class="min-h-[500px] w-full flex flex-col md:flex-row items-center justify-center gap-6 p-6" data-aos="fade-up">
+<section class="min-h-[500px] w-full flex flex-col md:flex-row items-center justify-center gap-6 p-6" data-aos="fade-up">
   <div class="w-full md:w-1/2 flex items-center justify-center" data-aos="zoom-in">
     <img class="max-w-1/2 h-1/2 rounded-lg" src="img/AboutMe.png" alt="fotoAboutMe">
   </div>
@@ -58,10 +62,10 @@
       Currently focusing on Front-End development and UI/UX design, with a deep interest in creating user-friendly, responsive, and aesthetically pleasing digital interfaces. Actively learning and improving skills in technologies such as HTML, CSS, JavaScript, and design tools like Figma to support a career in the creative and development side of technology.
     </p>
   </div>
-</div>
+</section>
 
 <!-- Timeline -->
-<div class="flex flex-col items-center justify-center min-h-[500px] bg-white" data-aos="fade-up">
+<section class="flex flex-col items-center justify-center min-h-[500px] bg-white" data-aos="fade-up">
   <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
     <div data-aos="flip-left">
       <div class="pl-4">
@@ -89,10 +93,10 @@
       </button>
     </a>
   </div>
-</div>
+</section>
 
 <!-- Contact Section -->
-<div class="flex flex-col md:flex-row justify-center items-center gap-10 py-10" id="contact" data-aos="fade-up">
+<section class="flex flex-col md:flex-row justify-center items-center gap-10 py-10" id="contact" data-aos="fade-up">
   <div class="flex flex-col items-center text-center" data-aos="zoom-in-up">
     <div class="w-14 h-14 flex items-center justify-center rounded-full bg-[#f5faff] shadow-md">
       <i class="fi fi-rr-envelope text-2xl text-[#5E3BEE] leading-none"></i>
@@ -111,7 +115,9 @@
     </div>
     <p class=" mt-4">+62-8774-3603-361</p>
   </div>
-</div>
+</section>
+
+</main>
 
 <!-- Footer -->
 <footer class="bg-[#f5faff] shadow-md border-t border-gray-200 mt-10" >

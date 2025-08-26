@@ -413,7 +413,7 @@ createApp({
     }
   }).mount('#app-dashboard-mk');
 
-  // Dashboard
+  // Search
 createApp({
     data() {
       return {

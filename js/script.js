@@ -65,6 +65,30 @@ if (preloader && content && bar) {
   }
 }
 
+ const form = document.getElementById("contact-form");
+  const successMessage = document.getElementById("success-message");
+
+  form.addEventListener("submit", async function (e) {
+    e.preventDefault();
+
+    const formData = new FormData(form);
+    try {
+      const response = await fetch(form.action, {
+        method: "POST",
+        body: formData,
+        headers: { 'Accept': 'application/json' }
+      });
+
+      if (response.ok) {
+        successMessage.classList.remove("hidden"); // tampilkan pesan sukses
+        form.reset(); // kosongkan form
+      } else {
+        alert("Terjadi kesalahan, coba lagi.");
+      }
+    } catch (err) {
+      alert("Gagal mengirim form.");
+    }
+  });
 
 
 // JS Animasi Screen 

@@ -65,13 +65,14 @@ if (preloader && content && bar) {
   }
 }
 
- const form = document.getElementById("contact-form");
-  const successMessage = document.getElementById("success-message");
+const form = document.getElementById("contact-form");
+const successMessage = document.getElementById("success-message");
 
+if (form) {
   form.addEventListener("submit", async function (e) {
     e.preventDefault();
-
     const formData = new FormData(form);
+
     try {
       const response = await fetch(form.action, {
         method: "POST",
@@ -80,8 +81,8 @@ if (preloader && content && bar) {
       });
 
       if (response.ok) {
-        successMessage.classList.remove("hidden"); // tampilkan pesan sukses
-        form.reset(); // kosongkan form
+        successMessage?.classList.remove("hidden");
+        form.reset();
       } else {
         alert("Terjadi kesalahan, coba lagi.");
       }
@@ -89,6 +90,7 @@ if (preloader && content && bar) {
       alert("Gagal mengirim form.");
     }
   });
+}
 
 
 // JS Animasi Screen 

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -7,7 +8,11 @@
 
   <!-- Tailwind CSS -->
   <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <style type="text/tailwindcss">
+    @variant dark (&:where(.dark, .dark *));
+  </style>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet" />
 
   <!-- Icons -->
   <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/uicons-brands/css/uicons-brands.css" />
@@ -15,28 +20,48 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 
   <!-- AOS -->
-  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" >
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css">
   <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
 </head>
-<body style="font-family: 'Poppins', sans-serif;" class="opacity-100 transition-opacity duration-500 min-h-screen flex flex-col top-0 w-full z-50 bg-white" >
+
+<body style="font-family: 'Poppins', sans-serif;"
+  class="opacity-100 transition-opacity duration-500 min-h-screen flex flex-col top-0 w-full z-50 bg-white dark:bg-gray-900 transition-colors duration-300">
 
   <!-- Navbar -->
-  <nav class="fixed top-0 w-full z-50 bg-white shadow-xl" data-aos="fade-down" data-aos-delay="200">
+  <nav class="fixed top-0 w-full z-50 bg-white dark:bg-gray-900 shadow-xl transition-colors duration-300"
+    data-aos="fade-down" data-aos-delay="200">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex justify-between h-16 items-center">
         <div class="flex items-center">
           <span class="text-xl font-bold text-[#5E3BEE]"><a href="index.html">MyPorto</a></span>
         </div>
         <div class="hidden md:flex items-center space-x-6">
-          <a href="index.html" class="text-gray-700 hover:text-purple-600">Home</a>
-          <a href="portofolio.html" class="text-gray-700 hover:text-purple-600">Portofolio</a>
-          <a href="aboutme.html" class="text-gray-700 hover:text-purple-600">About Me</a>
+          <a href="index.html"
+            class="text-gray-700 dark:text-gray-200 hover:text-purple-600 dark:hover:text-purple-400">Home</a>
+          <a href="portofolio.html"
+            class="text-gray-700 dark:text-gray-200 hover:text-purple-600 dark:hover:text-purple-400">Portofolio</a>
+          <a href="aboutme.html"
+            class="text-gray-700 dark:text-gray-200 hover:text-purple-600 dark:hover:text-purple-400">About Me</a>
         </div>
         <div class="hidden md:flex items-center space-x-6">
-          <a href="aboutme.html#contact" class="border border-[#5E3BEE] text-[#5E3BEE] px-4 py-2 rounded-md hover:bg-[#452fc5] hover:text-white transition">Contact</a>
+          <button type="button"
+            class="theme-toggle-btn text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5">
+            <svg class="theme-toggle-dark-icon w-5 h-5" fill="currentColor" viewBox="0 0 20 20"
+              xmlns="http://www.w3.org/2000/svg">
+              <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
+            </svg>
+            <svg class="theme-toggle-light-icon hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20"
+              xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z"
+                fill-rule="evenodd" clip-rule="evenodd"></path>
+            </svg>
+          </button>
+          <a href="aboutme.html#contact"
+            class="border border-[#5E3BEE] text-[#5E3BEE] px-4 py-2 rounded-md hover:bg-[#452fc5] hover:text-white transition">Contact</a>
         </div>
         <div class="md:hidden flex items-center">
-          <button id="mobile-menu-button" class="text-gray-700 focus:outline-none text-2xl">☰</button>
+          <button id="mobile-menu-button" class="text-gray-700 dark:text-white focus:outline-none text-2xl">☰</button>
         </div>
       </div>
     </div>
@@ -44,66 +69,103 @@
       <a href="index.html" class="block py-2 text-gray-700 hover:text-purple-600">Home</a>
       <a href="portofolio.html" class="block py-2 text-gray-700 hover:text-purple-600">Portofolio</a>
       <a href="aboutme.html" class="block py-2 text-gray-700 hover:text-purple-600">About Me</a>
-      <a href="aboutme.html#contact" class="block py-2 bg-[#5E3BEE] text-white rounded-md text-center hover:bg-[#452fc5] transition">Contact</a>
+      <a href="aboutme.html#contact"
+        class="block py-2 bg-[#5E3BEE] text-white rounded-md text-center hover:bg-[#452fc5] transition">Contact</a>
+      <div class="flex justify-center mt-4">
+        <button type="button"
+          class="theme-toggle-btn text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5">
+          <svg class="theme-toggle-dark-icon hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20"
+            xmlns="http://www.w3.org/2000/svg">
+            <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
+          </svg>
+          <svg class="theme-toggle-light-icon hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20"
+            xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z"
+              fill-rule="evenodd" clip-rule="evenodd"></path>
+          </svg>
+        </button>
+      </div>
     </div>
   </nav>
 
   <div class="h-20"></div>
 
-<main class="flex-grow">
+  <main class="flex-grow">
 
-  <!-- Content Section -->
-  <section class="min-h-[50px] w-full flex flex-col items-center justify-center gap-10 px-4 py-10 bg-white">
-    <div class="grid grid-cols-1 md:grid-cols-1 gap-8 max-w-5xl w-full">
+    <!-- Content Section -->
+    <section
+      class="min-h-[50px] w-full flex flex-col items-center justify-center gap-10 px-4 py-10 bg-white dark:bg-gray-900 transition-colors duration-300">
+      <div class="grid grid-cols-1 md:grid-cols-1 gap-8 max-w-5xl w-full">
 
-      <!-- Card 1 -->
-      <div class="group flex flex-col md:flex-row items-center bg-[#f5faff] rounded-xl overflow-hidden shadow-md hover:shadow-xl transition duration-300" data-aos="fade-right">
-        <a href="porto1.html" class="w-full md:w-1/2 overflow-hidden">
-          <img src="img/projectIL1.png" alt="Teras Budaya" class="object-cover w-full h-full transform group-hover:scale-105 group-hover:rotate-1 transition duration-500 ease-in-out">
-        </a>
-        <div class="p-6 flex flex-col justify-between w-full md:w-1/2">
-          <h3 class="text-xl font-bold text-[#f0a202] mb-2">Teras Budaya</h3>
-          <p class="text-sm text-gray-700 mb-4">Teras Budaya is a platform for exploring Indonesian culture, allowing users to explore cultural events.</p>
-          <a href="porto1.html" class="self-start px-4 py-2 bg-[#f0a202] text-white rounded-md font-medium transition duration-300 hover:bg-white hover:text-[#f0a202] border border-transparent hover:border-[#f0a202]">View Project</a>
+        <!-- Card 1 -->
+        <div
+          class="group flex flex-col md:flex-row items-center bg-[#f5faff] dark:bg-gray-800 rounded-xl overflow-hidden shadow-md hover:shadow-xl transition duration-300"
+          data-aos="fade-right">
+          <a href="porto1.html" class="w-full md:w-1/2 overflow-hidden">
+            <img src="img/projectIL1.png" alt="Teras Budaya"
+              class="object-cover w-full h-full transform group-hover:scale-105 group-hover:rotate-1 transition duration-500 ease-in-out">
+          </a>
+          <div class="p-6 flex flex-col justify-between w-full md:w-1/2">
+            <h3 class="text-xl font-bold text-[#f0a202] mb-2">Teras Budaya</h3>
+            <p class="text-sm text-gray-700 dark:text-gray-300 mb-4">Teras Budaya is a platform for exploring Indonesian
+              culture, allowing users to explore cultural events.</p>
+            <a href="porto1.html"
+              class="self-start px-4 py-2 bg-[#f0a202] text-white rounded-md font-medium transition duration-300 hover:bg-white hover:text-[#f0a202] border border-transparent hover:border-[#f0a202]">View
+              Project</a>
+          </div>
         </div>
+
+        <!-- Card 2 -->
+        <div
+          class="group flex flex-col-reverse md:flex-row items-center bg-[#f5faff] dark:bg-gray-800 rounded-xl overflow-hidden shadow-md hover:shadow-xl transition duration-300"
+          data-aos="fade-left">
+          <div class="p-6 flex flex-col justify-between w-full md:w-1/2">
+            <h3 class="text-xl font-bold text-[#fd6220] mb-2">PawPals</h3>
+            <p class="text-sm text-gray-700 dark:text-gray-300 mb-4">PawPals is a pet care platform that helps pet
+              owners take care of their furry friends.</p>
+            <a href="porto2.html"
+              class="self-start px-4 py-2 bg-[#fd6220] text-white rounded-md font-medium transition duration-300 hover:bg-white hover:text-[#fd6220] border border-transparent hover:border-[#fd6220]">View
+              Project</a>
+          </div>
+          <a href="porto2.html" class="w-full md:w-1/2 overflow-hidden">
+            <img src="img/projectIL2.png" alt="PawPals"
+              class="object-cover w-full h-full transform group-hover:scale-105 group-hover:rotate-1 transition duration-500 ease-in-out">
+          </a>
+        </div>
+
+        <!-- Card 3 -->
+        <div
+          class="group flex flex-col md:flex-row items-center bg-[#f5faff] dark:bg-gray-800 rounded-xl overflow-hidden shadow-md hover:shadow-xl transition duration-300"
+          data-aos="fade-right">
+          <a href="porto3.html" class="w-full md:w-1/2 overflow-hidden">
+            <img src="img/projectITC3 (2).png" alt="Mentor Kita"
+              class="object-cover w-full h-full transform group-hover:scale-105 group-hover:rotate-1 transition duration-500 ease-in-out">
+          </a>
+          <div class="p-6 flex flex-col justify-between w-full md:w-1/2">
+            <h3 class="text-xl font-bold text-[#162DA5] mb-2">Mentor Kita</h3>
+            <p class="text-sm text-gray-700 dark:text-gray-300 mb-4">Mentor Kita is a platform to help users find
+              mentors that match their personal goals and interests.</p>
+            <a href="porto3.html"
+              class="self-start px-4 py-2 bg-[#162DA5] text-white rounded-md font-medium transition duration-300 hover:bg-white hover:text-[#162DA5] border border-transparent hover:border-[#162DA5]">View
+              Project</a>
+          </div>
+        </div>
+
+      </div>
       </div>
 
-      <!-- Card 2 -->
-      <div class="group flex flex-col-reverse md:flex-row items-center bg-[#f5faff] rounded-xl overflow-hidden shadow-md hover:shadow-xl transition duration-300" data-aos="fade-left">
-        <div class="p-6 flex flex-col justify-between w-full md:w-1/2">
-          <h3 class="text-xl font-bold text-[#fd6220] mb-2">PawPals</h3>
-          <p class="text-sm text-gray-700 mb-4">PawPals is a pet care platform that helps pet owners take care of their furry friends.</p>
-          <a href="porto2.html" class="self-start px-4 py-2 bg-[#fd6220] text-white rounded-md font-medium transition duration-300 hover:bg-white hover:text-[#fd6220] border border-transparent hover:border-[#fd6220]">View Project</a>
-        </div>
-        <a href="porto2.html" class="w-full md:w-1/2 overflow-hidden">
-          <img src="img/projectIL2.png" alt="PawPals" class="object-cover w-full h-full transform group-hover:scale-105 group-hover:rotate-1 transition duration-500 ease-in-out">
-        </a>
-      </div>
-
-      <!-- Card 3 -->
-      <div class="group flex flex-col md:flex-row items-center bg-[#f5faff] rounded-xl overflow-hidden shadow-md hover:shadow-xl transition duration-300" data-aos="fade-right">
-        <a href="porto3.html" class="w-full md:w-1/2 overflow-hidden">
-          <img src="img/projectITC3 (2).png" alt="Mentor Kita" class="object-cover w-full h-full transform group-hover:scale-105 group-hover:rotate-1 transition duration-500 ease-in-out">
-        </a>
-        <div class="p-6 flex flex-col justify-between w-full md:w-1/2">
-          <h3 class="text-xl font-bold text-[#162DA5] mb-2">Mentor Kita</h3>
-          <p class="text-sm text-gray-700 mb-4">Mentor Kita is a platform to help users find mentors that match their personal goals and interests.</p>
-          <a href="porto3.html" class="self-start px-4 py-2 bg-[#162DA5] text-white rounded-md font-medium transition duration-300 hover:bg-white hover:text-[#162DA5] border border-transparent hover:border-[#162DA5]">View Project</a>
-        </div>
-      </div>
-
-    </div>
-  </div>
-
-</main>
+  </main>
 
   <!-- Footer -->
-  <footer class="bg-[#f5faff] shadow-md border-t border-gray-200 mt-10">
+  <footer
+    class="bg-[#f5faff] dark:bg-gray-900 shadow-md border-t border-gray-200 dark:border-gray-800 mt-10 transition-colors duration-300">
     <div class="container mx-auto px-6 py-4 flex flex-col md:flex-row justify-between items-center">
       <div class="text-xl font-semibold text-[#5E3BEE]"><a href="index.html">MyPorto</a></div>
-      <div>©2025 by FarisDani</div>
+      <div class="text-gray-600 dark:text-gray-400">©2025 by FarisDani</div>
       <div class="flex space-x-4 mt-4 md:mt-0">
-        <a href="http://www.linkedin.com/in/faris-dani-rizkianto-rizkianto-809629310/" target="_blank" class="text-gray-600 hover:text-[#0077B5] transition">
+        <a href="http://www.linkedin.com/in/faris-dani-rizkianto-rizkianto-809629310/" target="_blank"
+          class="text-gray-600 hover:text-[#0077B5] transition">
           <i class="fab fa-linkedin fa-lg"></i>
         </a>
         <a href="https://github.com/FarisDani" target="_blank" class="text-gray-600 hover:text-[#0077B5] transition">
@@ -115,4 +177,5 @@
 
   <script src="js/script.js"></script>
 </body>
+
 </html>

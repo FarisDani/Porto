@@ -1,6 +1,47 @@
+// --- Dark Mode Logic (Prioritized) --- //
+(function () {
+  const themeToggleBtns = document.querySelectorAll('.theme-toggle-btn');
+  const themeToggleDarkIcons = document.querySelectorAll('.theme-toggle-dark-icon');
+  const themeToggleLightIcons = document.querySelectorAll('.theme-toggle-light-icon');
+
+  // Function to apply theme based on local storage or system preference
+  function applyTheme() {
+    const isDark = localStorage.getItem('color-theme') === 'dark' ||
+      (!('color-theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches);
+
+    if (isDark) {
+      document.documentElement.classList.add('dark');
+      themeToggleLightIcons.forEach(icon => icon.classList.remove('hidden'));
+      themeToggleDarkIcons.forEach(icon => icon.classList.add('hidden'));
+    } else {
+      document.documentElement.classList.remove('dark');
+      themeToggleLightIcons.forEach(icon => icon.classList.add('hidden'));
+      themeToggleDarkIcons.forEach(icon => icon.classList.remove('hidden'));
+    }
+  }
+
+  // Initial Check
+  applyTheme();
+
+  // Event Listeners for all toggle buttons
+  themeToggleBtns.forEach(btn => {
+    btn.addEventListener('click', function () {
+      if (document.documentElement.classList.contains('dark')) {
+        document.documentElement.classList.remove('dark');
+        localStorage.setItem('color-theme', 'light');
+      } else {
+        document.documentElement.classList.add('dark');
+        localStorage.setItem('color-theme', 'dark');
+      }
+      applyTheme(); // Sync UI
+    });
+  });
+})();
+
 // Mobile menu toggle
 document.getElementById("mobile-menu-button")?.addEventListener("click", function () {
-  document.getElementById("mobile-menu")?.classList.toggle("hidden");
+  const menu = document.getElementById("mobile-menu");
+  menu?.classList.toggle("hidden");
 });
 
 // Utility to load AOS only once
@@ -90,158 +131,160 @@ if (form) {
 }
 
 // --- Vue 3 Factory Functions --- //
-const { createApp } = Vue;
+if (typeof Vue !== 'undefined') {
+  const { createApp } = Vue;
 
-/**
- * Creates a carousel app instance for a given selector.
- * @param {string} selector - The DOM ID selector (e.g., "#app-onboarding").
- * @param {string[]} images - Array of image paths.
- */
-function createCarouselApp(selector, images) {
-  const element = document.querySelector(selector);
-  if (!element) return; // Skip if element doesn't exist on this page
+  /**
+   * Creates a carousel app instance for a given selector.
+   * @param {string} selector - The DOM ID selector (e.g., "#app-onboarding").
+   * @param {string[]} images - Array of image paths.
+   */
+  function createCarouselApp(selector, images) {
+    const element = document.querySelector(selector);
+    if (!element) return; // Skip if element doesn't exist on this page
 
-  createApp({
-    data() {
-      return {
-        screens: images,
-        currentIndex: 0,
-      };
-    },
-    methods: {
-      getPosition(index) {
-        const len = this.screens.length;
-        const center = this.currentIndex;
-        // Proper modulo for negative numbers not needed here since we only increment, but good practice:
-        // (n % m + m) % m
-        const left = (center - 1 + len) % len;
-        const right = (center + 1) % len;
-
-        if (index === center) {
-          return "left-1/2 -translate-x-1/2 scale-100 z-30 opacity-100";
-        } else if (index === left) {
-          return "left-[10%] scale-90 z-20 opacity-80";
-        } else if (index === right) {
-          return "left-[75%] -translate-x-1/2 scale-90 z-20 opacity-80";
-        } else {
-          return "hidden";
-        }
+    createApp({
+      data() {
+        return {
+          screens: images,
+          currentIndex: 0,
+        };
       },
-    },
-    mounted() {
-      // Auto-slide every 3 seconds
-      setInterval(() => {
-        this.currentIndex = (this.currentIndex + 1) % this.screens.length;
-      }, 3000);
-    },
-  }).mount(selector);
-}
+      methods: {
+        getPosition(index) {
+          const len = this.screens.length;
+          const center = this.currentIndex;
+          // Proper modulo for negative numbers not needed here since we only increment, but good practice:
+          // (n % m + m) % m
+          const left = (center - 1 + len) % len;
+          const right = (center + 1) % len;
 
-/**
- * Creates an auto-scrolling image app instance.
- * @param {string} selector - The DOM ID selector.
- * @param {number} containerHeight - Height of the container (default 600).
- */
-function createScrollApp(selector, containerHeight = 600) {
-  const element = document.querySelector(selector);
-  if (!element) return;
+          if (index === center) {
+            return "left-1/2 -translate-x-1/2 scale-100 z-30 opacity-100";
+          } else if (index === left) {
+            return "left-[10%] scale-90 z-20 opacity-80";
+          } else if (index === right) {
+            return "left-[75%] -translate-x-1/2 scale-90 z-20 opacity-80";
+          } else {
+            return "hidden";
+          }
+        },
+      },
+      mounted() {
+        // Auto-slide every 3 seconds
+        setInterval(() => {
+          this.currentIndex = (this.currentIndex + 1) % this.screens.length;
+        }, 3000);
+      },
+    }).mount(selector);
+  }
 
-  createApp({
-    data() {
-      return {
-        scrollOffset: 0,
-        direction: 1,
-        pauseScroll: false,
-        imageHeight: 0,
-        containerHeight: containerHeight,
-        speed: 1, // pixel per step
-      };
-    },
-    mounted() {
-      const img = this.$refs.scrollImage;
-      if (!img) return;
+  /**
+   * Creates an auto-scrolling image app instance.
+   * @param {string} selector - The DOM ID selector.
+   * @param {number} containerHeight - Height of the container (default 600).
+   */
+  function createScrollApp(selector, containerHeight = 600) {
+    const element = document.querySelector(selector);
+    if (!element) return;
 
-      const updateImageHeight = () => {
-        this.imageHeight = img.offsetHeight;
-      };
+    createApp({
+      data() {
+        return {
+          scrollOffset: 0,
+          direction: 1,
+          pauseScroll: false,
+          imageHeight: 0,
+          containerHeight: containerHeight,
+          speed: 1, // pixel per step
+        };
+      },
+      mounted() {
+        const img = this.$refs.scrollImage;
+        if (!img) return;
 
-      img.onload = updateImageHeight;
+        const updateImageHeight = () => {
+          this.imageHeight = img.offsetHeight;
+        };
 
-      if (img.complete) {
-        updateImageHeight();
-      }
+        img.onload = updateImageHeight;
 
-      // Start scroll loop
-      setInterval(() => {
-        if (this.pauseScroll) return;
-        // If image hasn't loaded or is shorter than container, don't scroll
-        if (this.imageHeight <= this.containerHeight) return;
-
-        const maxScroll = this.imageHeight - this.containerHeight;
-
-        if (this.scrollOffset >= maxScroll) {
-          this.direction = -1;
-        } else if (this.scrollOffset <= 0) {
-          this.direction = 1;
+        if (img.complete) {
+          updateImageHeight();
         }
 
-        this.scrollOffset += this.speed * this.direction;
-      }, 30);
-    },
-  }).mount(selector);
+        // Start scroll loop
+        setInterval(() => {
+          if (this.pauseScroll) return;
+          // If image hasn't loaded or is shorter than container, don't scroll
+          if (this.imageHeight <= this.containerHeight) return;
+
+          const maxScroll = this.imageHeight - this.containerHeight;
+
+          if (this.scrollOffset >= maxScroll) {
+            this.direction = -1;
+          } else if (this.scrollOffset <= 0) {
+            this.direction = 1;
+          }
+
+          this.scrollOffset += this.speed * this.direction;
+        }, 30);
+      },
+    }).mount(selector);
+  }
+
+  // --- Initialize Carousel Apps (Teras Budaya & PawPals) --- //
+
+  // Teras Budaya
+  createCarouselApp("#app-onboarding", [
+    "img/TB/Loading Screen1.png",
+    "img/TB/Loading Screen2.png",
+    "img/TB/Loading Screen3.png",
+  ]);
+  createCarouselApp("#app-home", [
+    "img/TB/Home Screen1.png",
+    "img/TB/Home Screen2.png",
+    "img/TB/Home Screen3.png",
+  ]);
+  createCarouselApp("#app-education", [
+    "img/TB/Edu Screen1.png",
+    "img/TB/Edu Screen2.png",
+    "img/TB/Edu Screen3.png",
+  ]);
+  createCarouselApp("#app-profile", [
+    "img/TB/Profile Screen1.png",
+    "img/TB/Profile Screen2.png",
+    "img/TB/Profile Screen3.png",
+  ]);
+
+  // PawPals
+  createCarouselApp("#app-onboarding-pp", [
+    "img/PP/Onboarding1.png",
+    "img/PP/Onboarding2.png",
+    "img/PP/Onboarding3.png",
+  ]);
+  createCarouselApp("#app-home-pp", [
+    "img/PP/Home1.png",
+    "img/PP/Home2.png",
+    "img/PP/Home3.png",
+  ]);
+  createCarouselApp("#app-community-pp", [
+    "img/PP/Community1.png",
+    "img/PP/Community2.png",
+    "img/PP/Community3.png",
+  ]);
+  createCarouselApp("#app-schedule-pp", [
+    "img/PP/Schedule1.png",
+    "img/PP/Schedule2.png",
+    "img/PP/Schedule3.png",
+  ]);
+
+  // --- Initialize Scroll Apps (Mentor Kita) --- //
+  // Note: container height in HTML might be dynamic (lg:h-[600px]), 
+  // but consistency with the JS default check is important. 
+  // If specific heights differ per ID, we can pass them as the 2nd arg.
+  createScrollApp("#app-dashboard-mk");
+  createScrollApp("#app-search-mk");
+  createScrollApp("#app-mentor-mk");
+  createScrollApp("#app-profile-mk");
 }
-
-// --- Initialize Carousel Apps (Teras Budaya & PawPals) --- //
-
-// Teras Budaya
-createCarouselApp("#app-onboarding", [
-  "img/TB/Loading Screen1.png",
-  "img/TB/Loading Screen2.png",
-  "img/TB/Loading Screen3.png",
-]);
-createCarouselApp("#app-home", [
-  "img/TB/Home Screen1.png",
-  "img/TB/Home Screen2.png",
-  "img/TB/Home Screen3.png",
-]);
-createCarouselApp("#app-education", [
-  "img/TB/Edu Screen1.png",
-  "img/TB/Edu Screen2.png",
-  "img/TB/Edu Screen3.png",
-]);
-createCarouselApp("#app-profile", [
-  "img/TB/Profile Screen1.png",
-  "img/TB/Profile Screen2.png",
-  "img/TB/Profile Screen3.png",
-]);
-
-// PawPals
-createCarouselApp("#app-onboarding-pp", [
-  "img/PP/Onboarding1.png",
-  "img/PP/Onboarding2.png",
-  "img/PP/Onboarding3.png",
-]);
-createCarouselApp("#app-home-pp", [
-  "img/PP/Home1.png",
-  "img/PP/Home2.png",
-  "img/PP/Home3.png",
-]);
-createCarouselApp("#app-community-pp", [
-  "img/PP/Community1.png",
-  "img/PP/Community2.png",
-  "img/PP/Community3.png",
-]);
-createCarouselApp("#app-schedule-pp", [
-  "img/PP/Schedule1.png",
-  "img/PP/Schedule2.png",
-  "img/PP/Schedule3.png",
-]);
-
-// --- Initialize Scroll Apps (Mentor Kita) --- //
-// Note: container height in HTML might be dynamic (lg:h-[600px]), 
-// but consistency with the JS default check is important. 
-// If specific heights differ per ID, we can pass them as the 2nd arg.
-createScrollApp("#app-dashboard-mk");
-createScrollApp("#app-search-mk");
-createScrollApp("#app-mentor-mk");
-createScrollApp("#app-profile-mk");

@@ -1,24 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Teras Budaya Project Detail</title>
-  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <style type="text/tailwindcss">
+    @variant dark (&:where(.dark, .dark *));
+  </style>
   <script src="https://unpkg.com/vue@3/dist/vue.global.prod.js"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/uicons-brands/css/uicons-brands.css">
-    <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/uicons-solid-rounded/css/uicons-solid-rounded.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
-    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
-    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/uicons-brands/css/uicons-brands.css">
+  <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/uicons-solid-rounded/css/uicons-solid-rounded.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
 </head>
-<body class="bg-white text-gray-800 font-sans flex flex-col min-h-screen">
-    <!-- Navbar -->
-  <nav class="fixed top-0 w-full z-50 bg-white shadow-xl">
+
+<body
+  class="bg-white dark:bg-gray-900 text-gray-800 dark:text-gray-200 font-sans flex flex-col min-h-screen transition-colors duration-300">
+  <!-- Navbar -->
+  <nav class="fixed top-0 w-full z-50 bg-white dark:bg-gray-900 shadow-xl transition-colors duration-300">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex justify-between h-16 items-center">
-        
+
         <!-- Logo -->
         <div class="flex items-center">
           <span class="text-xl font-bold text-[#5E3BEE]"><a href="index.html">MyPorto</a></span>
@@ -26,21 +32,36 @@
 
         <!-- Navigation Links (Hidden on mobile) -->
         <div class="hidden md:flex items-center space-x-6">
-          <a href="index.html" class="text-gray-700 hover:text-purple-600">Home</a>
-          <a href="portofolio.html" class="text-gray-700 hover:text-purple-600">Portofolio</a>
-          <a href="aboutme.html" class="text-gray-700 hover:text-purple-600">About Me</a>
+          <a href="index.html"
+            class="text-gray-700 dark:text-gray-200 hover:text-purple-600 dark:hover:text-purple-400">Home</a>
+          <a href="portofolio.html"
+            class="text-gray-700 dark:text-gray-200 hover:text-purple-600 dark:hover:text-purple-400">Portofolio</a>
+          <a href="aboutme.html"
+            class="text-gray-700 dark:text-gray-200 hover:text-purple-600 dark:hover:text-purple-400">About Me</a>
         </div>
-
-        <!-- Contact Button -->
         <div class="hidden md:flex items-center space-x-6">
-          <a href="aboutme.html#contact" class="border border-[#5E3BEE] text-[#5E3BEE] px-4 py-2 rounded-md hover:bg-[#452fc5] hover:text-white transition">
+          <button type="button"
+            class="theme-toggle-btn text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5">
+            <svg class="theme-toggle-dark-icon hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20"
+              xmlns="http://www.w3.org/2000/svg">
+              <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
+            </svg>
+            <svg class="theme-toggle-light-icon hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20"
+              xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z"
+                fill-rule="evenodd" clip-rule="evenodd"></path>
+            </svg>
+          </button>
+          <a href="aboutme.html#contact"
+            class="border border-[#5E3BEE] text-[#5E3BEE] px-4 py-2 rounded-md hover:bg-[#452fc5] hover:text-white transition">
             Contact
           </a>
         </div>
 
         <!-- Mobile Menu Button -->
         <div class="md:hidden flex items-center">
-          <button id="mobile-menu-button" class="text-gray-700 focus:outline-none text-2xl">
+          <button id="mobile-menu-button" class="text-gray-700 dark:text-white focus:outline-none text-2xl">
             ☰
           </button>
         </div>
@@ -53,203 +74,230 @@
       <a href="index.html" class="block py-2 text-gray-700 hover:text-purple-600">Home</a>
       <a href="portofolio.html" class="block py-2 text-gray-700 hover:text-purple-600">Portofolio</a>
       <a href="aboutme.html" class="block py-2 text-gray-700 hover:text-purple-600">About Me</a>
-      <a href="aboutme.html#contact" class="block py-2 bg-[#5E3BEE] text-white rounded-md text-center hover:bg-[#452fc5] transition">Contact</a>
+      <a href="aboutme.html#contact"
+        class="block py-2 bg-[#5E3BEE] text-white rounded-md text-center hover:bg-[#452fc5] transition">Contact</a>
+      <div class="flex justify-center mt-4">
+        <button type="button"
+          class="theme-toggle-btn text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5">
+          <svg class="theme-toggle-dark-icon hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20"
+            xmlns="http://www.w3.org/2000/svg">
+            <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
+          </svg>
+          <svg class="theme-toggle-light-icon hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20"
+            xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z"
+              fill-rule="evenodd" clip-rule="evenodd"></path>
+          </svg>
+        </button>
+      </div>
     </div>
   </nav>
 
   <div class="px-18 py-2 from-gray-200 to-transparent"></div>
-<br>
+  <br>
 
-<main class="flex-grow">
+  <main class="flex-grow">
 
 
 
-  <div id="app">
-    <!-- Header Section -->
- <section class="relative px-10 py-[150px] bg-cover bg-right bg-no-repeat" style="background-image: url('img/projectIL1.png');">
-  <!-- Overlay hitam transparan -->
-  <div class="absolute inset-0 bg-black bg-opacity-70"></div>
+    <div id="app">
+      <!-- Header Section -->
+      <section class="relative px-10 py-[150px] bg-cover bg-right bg-no-repeat"
+        style="background-image: url('img/projectIL1.png');">
+        <!-- Overlay hitam transparan -->
+        <div class="absolute inset-0 bg-black/70"></div>
 
-  <!-- Konten -->
-  <div class="relative z-10 flex flex-col lg:flex-row items-center justify-center gap-10 max-w-7xl mx-auto">
-    <!-- Logo -->
-    <img src="img/Logo Teras Budaya.png" alt="Logo" class="w-32 h-32 object-contain" data-aos="fade-in"/>
+        <!-- Konten -->
+        <div class="relative z-10 flex flex-col lg:flex-row items-center justify-center gap-10 max-w-7xl mx-auto">
+          <!-- Logo -->
+          <img src="img/Logo Teras Budaya.png" alt="Logo" class="w-32 h-32 object-contain" data-aos="fade-in" />
 
-    <!-- Teks -->
-    <div class="flex-1 max-w-2xl text-white" data-aos="fade-left">
-      <h1 class="text-4xl font-bold mb-3"><span class="text-[#f0a202]">Teras</span>  Budaya</h1>
-      <p class="text-lg font-semibold text-gray-200">
-        Teras Budaya is a platform that allows users to explore and celebrate Indonesian cultural richness. It features
-        curated cultural events, articles, and a personalized experience for enthusiasts.
-      </p>
-      <div class="flex flex-col lg:flex-row items-center gap-5 lg:gap-5 mt-10">
-        <p class="text-lg font-semibold text-gray-200">Design with</p>
-        <div class="flex justify-center gap-4 flex-wrap" data-aos="zoom-in">
-          <i class="fi fi-brands-figma text-black font-semibold bg-[#f0a202] px-5 py-3 rounded-full shadow hover:scale-105 transition">
-            Figma
-          </i>
+          <!-- Teks -->
+          <div class="flex-1 max-w-2xl text-white" data-aos="fade-left">
+            <h1 class="text-4xl font-bold mb-3"><span class="text-[#f0a202]">Teras</span> Budaya</h1>
+            <p class="text-lg font-semibold text-gray-200">
+              Teras Budaya is a platform that allows users to explore and celebrate Indonesian cultural richness. It
+              features
+              curated cultural events, articles, and a personalized experience for enthusiasts.
+            </p>
+            <div class="flex flex-col lg:flex-row items-center gap-5 lg:gap-5 mt-10">
+              <p class="text-lg font-semibold text-gray-200">Design with</p>
+              <div class="flex justify-center gap-4 flex-wrap" data-aos="zoom-in">
+                <i
+                  class="fi fi-brands-figma text-black font-semibold bg-[#f0a202] px-5 py-3 rounded-full shadow hover:scale-105 transition">
+                  Figma
+                </i>
+              </div>
+            </div>
+          </div>
         </div>
-      </div>  
-    </div>
-  </div>
-</section>
+      </section>
 
-<section class="mt-16 text-center">
-  <h2 class="text-2xl font-bold mb-10" data-aos="fade-down"><span class="text-[#f0a202]">Key</span> Features</h2>
+      <section class="mt-16 text-center">
+        <h2 class="text-2xl font-bold mb-10" data-aos="fade-down"><span class="text-[#f0a202]">Key</span> Features</h2>
 
-  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2 items-center justify-center">
-    
-    <!-- Feature 1 -->
-    <div class="p-6 flex flex-col items-center" data-aos="zoom-in" >
-      <div class="w-fit bg-[#F9DA9A] p-3 rounded-md mb-4 text-2xl">
-        🎟️
-      </div>
-      <h3 class="text-lg font-bold text-[#f0a202] mb-1">Cultural Ticketing</h3>
-      <p class="text-sm font-semibold text-gray-800">Wayang Kulit, Tari Tradisional, Musik Etnik</p>
-    </div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2 items-center justify-center">
 
-    <!-- Feature 2 -->
-    <div class="p-6 flex flex-col items-center" data-aos="zoom-in" data-aos-delay="200">
-      <div class="w-fit bg-[#F9DA9A] p-3 rounded-md mb-4 text-2xl">
-        💬
-      </div>
-      <h3 class="text-lg font-bold text-[#f0a202] mb-1">Community Forum</h3>
-      <p class="text-sm font-semibold text-gray-800">Diskusi, Cerita, Kolaborasi</p>
-    </div>
+          <!-- Feature 1 -->
+          <div class="p-6 flex flex-col items-center" data-aos="zoom-in">
+            <div class="w-fit bg-[#F9DA9A] p-3 rounded-md mb-4 text-2xl">
+              🎟️
+            </div>
+            <h3 class="text-lg font-bold text-[#f0a202] mb-1">Cultural Ticketing</h3>
+            <p class="text-sm font-semibold text-gray-800 dark:text-gray-300">Wayang Kulit, Tari Tradisional, Musik
+              Etnik</p>
+          </div>
 
-    <!-- Feature 3 -->
-    <div class="p-6 flex flex-col items-center" data-aos="zoom-in" data-aos-delay="400">
-      <div class="w-fit bg-[#F9DA9A] p-3 rounded-md mb-4 text-2xl">
-        🏆
-      </div>
-      <h3 class="text-lg font-bold text-[#f0a202] mb-1">Virtual Awards</h3>
-      <p class="text-sm font-semibold text-gray-800">Badge, Level, Ranking</p>
-    </div>
+          <!-- Feature 2 -->
+          <div class="p-6 flex flex-col items-center" data-aos="zoom-in" data-aos-delay="200">
+            <div class="w-fit bg-[#F9DA9A] p-3 rounded-md mb-4 text-2xl">
+              💬
+            </div>
+            <h3 class="text-lg font-bold text-[#f0a202] mb-1">Community Forum</h3>
+            <p class="text-sm font-semibold text-gray-800 dark:text-gray-300">Diskusi, Cerita, Kolaborasi</p>
+          </div>
 
-  </div>
-</section>
+          <!-- Feature 3 -->
+          <div class="p-6 flex flex-col items-center" data-aos="zoom-in" data-aos-delay="400">
+            <div class="w-fit bg-[#F9DA9A] p-3 rounded-md mb-4 text-2xl">
+              🏆
+            </div>
+            <h3 class="text-lg font-bold text-[#f0a202] mb-1">Virtual Awards</h3>
+            <p class="text-sm font-semibold text-gray-800 dark:text-gray-300">Badge, Level, Ranking</p>
+          </div>
 
-<!-- Application Screens 1: Onboarding -->
-<section class="px-6 py-12 bg-[#F9DA9A] bg-opacity-50">
-  <div class="max-w-6xl mx-auto flex flex-col lg:flex-row items-center gap-12" id="app-onboarding">
+        </div>
+      </section>
 
-    <!-- Kiri: Judul -->
-    <div class="w-full lg:w-1/2 text-center lg:text-left" data-aos="fade-right">
-      <h2 class="text-3xl font-bold mb-6">
-        <span class="text-[#f0a202]">Onboarding</span> Screens
-      </h2>
-      <p class="text-gray-700">
-        Introduce users to the cultural richness and unique features of the app through engaging welcome screens.
+      <!-- Application Screens 1: Onboarding -->
+      <section class="px-6 py-12 bg-[#F9DA9A] dark:bg-gray-800 bg-opacity-50">
+        <div class="max-w-6xl mx-auto flex flex-col lg:flex-row items-center gap-12" id="app-onboarding">
+
+          <!-- Kiri: Judul -->
+          <div class="w-full lg:w-1/2 text-center lg:text-left" data-aos="fade-right">
+            <h2 class="text-3xl font-bold mb-6">
+              <span class="text-[#f0a202]">Onboarding</span> Screens
+            </h2>
+            <p class="text-gray-700 dark:text-gray-300">
+              Introduce users to the cultural richness and unique features of the app through engaging welcome screens.
+            </p>
+          </div>
+
+          <!-- Kanan: Gambar animasi sliding -->
+          <div class="w-full lg:w-1/2 rounded-xl p-6 relative h-[600px] overflow-hidden">
+            <div v-for="(screen, index) in screens" :key="index"
+              class="absolute top-1/2 transform -translate-y-1/2 transition-all duration-700 ease-in-out"
+              :class="getPosition(index)">
+              <img :src="screen" class="w-[280px] h-[560px] rounded-xl object-cover shadow-xl mx-auto lg:mx-0" />
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+
+      <!-- Application Screens 2: Home & Explore -->
+      <section class="px-6 py-12 bg-opacity-50">
+        <div class="max-w-6xl mx-auto flex flex-col-reverse lg:flex-row items-center gap-12" id="app-home">
+
+          <!-- Gambar -->
+          <div class="w-full lg:w-1/2 rounded-xl p-6 relative h-[600px] overflow-hidden">
+            <div v-for="(screen, index) in screens" :key="index"
+              class="absolute top-1/2 transform -translate-y-1/2 transition-all duration-700 ease-in-out"
+              :class="getPosition(index)">
+              <img :src="screen" class="w-[280px] h-[560px] rounded-xl object-cover shadow-xl mx-auto lg:mx-0" />
+            </div>
+          </div>
+
+          <!-- Teks -->
+          <div class="w-full lg:w-1/2 text-center lg:text-left" data-aos="fade-left">
+            <h2 class="text-3xl font-bold mb-6">
+              <span class="text-[#f0a202]">Home & Explore</span> Screens
+            </h2>
+            <p class="text-gray-700 dark:text-gray-300">
+              Discover traditional arts, events, and nearby cultural activities from the personalized home and explore
+              sections.
+            </p>
+          </div>
+
+        </div>
+      </section>
+
+
+      <!-- Application Screens 3: Education & Forum -->
+      <section class="px-6 py-12 bg-[#F9DA9A] dark:bg-gray-800 bg-opacity-50">
+        <div class="max-w-6xl mx-auto flex flex-col lg:flex-row items-center gap-12 md:gap-12" id="app-education">
+
+          <!-- Kiri: Judul -->
+          <div class="w-full lg:w-1/2 text-center lg:text-left" data-aos="fade-right">
+            <h2 class="text-3xl font-bold mb-6">
+              <span class="text-[#f0a202]">Education & Forum</span> Screens
+            </h2>
+            <p class="text-gray-700 dark:text-gray-300">
+              Learn about local traditions and connect with the community through interactive lessons and open
+              discussions.
+            </p>
+          </div>
+
+          <!-- Kanan: Gambar animasi sliding -->
+          <div class="w-full lg:w-1/2 rounded-xl p-6 relative h-[600px] overflow-hidden mt-8 md:mt-0">
+            <div v-for="(screen, index) in screens" :key="index"
+              class="absolute top-1/2 transform -translate-y-1/2 transition-all duration-700 ease-in-out"
+              :class="getPosition(index)">
+              <img :src="screen" class="w-[280px] h-[560px] rounded-xl object-cover shadow-xl mx-auto lg:mx-0" />
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- Application Screens 4: Profile & Milestone  -->
+      <section class="px-6 py-12 bg-opacity-50">
+        <div class="max-w-6xl mx-auto flex flex-col-reverse lg:flex-row items-center gap-12" id="app-profile">
+
+          <!-- Gambar -->
+          <div class="w-full lg:w-1/2 rounded-xl p-6 relative h-[600px] overflow-hidden">
+            <div v-for="(screen, index) in screens" :key="index"
+              class="absolute top-1/2 transform -translate-y-1/2 transition-all duration-700 ease-in-out"
+              :class="getPosition(index)">
+              <img :src="screen" class="w-[280px] h-[560px] rounded-xl object-cover shadow-xl mx-auto lg:mx-0" />
+            </div>
+          </div>
+
+          <!-- Teks -->
+          <div class="w-full lg:w-1/2 text-center lg:text-left" data-aos="fade-left">
+            <h2 class="text-3xl font-bold mb-6">
+              <span class="text-[#f0a202]">Profile & Milestone</span> Screens
+            </h2>
+            <p class="text-gray-700 dark:text-gray-300">
+              Track your cultural journey, achievements, and participation milestones in a personalized user profile.
+            </p>
+          </div>
+
+        </div>
+      </section>
+
+      <p class="max-w-3xl mx-auto mt-10 px-6 py-4 bg-[#FDF4E1] border-l-4 border-[#f0a202] rounded-lg text-base text-gray-800 leading-relaxed shadow-md"
+        data-aos="fade-up">
+        <strong>Teras Budaya</strong> is a micro-project developed as part of the MSIB Batch 6 program under Android and
+        UI/UX Development tracks at Infinite Learning. It was created by the dedicated team <em>Swadesi Sakti</em> to
+        celebrate and promote Indonesia's rich cultural heritage through digital innovation.
       </p>
-    </div>
 
-    <!-- Kanan: Gambar animasi sliding -->
-    <div class="w-full lg:w-1/2 rounded-xl p-6 relative h-[600px] overflow-hidden">
-      <div v-for="(screen, index) in screens" :key="index"
-           class="absolute top-1/2 transform -translate-y-1/2 transition-all duration-700 ease-in-out"
-           :class="getPosition(index)">
-        <img :src="screen" class="w-[280px] h-[560px] rounded-xl object-cover shadow-xl mx-auto lg:mx-0" />
-      </div>
-    </div>
+  </main>
 
-  </div>
-</section>
-
-
-<!-- Application Screens 2: Home & Explore -->
-<section class="px-6 py-12 bg-opacity-50">
-  <div class="max-w-6xl mx-auto flex flex-col-reverse lg:flex-row items-center gap-12" id="app-home">
-
-    <!-- Gambar -->
-    <div class="w-full lg:w-1/2 rounded-xl p-6 relative h-[600px] overflow-hidden">
-      <div v-for="(screen, index) in screens" :key="index"
-           class="absolute top-1/2 transform -translate-y-1/2 transition-all duration-700 ease-in-out"
-           :class="getPosition(index)">
-        <img :src="screen" class="w-[280px] h-[560px] rounded-xl object-cover shadow-xl mx-auto lg:mx-0" />
-      </div>
-    </div>
-
-    <!-- Teks -->
-    <div class="w-full lg:w-1/2 text-center lg:text-left" data-aos="fade-left">
-      <h2 class="text-3xl font-bold mb-6">
-        <span class="text-[#f0a202]">Home & Explore</span> Screens
-      </h2>
-      <p class="text-gray-700">
-        Discover traditional arts, events, and nearby cultural activities from the personalized home and explore sections.
-      </p>
-    </div>
-
-  </div>
-</section>
-
-
-<!-- Application Screens 3: Education & Forum -->
-<section class="px-6 py-12 bg-[#F9DA9A] bg-opacity-50">
-  <div class="max-w-6xl mx-auto flex flex-col lg:flex-row items-center gap-12 md:gap-12" id="app-education">
-
-    <!-- Kiri: Judul -->
-    <div class="w-full lg:w-1/2 text-center lg:text-left" data-aos="fade-right">
-      <h2 class="text-3xl font-bold mb-6">
-        <span class="text-[#f0a202]">Education & Forum</span> Screens
-      </h2>
-      <p class="text-gray-700">
-        Learn about local traditions and connect with the community through interactive lessons and open discussions.
-      </p>
-    </div>
-
-    <!-- Kanan: Gambar animasi sliding -->
-    <div class="w-full lg:w-1/2 rounded-xl p-6 relative h-[600px] overflow-hidden mt-8 md:mt-0">
-      <div v-for="(screen, index) in screens" :key="index"
-           class="absolute top-1/2 transform -translate-y-1/2 transition-all duration-700 ease-in-out"
-           :class="getPosition(index)">
-        <img :src="screen" class="w-[280px] h-[560px] rounded-xl object-cover shadow-xl mx-auto lg:mx-0" />
-      </div>
-    </div>
-
-  </div>
-</section>
-
-<!-- Application Screens 4: Profile & Milestone  -->
-<section class="px-6 py-12 bg-opacity-50">
-  <div class="max-w-6xl mx-auto flex flex-col-reverse lg:flex-row items-center gap-12" id="app-profile">
-
-    <!-- Gambar -->
-    <div class="w-full lg:w-1/2 rounded-xl p-6 relative h-[600px] overflow-hidden">
-      <div v-for="(screen, index) in screens" :key="index"
-           class="absolute top-1/2 transform -translate-y-1/2 transition-all duration-700 ease-in-out"
-           :class="getPosition(index)">
-        <img :src="screen" class="w-[280px] h-[560px] rounded-xl object-cover shadow-xl mx-auto lg:mx-0" />
-      </div>
-    </div>
-
-    <!-- Teks -->
-    <div class="w-full lg:w-1/2 text-center lg:text-left" data-aos="fade-left">
-      <h2 class="text-3xl font-bold mb-6">
-        <span class="text-[#f0a202]">Profile & Milestone</span> Screens
-      </h2>
-      <p class="text-gray-700">
-        Track your cultural journey, achievements, and participation milestones in a personalized user profile.
-     </p>
-    </div>
-
-  </div>
-</section>
-
-<p class="max-w-3xl mx-auto mt-10 px-6 py-4 bg-[#F9DA9A] bg-opacity-30 border-l-4 border-[#f0a202] rounded-lg text-base text-gray-800 leading-relaxed shadow-md" data-aos="fade-up">
-  <strong>Teras Budaya</strong> is a micro-project developed as part of the MSIB Batch 6 program under Android and UI/UX Development tracks at Infinite Learning. It was created by the dedicated team <em>Swadesi Sakti</em> to celebrate and promote Indonesia's rich cultural heritage through digital innovation.
-</p>
-
-</main>
-
-    <!-- Footer -->
-  <footer class="bg-[#f5faff] shadow-md border-t border-gray-200 mt-10">
+  <!-- Footer -->
+  <footer
+    class="bg-[#f5faff] dark:bg-gray-900 shadow-md border-t border-gray-200 dark:border-gray-800 mt-10 transition-colors duration-300">
     <div class="container mx-auto px-6 py-4 flex flex-col md:flex-row justify-between items-center">
       <!-- Logo/Teks -->
       <div class="text-xl font-semibold text-[#5E3BEE]"><a href="index.html">MyPorto</a></div>
-      <div>©2025 by FarisDani</div>
+      <div class="text-gray-600 dark:text-gray-400">©2025 by FarisDani</div>
       <!-- Social Icons -->
       <div class="flex space-x-4 mt-4 md:mt-0">
-        <a href="http://www.linkedin.com/in/faris-dani-rizkianto-rizkianto-809629310/" target="_blank" class="text-gray-600 hover:text-[#0077B5] transition">
+        <a href="http://www.linkedin.com/in/faris-dani-rizkianto-rizkianto-809629310/" target="_blank"
+          class="text-gray-600 hover:text-[#0077B5] transition">
           <i class="fab fa-linkedin fa-lg"></i>
         </a>
         <a href="https://github.com/FarisDani" target="_blank" class="text-gray-600 hover:text-[#0077B5] transition">
@@ -263,4 +311,5 @@
   <script src="js/script.js"></script>
 
 </body>
+
 </html>

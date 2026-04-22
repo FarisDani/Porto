@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>IT Multimedia Internship | MyPorto</title>
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <style type="text/tailwindcss">
+    @variant dark (&:where(.dark, .dark *));
+  </style>
+
+  <!-- Fonts & Icons -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/uicons-brands/css/uicons-brands.css">
+  <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/uicons-solid-rounded/css/uicons-solid-rounded.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <!-- AOS -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+</head>
+
+<body class="bg-white dark:bg-gray-900 text-gray-800 dark:text-gray-200 font-sans flex flex-col min-h-screen transition-colors duration-300">
+  
+  <!-- Navbar -->
+  <nav class="fixed top-0 w-full z-50 bg-white dark:bg-gray-900 shadow-xl transition-colors duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between h-16 items-center">
+        <!-- Logo -->
+        <div class="flex items-center">
+          <span class="text-xl font-bold text-[#5E3BEE]"><a href="index.html">MyPorto</a></span>
+        </div>
+        <!-- Navigation Links (Hidden on mobile) -->
+        <div class="hidden md:flex items-center space-x-6">
+          <a href="index.html" class="text-gray-700 dark:text-gray-200 hover:text-purple-600 dark:hover:text-purple-400">Home</a>
+          <a href="portofolio.html" class="text-gray-700 dark:text-gray-200 hover:text-purple-600 dark:hover:text-purple-400">Portofolio</a>
+          <a href="aboutme.html#contact" class="text-gray-700 dark:text-gray-200 hover:text-purple-600 dark:hover:text-purple-400">About Me</a>
+        </div>
+        
+        <div class="hidden md:flex items-center space-x-6">
+          <button type="button" class="theme-toggle-btn text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5">
+            <svg class="theme-toggle-dark-icon hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+              <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
+            </svg>
+            <svg class="theme-toggle-light-icon hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+              <path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" fill-rule="evenodd" clip-rule="evenodd"></path>
+            </svg>
+          </button>
+          <a href="aboutme.html#contact" class="border border-[#5E3BEE] text-[#5E3BEE] px-4 py-2 rounded-md hover:bg-[#452fc5] hover:text-white transition">Contact</a>
+        </div>
+
+        <!-- Mobile Menu Button -->
+        <div class="md:hidden flex items-center">
+          <button id="mobile-menu-button" class="text-gray-700 dark:text-white focus:outline-none text-2xl">☰</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden md:hidden px-4 pb-4">
+      <a href="index.html" class="block py-2 text-gray-700 hover:text-purple-600">Home</a>
+      <a href="portofolio.html" class="block py-2 text-gray-700 hover:text-purple-600">Portofolio</a>
+      <a href="aboutme.html" class="block py-2 text-gray-700 hover:text-purple-600">About Me</a>
+      <a href="aboutme.html#contact" class="block py-2 bg-[#5E3BEE] text-white rounded-md text-center hover:bg-[#452fc5] transition">Contact</a>
+      <div class="flex justify-center mt-4">
+        <button type="button" class="theme-toggle-btn text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5">
+          <svg class="theme-toggle-dark-icon hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+            <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
+          </svg>
+          <svg class="theme-toggle-light-icon hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+             <path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" fill-rule="evenodd" clip-rule="evenodd"></path>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <div class="px-18 py-2 from-gray-200 to-transparent"></div>
+  <br>
+
+  <main class="flex-grow">
+
+    <!-- Header Section -->
+    <!-- Background hero image bisa diganti dengan foto andalan dari internship -->
+    <section class="relative px-10 py-[150px] bg-cover bg-center bg-no-repeat bg-[#10B981]" style="background-image: url('https://images.unsplash.com/photo-1542038784456-1ea8e935640e?q=80&w=2070&auto=format&fit=crop');">
+      <!-- Overlay hitam transparan untuk readibility text -->
+      <div class="absolute inset-0 bg-black/60"></div>
+
+      <!-- Konten -->
+      <div class="relative z-10 flex flex-col items-center justify-center gap-10 max-w-7xl mx-auto text-center" data-aos="fade-up">
+        
+        <i class="fi fi-sr-camera text-7xl text-white mb-2"></i>
+        
+        <div class="flex-1 max-w-3xl text-white">
+          <h1 class="text-4xl md:text-5xl font-bold mb-4">IT <span class="text-[#10B981]">Multimedia</span> Internship</h1>
+          <p class="text-lg md:text-xl font-medium text-gray-200 mb-6">
+            A comprehensive portfolio of photography and videography works produced during my internship, capturing moments and telling visual stories.
+          </p>
+          <div class="flex flex-col md:flex-row items-center justify-center gap-4 mt-8">
+            <p class="text-lg font-semibold text-gray-200">Tools Used:</p>
+            <div class="flex justify-center gap-3 flex-wrap">
+              <span class="bg-[#10B981] px-4 py-2 rounded-full font-semibold shadow text-sm">Premiere Pro</span>
+              <span class="bg-[#10B981] px-4 py-2 rounded-full font-semibold shadow text-sm">Lightroom</span>
+              <span class="bg-[#10B981] px-4 py-2 rounded-full font-semibold shadow text-sm">DSLR / Mirrorless</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Photography / Instagram Embed Section -->
+    <section class="py-16 px-6 bg-white dark:bg-gray-900 transition-colors duration-300">
+      <div class="max-w-6xl mx-auto text-center">
+        <h2 class="text-3xl font-bold mb-4" data-aos="fade-down"><span class="text-[#10B981]">Photography</span> Gallery</h2>
+        <p class="text-gray-600 dark:text-gray-300 mb-12 max-w-2xl mx-auto" data-aos="fade-up">
+          A collection of embedded posts directly from Instagram. You can scroll, like, and view the original photography works below.
+        </p>
+
+        <!-- Grid for Instagram Embeds -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 justify-items-center">
+          
+          <!-- Paste Instagram Embed Block Here -->
+          <div class="w-full max-w-[400px] border border-gray-200 dark:border-gray-700 rounded-lg overflow-hidden flex items-center justify-center bg-gray-50 dark:bg-gray-800" data-aos="zoom-in" style="min-height: 450px;">
+            <p class="text-gray-500 dark:text-gray-400 p-6 text-sm italic">
+              (Paste your 1st Instagram Embed Code Here) <br><br> Go to an Instagram post on desktop -> Click 3 dots (...) -> Click "Embed" -> Copy Embed Code.
+            </p>
+          </div>
+
+          <!-- Paste Instagram Embed Block Here -->
+          <div class="w-full max-w-[400px] border border-gray-200 dark:border-gray-700 rounded-lg overflow-hidden flex items-center justify-center bg-gray-50 dark:bg-gray-800" data-aos="zoom-in" data-aos-delay="150" style="min-height: 450px;">
+            <p class="text-gray-500 dark:text-gray-400 p-6 text-sm italic">
+              (Paste your 2nd Instagram Embed Code Here)
+            </p>
+          </div>
+
+          <!-- Paste Instagram Embed Block Here -->
+          <div class="w-full max-w-[400px] border border-gray-200 dark:border-gray-700 rounded-lg overflow-hidden flex items-center justify-center bg-gray-50 dark:bg-gray-800" data-aos="zoom-in" data-aos-delay="300" style="min-height: 450px;">
+            <p class="text-gray-500 dark:text-gray-400 p-6 text-sm italic">
+              (Paste your 3rd Instagram Embed Code Here)
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Videography / YouTube Embed Section -->
+    <section class="py-16 px-6 bg-[#f5faff] dark:bg-gray-800 transition-colors duration-300">
+      <div class="max-w-6xl mx-auto">
+        <div class="text-center mb-12">
+          <h2 class="text-3xl font-bold mb-4" data-aos="fade-down"><span class="text-[#10B981]">Videography</span> Works</h2>
+          <p class="text-gray-600 dark:text-gray-300 max-w-2xl mx-auto" data-aos="fade-up">
+            Selected video projects covering events, promos, and visual narratives. Embedded directly from YouTube/Instagram Reels for fast loading.
+          </p>
+        </div>
+
+        <div class="flex flex-col gap-12">
+          
+          <!-- Video 1 -->
+          <div class="flex flex-col lg:flex-row items-center gap-8" data-aos="fade-right">
+            <!-- Video Container (Responsive 16:9) -->
+            <div class="w-full lg:w-3/5 rounded-xl overflow-hidden shadow-lg border-4 border-gray-100 dark:border-gray-700 bg-gray-200 dark:bg-gray-900 aspect-video flex items-center justify-center relative">
+              <p class="text-gray-500 text-center px-4 italic absolute">
+                 (Paste YouTube &lt;iframe&gt; embed code here and add class "w-full h-full" to the iframe) <br><br> Example: &lt;iframe class="w-full h-full" src="..."&gt;&lt;/iframe&gt;
+              </p>
+            </div>
+            <!-- Video Text -->
+            <div class="w-full lg:w-2/5">
+              <h3 class="text-2xl font-bold mb-3 text-gray-800 dark:text-gray-100">Project Video Title 1</h3>
+              <p class="text-gray-600 dark:text-gray-300 leading-relaxed">
+                Describe the context of the video. For example: "A recap video documenting the 3-day internal company workshop. Responsible for setting up the camera gear, capturing b-roll, and final editing."
+              </p>
+            </div>
+          </div>
+
+          <!-- Video 2 -->
+          <div class="flex flex-col-reverse lg:flex-row items-center gap-8" data-aos="fade-left">
+            <!-- Video Text -->
+            <div class="w-full lg:w-2/5 lg:text-right">
+              <h3 class="text-2xl font-bold mb-3 text-gray-800 dark:text-gray-100">Project Video Title 2</h3>
+              <p class="text-gray-600 dark:text-gray-300 leading-relaxed">
+                Describe the context of the video. Example: "A short promotional video for social media campaigns. Focused on color grading and upbeat transitions to retain audience retention."
+              </p>
+            </div>
+            <!-- Video Container (Responsive 16:9) -->
+            <div class="w-full lg:w-3/5 rounded-xl overflow-hidden shadow-lg border-4 border-gray-100 dark:border-gray-700 bg-gray-200 dark:bg-gray-900 aspect-video flex items-center justify-center relative">
+              <p class="text-gray-500 text-center px-4 italic absolute">
+                 (Paste YouTube 2nd &lt;iframe&gt; here)
+              </p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <div class="max-w-4xl mx-auto my-16 px-6">
+      <p class="py-5 px-6 bg-[#ebfbf5] dark:bg-[#107052]/20 border-l-4 border-[#10B981] rounded-r-lg text-base text-gray-800 dark:text-gray-200 leading-relaxed shadow-sm" data-aos="fade-up">
+        <strong>The IT Multimedia Internship</strong> allowed me to deeply explore the creative side of technology. From understanding framing and lighting in photography to mastering post-production editing for videos, this experience sharpened my eye for aesthetics while maintaining technical precision. The selected pieces above represent my continuous growth in the multimedia field.
+      </p>
+    </div>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-[#f5faff] dark:bg-gray-900 shadow-md border-t border-gray-200 dark:border-gray-800 transition-colors duration-300">
+    <div class="container mx-auto px-6 py-4 flex flex-col md:flex-row justify-between items-center">
+      <div class="text-xl font-semibold text-[#5E3BEE]"><a href="index.html">MyPorto</a></div>
+      <div class="text-gray-600 dark:text-gray-400">©2025 by FarisDani</div>
+      <div class="flex space-x-4 mt-4 md:mt-0">
+        <a href="http://www.linkedin.com/in/faris-dani-rizkianto-rizkianto-809629310/" target="_blank" class="text-gray-600 hover:text-[#0077B5] transition">
+          <i class="fab fa-linkedin fa-lg"></i>
+        </a>
+        <a href="https://github.com/FarisDani" target="_blank" class="text-gray-600 hover:text-[#0077B5] transition">
+          <i class="fab fa-github fa-lg"></i>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+
+</body>
+
+</html>

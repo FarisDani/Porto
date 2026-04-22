@@ -1,9 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <style type="text/tailwindcss">
+    @variant dark (&:where(.dark, .dark *));
+  </style>
   <script src="https://unpkg.com/vue@3"></script>
   <!-- <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script> -->
   <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" id="aos-css" disabled>
@@ -13,248 +17,369 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
   <title>FarisDani | MyPorto</title>
 </head>
-<body style="font-family: 'Poppins', sans-serif;" class="relative top-0 z-50 w-full flex flex-col bg-white" id="app">
 
-<!-- Preloader -->
-<div id="preloader" class="fixed inset-0 flex flex-col items-center justify-center bg-white z-50">
-  <div class="text-xl font-bold text-[#5E3BEE]">MyPorto</div>
-  <br>
-  <div class="w-64 h-3 bg-gray-200 rounded-full overflow-hidden">
-    <div id="loading-bar" class="h-full bg-[#5E3BEE] rounded-full animate-pulse transition-all duration-250" style="width: 0%;"></div>
-  </div>
-</div>
+<body style="font-family: 'Poppins', sans-serif;"
+  class="relative top-0 z-50 w-full flex flex-col bg-white dark:bg-gray-900 transition-colors duration-300" id="app">
 
-<div  id="main-content" class="opacity-0 pointer-events-none hidden aos-delay-start transition-opacity duration-500">
-
-<!-- Navbar -->
-<nav class="fixed top-0 w-full z-50 bg-white shadow-xl" data-aos="fade-down">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="flex justify-between h-16 items-center">
-      <div class="flex items-center">
-        <span class="text-xl font-bold text-[#5E3BEE]"><a href="index.html">MyPorto</a></span>
-      </div>
-      <div class="hidden md:flex items-center space-x-6">
-        <a href="index.html" class="text-gray-700 hover:text-purple-600">Home</a>
-        <a href="portofolio.html" class="text-gray-700 hover:text-purple-600">Portofolio</a>
-        <a href="aboutme.html" class="text-gray-700 hover:text-purple-600">About Me</a>
-      </div>
-      <div class="hidden md:flex items-center space-x-6">
-        <a href="aboutme.html#contact" class="border border-[#5E3BEE] text-[#5E3BEE] px-4 py-2 rounded-md hover:bg-[#452fc5] hover:text-white transition">Contact</a>
-      </div>
-      <div class="md:hidden flex items-center">
-        <button id="mobile-menu-button" class="text-gray-700 focus:outline-none text-2xl">☰</button>
-      </div>
+  <!-- Preloader -->
+  <div id="preloader" class="fixed inset-0 flex flex-col items-center justify-center bg-white dark:bg-gray-900 z-50">
+    <div class="text-xl font-bold text-[#5E3BEE]">MyPorto</div>
+    <br>
+    <div class="w-64 h-3 bg-gray-200 rounded-full overflow-hidden">
+      <div id="loading-bar" class="h-full bg-[#5E3BEE] rounded-full animate-pulse transition-all duration-250"
+        style="width: 0%;"></div>
     </div>
   </div>
-  <div id="mobile-menu" class="hidden md:hidden px-4 pb-4">
-    <a href="index.html" class="block py-2 text-gray-700 hover:text-purple-600">Home</a>
-    <a href="portofolio.html" class="block py-2 text-gray-700 hover:text-purple-600">Portofolio</a>
-    <a href="aboutme.html" class="block py-2 text-gray-700 hover:text-purple-600">About Me</a>
-    <a href="aboutme.html#contact" class="block py-2 bg-[#5E3BEE] text-white rounded-md text-center hover:bg-[#452fc5] transition">Contact</a>
-  </div>
-</nav>
-<div class="h-15 bg-gradient-to-b from-gray-200 to-transparent"></div>
 
-<main class="flex-grow">
+  <div id="main-content" class="opacity-0 pointer-events-none hidden aos-delay-start transition-opacity duration-500">
 
-
-
-<!-- Hero Section -->
-<section class="min-h-[500px] w-full bg-[#F5FCFF] flex flex-col md:flex-row items-center justify-center gap-6 p-6" data-aos="fade-up" data-aos-duration="1200">
-  <div class="w-full md:w-1/3 flex flex-col items-start justify-center gap-4">
-    <h2 class="text-gray-600 mt-2">Hello, I am Faris</h2>
-    <h2 class="text-gray-800 text-4xl md:text-5xl font-bold leading-tight">
-      A Fresh Graduate <span class="text-[#5E3BEE]">Informatics</span> Student
-    </h2>
-    <p class="text-gray-600 mt-2">
-      Eager to apply the knowledge and skills I’ve acquired during my studies to real-world software development projects.
-    </p>
-    <a href="#getintouch" class="block px-4 py-2 bg-[#5E3BEE] text-white rounded-md text-center hover:bg-white hover:text-[#5E3BEE] hover:border border-[#5E3BEE] texttransition">Get in Touch</a>
-  </div>
-  <div class="w-full md:w-1/2 flex items-center justify-center" data-aos="zoom-in">
-    <img class="max-w-full h-auto rounded-lg" src="img/FotoOrang.png" alt="foto">
-  </div>
-</section>
-
-<!-- Skills Section -->
-<section class="w-full flex flex-col items-start justify-center gap-10 pl-4 md:pl-[100px] pt-10" data-aos="fade-right">
-  <h2 class="text-gray-800 text-4xl md:text-5xl font-semibold leading-tight">My Skills</h2>
-</section>
-<section class="min-h-[100px] w-full flex flex-col items-center justify-center gap-10 px-6 py-10 bg-white">
-  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-20">
-    <div class="bg-[#f5faff] min-h-[200px] w-[300px] rounded-lg shadow-sm hover:shadow-lg transition duration-300 p-6 flex flex-col items-start justify-center text-center" data-aos="fade-up" data-aos-delay="100">
-      <div class="w-12 h-12 flex items-center justify-center rounded-lg bg-[#e0f2fe] mb-3">
-        <i class="fi fi-brands-android text-2xl text-[#5E3BEE]"></i>
+    <!-- Navbar -->
+    <nav class="fixed top-0 w-full z-50 bg-white dark:bg-gray-900 shadow-xl transition-colors duration-300"
+      data-aos="fade-down">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between h-16 items-center">
+          <div class="flex items-center">
+            <span class="text-xl font-bold text-[#5E3BEE]"><a href="index.html">MyPorto</a></span>
+          </div>
+          <div class="hidden md:flex items-center space-x-6">
+            <a href="index.html"
+              class="text-gray-700 dark:text-gray-200 hover:text-purple-600 dark:hover:text-purple-400">Home</a>
+            <a href="portofolio.html"
+              class="text-gray-700 dark:text-gray-200 hover:text-purple-600 dark:hover:text-purple-400">Portofolio</a>
+            <a href="aboutme.html"
+              class="text-gray-700 dark:text-gray-200 hover:text-purple-600 dark:hover:text-purple-400">About Me</a>
+          </div>
+          <div class="hidden md:flex items-center space-x-6">
+            <button type="button"
+              class="theme-toggle-btn text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5">
+              <svg class="theme-toggle-dark-icon hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg">
+                <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
+              </svg>
+              <svg class="theme-toggle-light-icon hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z"
+                  fill-rule="evenodd" clip-rule="evenodd"></path>
+              </svg>
+            </button>
+            <a href="aboutme.html#contact"
+              class="border border-[#5E3BEE] text-[#5E3BEE] px-4 py-2 rounded-md hover:bg-[#452fc5] hover:text-white transition">Contact</a>
+          </div>
+          <div class="md:hidden flex items-center gap-4">
+            <!-- Mobile Toggle Button -->
+            <button id="theme-toggle-mobile" type="button"
+              class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5">
+              <!-- Reuse icons or duplicate them via JS/CSS if needed, but for simplicity we rely on the same ID logic, 
+                HOWEVER, ID must be unique. I will use classes for the toggle or add logic for the second button.
+                Wait, I can just use a different ID for the mobile button and attach event listener to BOTH.
+            -->
+              <!-- Actually, I'll stick to one button in desktop for now. If mobile needs it, I should modify the mobile menu.
+                 The user requested "fleksibel", so I should probably put it in the mobile menu or the header. 
+                 The header is visible on mobile too (the hamburger is there).
+                 Let's put a toggle button NEXT to the hamburger menu on mobile.
+             -->
+              <!-- Warning: modifying "md:hidden flex items-center" -->
+          </div>
+          <div class="md:hidden flex items-center">
+            <button id="mobile-menu-button" class="text-gray-700 dark:text-white focus:outline-none text-2xl">☰</button>
+          </div>
+        </div>
       </div>
-      <h3 class="text-lg font-semibold text-[#5E3BEE]">Android Programming</h3>
-      <h4 class="text-sm">Jetpack Compose</h4>
-    </div>
-    <div class="bg-[#f5faff] min-h-[200px] w-[300px] rounded-lg shadow-sm hover:shadow-lg transition duration-300 p-6 flex flex-col items-start justify-center text-center" data-aos="fade-up" data-aos-delay="200">
-      <div class="w-12 h-12 flex items-center justify-center rounded-lg bg-[#e0f2fe] mb-3">
-        <i class="fi fi-sr-laptop-code text-2xl text-[#5E3BEE]"></i>
+      <div id="mobile-menu" class="hidden md:hidden px-4 pb-4">
+        <a href="index.html" class="block py-2 text-gray-700 hover:text-purple-600">Home</a>
+        <a href="portofolio.html" class="block py-2 text-gray-700 hover:text-purple-600">Portofolio</a>
+        <a href="aboutme.html" class="block py-2 text-gray-700 hover:text-purple-600">About Me</a>
+        <a href="aboutme.html#contact"
+          class="block py-2 bg-[#5E3BEE] text-white rounded-md text-center hover:bg-[#452fc5] transition">Contact</a>
+        <div class="flex justify-center mt-4">
+          <button type="button"
+            class="theme-toggle-btn text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5">
+            <svg class="theme-toggle-dark-icon hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20"
+              xmlns="http://www.w3.org/2000/svg">
+              <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
+            </svg>
+            <svg class="theme-toggle-light-icon hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20"
+              xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z"
+                fill-rule="evenodd" clip-rule="evenodd"></path>
+            </svg>
+          </button>
+        </div>
       </div>
-      <h3 class="text-lg font-semibold text-[#5E3BEE]">Web Programming</h3>
-      <h4 class="text-sm">HTML, CSS, MySQL</h4>
-    </div>
-    <div class="bg-[#f5faff] min-h-[200px] w-[300px] rounded-lg shadow-sm hover:shadow-lg transition duration-300 p-6 flex flex-col items-start justify-center text-center" data-aos="fade-up" data-aos-delay="300">
-      <div class="w-12 h-12 flex items-center justify-center rounded-lg bg-[#e0f2fe] mb-3">
-        <i class="fi fi-sr-pencil-ruler text-2xl text-[#5E3BEE]"></i>
-      </div>
-      <h3 class="text-lg font-semibold text-[#5E3BEE]">UI/UX Design</h3>
-      <h4 class="text-sm">Figma</h4>
-    </div>
-    <div class="bg-[#f5faff] min-h-[200px] w-[300px] rounded-lg shadow-sm hover:shadow-lg transition duration-300 p-6 flex flex-col items-start justify-center text-center" data-aos="fade-up" data-aos-delay="400">
-      <div class="w-12 h-12 flex items-center justify-center rounded-lg bg-[#e0f2fe] mb-3">
-        <i class="fi fi-sr-file-code text-2xl text-[#5E3BEE]"></i>
-      </div>
-      <h3 class="text-lg font-semibold text-[#5E3BEE]">Others</h3>
-      <h4 class="text-sm">Matlab, R Studio</h4>
-    </div>
-  </div>
-</section>
+    </nav>
+    <div class="h-15 bg-gradient-to-b from-gray-200 to-transparent"></div>
 
-<!-- Hero Section 3 -->
-<section class="min-h-[500px] w-full flex flex-col md:flex-row items-center justify-center gap-6 p-6" data-aos="fade-up" data-aos-duration="1000">
-  <!-- Image -->
-  <div class="w-full md:w-1/2 flex items-center justify-center" data-aos="zoom-in" data-aos-delay="200">
-    <img class="max-w-1/2 h-1/2 rounded-lg" src="img/AboutMe.png" alt="fotoAboutMe">
-  </div>
-
-  <!-- Text -->
-  <div class="w-full md:w-1/3 flex flex-col items-start justify-center gap-4" data-aos="fade-left" data-aos-delay="400">
-    <h2 class="text-gray-800 text-4xl md:text-5xl font-semibold leading-tight">
-      About Me
-    </h2>
-    <p class="text-gray-600 mt-2">
-       A student at Universitas Pembangunan Vataran Yogyakarta, actively involved in the IT Club under the UI/UX division. Interested in applying the knowledge and skills gained throughout academic studies
-    </p>
-    <a href="contact.html" class="block px-4 py-2 border border-[#5E3BEE] text-[#5E3BEE] rounded-md text-center hover:bg-[#452fc5] hover:text-white transition">
-      More About Me
-    </a>
-  </div>
-</section>
-
-<!-- Hero Section 4 -->
-<section class="w-full flex flex-col md:flex-row items-center justify-between gap-4 px-4 sm:px-10 md:px-[100px] py-6" data-aos="fade-down" data-aos-duration="1000">
-  <!-- Judul -->
-  <h2 class="text-gray-800 text-4xl md:text-5xl font-semibold leading-tight text-center md:text-left">
-    My Portofolio
-  </h2>
-  <!-- Tombol -->
-  <a href="portofolio.html"
-     class="block px-4 py-2 bg-[#5E3BEE] text-white rounded-md text-center hover:bg-white hover:text-[#5E3BEE] hover:border border-[#5E3BEE] texttransition " data-aos="fade-up" data-aos-delay="200">
-    See More
-  </a>
-</section>
+    <main class="flex-grow">
 
 
 
-<section class="w-full px-6 py-10 bg-white">
-  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 justify-items-center">
-    <!-- Teras Budaya -->
-    <div class="bg-[#f5faff] w-full max-w-[500px] min-h-[480px] rounded-lg shadow-sm hover:shadow-lg transition duration-300 flex flex-col mx-auto" data-aos="zoom-in-up">
-      <a href="porto1.html">
-        <img class="w-full h-auto mb-3 rounded-t-lg" src="img/projectIL1.png" alt="Code">
-        <div class="p-5">
-          <h3 class="text-lg font-semibold text-[#f0a202]">Teras Budaya</h3>
-          <h4 class="text-sm">Teras Budaya is a platform for exploring Indonesian culture, allowing users to explore cultural events.</h4>
-          <br>
-          <a href="porto1.html" class="px-4 py-2 bg-[#f0a202] text-white font-semibold rounded-md hover:bg-white hover:text-[#f0a202] hover:border border-[#f0a202] transition">
-            View
+      <!-- Hero Section -->
+      <section
+        class="min-h-[500px] w-full bg-[#F5FCFF] dark:bg-gray-950 flex flex-col md:flex-row items-center justify-center gap-6 p-6 transition-colors duration-300"
+        data-aos="fade-up" data-aos-duration="1200">
+        <div class="w-full md:w-1/3 flex flex-col items-start justify-center gap-4">
+          <h2 class="text-gray-600 dark:text-gray-300 mt-2">Hello, I am Faris</h2>
+          <h2 class="text-gray-800 dark:text-white text-4xl md:text-5xl font-bold leading-tight">
+            A Fresh Graduate <span class="text-[#5E3BEE]">Informatics</span> Student
+          </h2>
+          <p class="text-gray-600 dark:text-gray-300 mt-2">
+            Eager to apply the knowledge and skills I’ve acquired during my studies to real-world software development
+            projects.
+          </p>
+          <a href="#getintouch"
+            class="block px-4 py-2 bg-[#5E3BEE] text-white rounded-md text-center hover:bg-white hover:text-[#5E3BEE] hover:border border-[#5E3BEE] texttransition">Get
+            in Touch</a>
+        </div>
+        <div class="w-full md:w-1/2 flex items-center justify-center" data-aos="zoom-in">
+          <img class="max-w-full h-auto rounded-lg" src="img/FotoOrang.png" alt="foto">
+        </div>
+      </section>
+
+      <!-- Skills Section -->
+      <section class="w-full flex flex-col items-start justify-center gap-10 pl-4 md:pl-[100px] pt-10"
+        data-aos="fade-right">
+        <h2 class="text-gray-800 dark:text-white text-4xl md:text-5xl font-semibold leading-tight">My Skills</h2>
+      </section>
+      <section
+        class="min-h-[100px] w-full flex flex-col items-center justify-center gap-10 px-6 py-10 bg-white dark:bg-gray-900 transition-colors duration-300">
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-20">
+          <div
+            class="bg-[#f5faff] dark:bg-gray-800 min-h-[200px] w-[300px] rounded-lg shadow-sm hover:shadow-lg transition duration-300 p-6 flex flex-col items-start justify-center text-center"
+            data-aos="fade-up" data-aos-delay="100">
+            <div class="w-12 h-12 flex items-center justify-center rounded-lg bg-[#e0f2fe] mb-3">
+              <i class="fi fi-brands-android text-2xl text-[#5E3BEE]"></i>
+            </div>
+            <h3 class="text-lg font-semibold text-[#5E3BEE]">Android Programming</h3>
+            <h4 class="text-sm dark:text-gray-300">Jetpack Compose</h4>
+          </div>
+          <div
+            class="bg-[#f5faff] dark:bg-gray-800 min-h-[200px] w-[300px] rounded-lg shadow-sm hover:shadow-lg transition duration-300 p-6 flex flex-col items-start justify-center text-center"
+            data-aos="fade-up" data-aos-delay="200">
+            <div class="w-12 h-12 flex items-center justify-center rounded-lg bg-[#e0f2fe] mb-3">
+              <i class="fi fi-sr-laptop-code text-2xl text-[#5E3BEE]"></i>
+            </div>
+            <h3 class="text-lg font-semibold text-[#5E3BEE]">Web Programming</h3>
+            <h4 class="text-sm dark:text-gray-300">HTML, CSS, MySQL</h4>
+          </div>
+          <div
+            class="bg-[#f5faff] dark:bg-gray-800 min-h-[200px] w-[300px] rounded-lg shadow-sm hover:shadow-lg transition duration-300 p-6 flex flex-col items-start justify-center text-center"
+            data-aos="fade-up" data-aos-delay="300">
+            <div class="w-12 h-12 flex items-center justify-center rounded-lg bg-[#e0f2fe] mb-3">
+              <i class="fi fi-sr-pencil-ruler text-2xl text-[#5E3BEE]"></i>
+            </div>
+            <h3 class="text-lg font-semibold text-[#5E3BEE]">UI/UX Design</h3>
+            <h4 class="text-sm dark:text-gray-300">Figma</h4>
+          </div>
+          <div
+            class="bg-[#f5faff] dark:bg-gray-800 min-h-[200px] w-[300px] rounded-lg shadow-sm hover:shadow-lg transition duration-300 p-6 flex flex-col items-start justify-center text-center"
+            data-aos="fade-up" data-aos-delay="400">
+            <div class="w-12 h-12 flex items-center justify-center rounded-lg bg-[#e0f2fe] mb-3">
+              <i class="fi fi-sr-file-code text-2xl text-[#5E3BEE]"></i>
+            </div>
+            <h3 class="text-lg font-semibold text-[#5E3BEE]">Others</h3>
+            <h4 class="text-sm dark:text-gray-300">Matlab, R Studio</h4>
+          </div>
+        </div>
+      </section>
+
+      <!-- Hero Section 3 -->
+      <section class="min-h-[500px] w-full flex flex-col md:flex-row items-center justify-center gap-6 p-6"
+        data-aos="fade-up" data-aos-duration="1000">
+        <!-- Image -->
+        <div class="w-full md:w-1/2 flex items-center justify-center" data-aos="zoom-in" data-aos-delay="200">
+          <img class="max-w-1/2 h-1/2 rounded-lg" src="img/AboutMe.png" alt="fotoAboutMe">
+        </div>
+
+        <!-- Text -->
+        <div class="w-full md:w-1/3 flex flex-col items-start justify-center gap-4" data-aos="fade-left"
+          data-aos-delay="400">
+          <h2 class="text-gray-800 dark:text-white text-4xl md:text-5xl font-semibold leading-tight">
+            About Me
+          </h2>
+          <p class="text-gray-600 dark:text-gray-300 mt-2">
+            A student at Universitas Pembangunan Vataran Yogyakarta, actively involved in the IT Club under the UI/UX
+            division. Interested in applying the knowledge and skills gained throughout academic studies
+          </p>
+          <a href="contact.html"
+            class="block px-4 py-2 border border-[#5E3BEE] text-[#5E3BEE] rounded-md text-center hover:bg-[#452fc5] hover:text-white transition">
+            More About Me
           </a>
         </div>
-      </a>
-    </div>
+      </section>
 
-    <!-- PawPals -->
-    <div class="bg-[#f5faff] w-full max-w-[500px] min-h-[480px] rounded-lg shadow-sm hover:shadow-lg transition duration-300 flex flex-col mx-auto" data-aos="zoom-in-up" data-aos-delay="150">
-      <a href="porto2.html">
-        <img class="w-full h-auto mb-3 rounded-t-lg" src="img/projectIL2.png" alt="Code">
-        <div class="p-5">
-          <h3 class="text-lg font-semibold text-[#fd6220]">PawPals</h3>
-          <h4 class="text-sm">PawPals is a pet care platform that offers solutions to help the pet owners to taking care of their best pals.</h4>
-          <br>
-          <a href="porto2.html" class="px-4 py-2 bg-[#fd6220] text-white font-semibold rounded-md hover:bg-white hover:text-[#fd6220] hover:border border-[#fd6220] transition">
-            View
+      <!-- Hero Section 4 -->
+      <section
+        class="w-full flex flex-col md:flex-row items-center justify-between gap-4 px-4 sm:px-10 md:px-[100px] py-6"
+        data-aos="fade-down" data-aos-duration="1000">
+        <!-- Judul -->
+        <h2
+          class="text-gray-800 dark:text-white text-4xl md:text-5xl font-semibold leading-tight text-center md:text-left">
+          My Portofolio
+        </h2>
+        <!-- Tombol -->
+        <a href="portofolio.html"
+          class="block px-4 py-2 bg-[#5E3BEE] text-white rounded-md text-center hover:bg-white hover:text-[#5E3BEE] hover:border border-[#5E3BEE] texttransition "
+          data-aos="fade-up" data-aos-delay="200">
+          See More
+        </a>
+      </section>
+
+
+
+      <section class="w-full px-6 py-10 bg-white dark:bg-gray-900 transition-colors duration-300">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 justify-items-center">
+          <!-- Teras Budaya -->
+          <div
+            class="bg-[#f5faff] dark:bg-gray-800 w-full max-w-[500px] min-h-[480px] rounded-lg shadow-sm hover:shadow-lg transition duration-300 flex flex-col mx-auto"
+            data-aos="zoom-in-up">
+            <a href="porto1.html">
+              <img class="w-full h-auto mb-3 rounded-t-lg" src="img/projectIL1.png" alt="Code">
+              <div class="p-5">
+                <h3 class="text-lg font-semibold text-[#f0a202]">Teras Budaya</h3>
+                <h4 class="text-sm dark:text-gray-300">Teras Budaya is a platform for exploring Indonesian culture,
+                  allowing users to explore cultural events.</h4>
+                <br>
+                <a href="porto1.html"
+                  class="px-4 py-2 bg-[#f0a202] text-white font-semibold rounded-md hover:bg-white hover:text-[#f0a202] hover:border border-[#f0a202] transition">
+                  View
+                </a>
+              </div>
+            </a>
+          </div>
+
+          <!-- PawPals -->
+          <div
+            class="bg-[#f5faff] dark:bg-gray-800 w-full max-w-[500px] min-h-[480px] rounded-lg shadow-sm hover:shadow-lg transition duration-300 flex flex-col mx-auto"
+            data-aos="zoom-in-up" data-aos-delay="150">
+            <a href="porto2.html">
+              <img class="w-full h-auto mb-3 rounded-t-lg" src="img/projectIL2.png" alt="Code">
+              <div class="p-5">
+                <h3 class="text-lg font-semibold text-[#fd6220]">PawPals</h3>
+                <h4 class="text-sm dark:text-gray-300">PawPals is a pet care platform that offers solutions to help the
+                  pet owners to taking care of their best pals.</h4>
+                <br>
+                <a href="porto2.html"
+                  class="px-4 py-2 bg-[#fd6220] text-white font-semibold rounded-md hover:bg-white hover:text-[#fd6220] hover:border border-[#fd6220] transition">
+                  View
+                </a>
+              </div>
+            </a>
+          </div>
+
+          <!-- Mentor Kita -->
+          <div
+            class="bg-[#f5faff] dark:bg-gray-800 w-full max-w-[500px] min-h-[480px] rounded-lg shadow-sm hover:shadow-lg transition duration-300 flex flex-col mx-auto"
+            data-aos="zoom-in-up" data-aos-delay="300">
+            <a href="porto3.html">
+              <img class="w-full h-auto mb-3 rounded-t-lg" src="img/projectITC3 (2).png" alt="Code">
+              <div class="p-5">
+                <h3 class="text-lg font-semibold text-[#162DA5]">Mentor Kita</h3>
+                <h4 class="text-sm dark:text-gray-300">Mentor Kita is a web-based platform developed by my team to help
+                  users find mentors tailored to their personal goals and interests.</h4>
+                <br>
+                <a href="porto3.html"
+                  class="px-4 py-2 bg-[#162DA5] text-white font-semibold rounded-md hover:bg-white hover:text-[#162DA5] hover:border border-[#162DA5] transition">
+                  View
+                </a>
+              </div>
+            </a>
+          </div>
+
+          <!-- IT Multimedia Internship -->
+          <div
+            class="bg-[#f5faff] dark:bg-gray-800 w-full max-w-[500px] min-h-[480px] rounded-lg shadow-sm hover:shadow-lg transition duration-300 flex flex-col mx-auto"
+            data-aos="zoom-in-up" data-aos-delay="450">
+            <a href="porto4.html">
+              <!-- Anda dapat mengganti gambar ini nanti yang sesuai dengan IT Multimedia -->
+              <div class="w-full h-48 mb-3 rounded-t-lg bg-[#10B981] flex items-center justify-center">
+                <i class="fi fi-sr-camera text-5xl text-white"></i>
+              </div>
+              <div class="p-5">
+                <h3 class="text-lg font-semibold text-[#10B981]">IT Multimedia Internship</h3>
+                <h4 class="text-sm dark:text-gray-300">A collection of photography and videography projects captured during my IT Multimedia Internship, showcasing visual storytelling through media.</h4>
+                <br>
+                <a href="porto4.html"
+                  class="px-4 py-2 bg-[#10B981] text-white font-semibold rounded-md hover:bg-white hover:text-[#10B981] hover:border border-[#10B981] transition">
+                  View
+                </a>
+              </div>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <div class="max-w-3xl mx-auto p-6" id="getintouch">
+        <!-- Heading -->
+        <div class="text-center mb-8">
+
+          <h1 class="text-3xl font-bold text-gray-900 dark:text-white" data-aos="fade-in">Get In Touch</h1>
+
+        </div>
+
+        <!-- Form -->
+        <form id="contact-form" action="https://formspree.io/f/mzzagdjn" method="POST"
+          class="space-y-6 border border-[#5E3BEE] p-6 rounded-lg" data-aos="fade-in" data-aos-delay="400"
+          data-aos="fade-in" data-aos-delay="50">
+          <!-- Grid Inputs -->
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div data-aos="fade-right">
+              <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1"
+                id="user-message">Name</label>
+              <input type="text" name="name"
+                class="w-full border border-[#5E3BEE] rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-[#5E3BEE] dark:bg-gray-800 dark:text-white" />
+            </div>
+            <div data-aos="fade-left">
+              <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1"
+                id="user-message">Email</label>
+              <input type="email" name="email"
+                class="w-full border border-[#5E3BEE] rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-[#5E3BEE] dark:bg-gray-800 dark:text-white" />
+            </div>
+          </div>
+          <div data-aos="fade-up">
+            <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1"
+              id="user-message">Message</label>
+            <textarea rows="5" name="message"
+              class="w-full border border-[#5E3BEE] rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-[#5E3BEE] dark:bg-gray-800 dark:text-white"
+              placeholder="Type your message..."></textarea>
+          </div>
+
+          <!-- Submit -->
+          <div class="text-center" data-aos="fade-up" data-aos-delay="400">
+            <button type="submit"
+              class="bg-[#5E3BEE] text-white px-6 py-2 rounded-md hover:bg-white hover:text-[#5E3BEE] transition">Submit</button>
+            <p id="success-message" class="text-green-600 mt-4 hidden">Form berhasil dikirim!</p>
+
+          </div>
+        </form>
+      </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer
+      class="bg-[#f5faff] dark:bg-gray-900 shadow-md border-t border-gray-200 dark:border-gray-800 mt-10 transition-colors duration-300">
+      <div class="container mx-auto px-6 py-4 flex flex-col md:flex-row justify-between items-center">
+        <!-- Logo/Teks -->
+        <div class="text-xl font-semibold text-[#5E3BEE]">MyPorto</div>
+        <div class="text-gray-600 dark:text-gray-400">©2025 by FarisDani</div>
+        <!-- Social Icons -->
+        <div class="flex space-x-4 mt-4 md:mt-0">
+          <a href="http://www.linkedin.com/in/faris-dani-rizkianto-rizkianto-809629310/" target="_blank"
+            class="text-gray-600 hover:text-[#0077B5] transition">
+            <i class="fab fa-linkedin fa-lg"></i>
+          </a>
+          <a href="https://github.com/FarisDani" target="_blank" class="text-gray-600 hover:text-[#0077B5] transition">
+            <i class="fab fa-github fa-lg"></i>
           </a>
         </div>
-      </a>
-    </div>
-
-    <!-- Mentor Kita -->
-    <div class="bg-[#f5faff] w-full max-w-[500px] min-h-[480px] rounded-lg shadow-sm hover:shadow-lg transition duration-300 flex flex-col mx-auto" data-aos="zoom-in-up" data-aos-delay="300">
-      <a href="porto3.html">
-        <img class="w-full h-auto mb-3 rounded-t-lg" src="img/projectITC3 (2).png" alt="Code">
-        <div class="p-5">
-          <h3 class="text-lg font-semibold text-[#162DA5]">Mentor Kita</h3>
-          <h4 class="text-sm">Mentor Kita is a web-based platform developed by my team to help users find mentors tailored to their personal goals and interests.</h4>
-          <br>
-          <a href="porto3.html" class="px-4 py-2 bg-[#162DA5] text-white font-semibold rounded-md hover:bg-white hover:text-[#162DA5] hover:border border-[#162DA5] transition">
-            View
-          </a>
-        </div>
-      </a>
-    </div>
-  </div>
-</section>
-
-<div class="max-w-3xl mx-auto p-6" id="getintouch">
-    <!-- Heading -->
-    <div class="text-center mb-8">
-
-      <h1 class="text-3xl font-bold text-gray-900" data-aos="fade-in">Get In Touch</h1>
- 
-    </div>
-
-    <!-- Form -->
-    <form  id="contact-form" action="https://formspree.io/f/mzzagdjn" method="POST" class="space-y-6 border border-[#5E3BEE] p-6 rounded-lg" data-aos="fade-in" data-aos-delay="400"data-aos="fade-in" data-aos-delay="50">
-      <!-- Grid Inputs -->
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-4" >
-        <div data-aos="fade-right">
-          <label class="block text-sm font-medium text-gray-700 mb-1" id="user-message">Name</label>
-          <input type="text" name="name" class="w-full border border-[#5E3BEE] rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-[#5E3BEE]" />
-        </div>
-        <div data-aos="fade-left">
-          <label class="block text-sm font-medium text-gray-700 mb-1" id="user-message">Email</label>
-          <input type="email" name="email" class="w-full border border-[#5E3BEE] rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-[#5E3BEE]" />
-        </div>
       </div>
-      <div data-aos="fade-up">
-        <label class="block text-sm font-medium text-gray-700 mb-1" id="user-message">Message</label>
-        <textarea rows="5" name="message" class="w-full border border-[#5E3BEE] rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-[#5E3BEE]" placeholder="Type your message..."></textarea>
-      </div>
+    </footer>
 
-      <!-- Submit -->
-      <div class="text-center" data-aos="fade-up" data-aos-delay="400">
-        <button type="submit" class="bg-[#5E3BEE] text-white px-6 py-2 rounded-md hover:bg-white hover:text-[#5E3BEE] transition">Submit</button>
-      <p id="success-message" class="text-green-600 mt-4 hidden">Form berhasil dikirim!</p>
-  
-      </div>
-    </form>
   </div>
 
-</main>
-
-<!-- Footer -->
-<footer class="bg-[#f5faff] shadow-md border-t border-gray-200 mt-10">
-  <div class="container mx-auto px-6 py-4 flex flex-col md:flex-row justify-between items-center">
-    <!-- Logo/Teks -->
-    <div class="text-xl font-semibold text-[#5E3BEE]">MyPorto</div>
-    <div>©2025 by FarisDani</div>
-    <!-- Social Icons -->
-    <div class="flex space-x-4 mt-4 md:mt-0">
-      <a href="http://www.linkedin.com/in/faris-dani-rizkianto-rizkianto-809629310/" target="_blank" class="text-gray-600 hover:text-[#0077B5] transition">
-        <i class="fab fa-linkedin fa-lg"></i>
-      </a>
-      <a href="https://github.com/FarisDani" target="_blank" class="text-gray-600 hover:text-[#0077B5] transition">
-        <i class="fab fa-github fa-lg"></i>
-      </a>
-    </div>
-  </div>
-</footer>
-
-</div>
-
-<script src="js/script.js"></script>
+  <script src="js/script.js"></script>
 </body>
+
 </html>

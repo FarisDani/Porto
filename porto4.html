@@ -23,8 +23,9 @@
   <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
 </head>
 
-<body class="bg-white dark:bg-gray-900 text-gray-800 dark:text-gray-200 font-sans flex flex-col min-h-screen transition-colors duration-300">
-  
+<body
+  class="bg-white dark:bg-gray-900 text-gray-800 dark:text-gray-200 font-sans flex flex-col min-h-screen transition-colors duration-300">
+
   <!-- Navbar -->
   <nav class="fixed top-0 w-full z-50 bg-white dark:bg-gray-900 shadow-xl transition-colors duration-300">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -35,21 +36,30 @@
         </div>
         <!-- Navigation Links (Hidden on mobile) -->
         <div class="hidden md:flex items-center space-x-6">
-          <a href="index.html" class="text-gray-700 dark:text-gray-200 hover:text-purple-600 dark:hover:text-purple-400">Home</a>
-          <a href="portofolio.html" class="text-gray-700 dark:text-gray-200 hover:text-purple-600 dark:hover:text-purple-400">Portofolio</a>
-          <a href="aboutme.html#contact" class="text-gray-700 dark:text-gray-200 hover:text-purple-600 dark:hover:text-purple-400">About Me</a>
+          <a href="index.html"
+            class="text-gray-700 dark:text-gray-200 hover:text-purple-600 dark:hover:text-purple-400">Home</a>
+          <a href="portofolio.html"
+            class="text-gray-700 dark:text-gray-200 hover:text-purple-600 dark:hover:text-purple-400">Portofolio</a>
+          <a href="aboutme.html#contact"
+            class="text-gray-700 dark:text-gray-200 hover:text-purple-600 dark:hover:text-purple-400">About Me</a>
         </div>
-        
+
         <div class="hidden md:flex items-center space-x-6">
-          <button type="button" class="theme-toggle-btn text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5">
-            <svg class="theme-toggle-dark-icon hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+          <button type="button"
+            class="theme-toggle-btn text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5">
+            <svg class="theme-toggle-dark-icon hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20"
+              xmlns="http://www.w3.org/2000/svg">
               <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
             </svg>
-            <svg class="theme-toggle-light-icon hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-              <path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" fill-rule="evenodd" clip-rule="evenodd"></path>
+            <svg class="theme-toggle-light-icon hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20"
+              xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z"
+                fill-rule="evenodd" clip-rule="evenodd"></path>
             </svg>
           </button>
-          <a href="aboutme.html#contact" class="border border-[#5E3BEE] text-[#5E3BEE] px-4 py-2 rounded-md hover:bg-[#452fc5] hover:text-white transition">Contact</a>
+          <a href="aboutme.html#contact"
+            class="border border-[#5E3BEE] text-[#5E3BEE] px-4 py-2 rounded-md hover:bg-[#452fc5] hover:text-white transition">Contact</a>
         </div>
 
         <!-- Mobile Menu Button -->
@@ -64,14 +74,20 @@
       <a href="index.html" class="block py-2 text-gray-700 hover:text-purple-600">Home</a>
       <a href="portofolio.html" class="block py-2 text-gray-700 hover:text-purple-600">Portofolio</a>
       <a href="aboutme.html" class="block py-2 text-gray-700 hover:text-purple-600">About Me</a>
-      <a href="aboutme.html#contact" class="block py-2 bg-[#5E3BEE] text-white rounded-md text-center hover:bg-[#452fc5] transition">Contact</a>
+      <a href="aboutme.html#contact"
+        class="block py-2 bg-[#5E3BEE] text-white rounded-md text-center hover:bg-[#452fc5] transition">Contact</a>
       <div class="flex justify-center mt-4">
-        <button type="button" class="theme-toggle-btn text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5">
-          <svg class="theme-toggle-dark-icon hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+        <button type="button"
+          class="theme-toggle-btn text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5">
+          <svg class="theme-toggle-dark-icon hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20"
+            xmlns="http://www.w3.org/2000/svg">
             <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
           </svg>
-          <svg class="theme-toggle-light-icon hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-             <path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" fill-rule="evenodd" clip-rule="evenodd"></path>
+          <svg class="theme-toggle-light-icon hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20"
+            xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z"
+              fill-rule="evenodd" clip-rule="evenodd"></path>
           </svg>
         </button>
       </div>
@@ -85,25 +101,28 @@
 
     <!-- Header Section -->
     <!-- Background hero image bisa diganti dengan foto andalan dari internship -->
-    <section class="relative px-10 py-[150px] bg-cover bg-center bg-no-repeat bg-[#10B981]" style="background-image: url('https://images.unsplash.com/photo-1542038784456-1ea8e935640e?q=80&w=2070&auto=format&fit=crop');">
+    <section class="relative px-10 py-[150px] bg-cover bg-center bg-no-repeat bg-[#10B981]"
+      style="background-image: url('https://images.unsplash.com/photo-1542038784456-1ea8e935640e?q=80&w=2070&auto=format&fit=crop');">
       <!-- Overlay hitam transparan untuk readibility text -->
       <div class="absolute inset-0 bg-black/60"></div>
 
       <!-- Konten -->
-      <div class="relative z-10 flex flex-col items-center justify-center gap-10 max-w-7xl mx-auto text-center" data-aos="fade-up">
-        
+      <div class="relative z-10 flex flex-col items-center justify-center gap-10 max-w-7xl mx-auto text-center"
+        data-aos="fade-up">
+
         <i class="fi fi-sr-camera text-7xl text-white mb-2"></i>
-        
+
         <div class="flex-1 max-w-3xl text-white">
-          <h1 class="text-4xl md:text-5xl font-bold mb-4">IT <span class="text-[#10B981]">Multimedia</span> Internship</h1>
+          <h1 class="text-4xl md:text-5xl font-bold mb-4">IT <span class="text-[#10B981]">Multimedia</span> Internship
+          </h1>
           <p class="text-lg md:text-xl font-medium text-gray-200 mb-6">
-            A comprehensive portfolio of photography and videography works produced during my internship, capturing moments and telling visual stories.
+            Maganghub KEMENAKER Batch 1 at Koperasi GEMI
           </p>
           <div class="flex flex-col md:flex-row items-center justify-center gap-4 mt-8">
             <p class="text-lg font-semibold text-gray-200">Tools Used:</p>
             <div class="flex justify-center gap-3 flex-wrap">
-              <span class="bg-[#10B981] px-4 py-2 rounded-full font-semibold shadow text-sm">Premiere Pro</span>
-              <span class="bg-[#10B981] px-4 py-2 rounded-full font-semibold shadow text-sm">Lightroom</span>
+              <span class="bg-[#10B981] px-4 py-2 rounded-full font-semibold shadow text-sm">Capcut</span>
+              <span class="bg-[#10B981] px-4 py-2 rounded-full font-semibold shadow text-sm">Canva</span>
               <span class="bg-[#10B981] px-4 py-2 rounded-full font-semibold shadow text-sm">DSLR / Mirrorless</span>
             </div>
           </div>
@@ -114,33 +133,116 @@
     <!-- Photography / Instagram Embed Section -->
     <section class="py-16 px-6 bg-white dark:bg-gray-900 transition-colors duration-300">
       <div class="max-w-6xl mx-auto text-center">
-        <h2 class="text-3xl font-bold mb-4" data-aos="fade-down"><span class="text-[#10B981]">Photography</span> Gallery</h2>
+        <h2 class="text-3xl font-bold mb-4" data-aos="fade-down"><span class="text-[#10B981]">Photography</span> Gallery
+        </h2>
         <p class="text-gray-600 dark:text-gray-300 mb-12 max-w-2xl mx-auto" data-aos="fade-up">
-          A collection of embedded posts directly from Instagram. You can scroll, like, and view the original photography works below.
+          A collection of embedded posts directly from Instagram. You can scroll, like, and view the original
+          photography works below.
         </p>
 
         <!-- Grid for Instagram Embeds -->
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 justify-items-center">
-          
+
           <!-- Paste Instagram Embed Block Here -->
-          <div class="w-full max-w-[400px] border border-gray-200 dark:border-gray-700 rounded-lg overflow-hidden flex items-center justify-center bg-gray-50 dark:bg-gray-800" data-aos="zoom-in" style="min-height: 450px;">
-            <p class="text-gray-500 dark:text-gray-400 p-6 text-sm italic">
-              (Paste your 1st Instagram Embed Code Here) <br><br> Go to an Instagram post on desktop -> Click 3 dots (...) -> Click "Embed" -> Copy Embed Code.
-            </p>
+          <div
+            class="w-full max-w-[400px] border border-gray-200 dark:border-gray-700 rounded-lg overflow-hidden flex items-center justify-center bg-gray-50 dark:bg-gray-800"
+            data-aos="zoom-in" style="min-height: 450px;">
+            <iframe src="https://www.instagram.com/p/DXWYk5ilIT8/embed" class="w-full h-full"
+              style="min-height: 450px; border:none;" frameborder="0" scrolling="no" allowtransparency="true"></iframe>
           </div>
 
           <!-- Paste Instagram Embed Block Here -->
-          <div class="w-full max-w-[400px] border border-gray-200 dark:border-gray-700 rounded-lg overflow-hidden flex items-center justify-center bg-gray-50 dark:bg-gray-800" data-aos="zoom-in" data-aos-delay="150" style="min-height: 450px;">
-            <p class="text-gray-500 dark:text-gray-400 p-6 text-sm italic">
-              (Paste your 2nd Instagram Embed Code Here)
-            </p>
+          <div
+            class="w-full max-w-[400px] border border-gray-200 dark:border-gray-700 rounded-lg overflow-hidden flex items-center justify-center bg-gray-50 dark:bg-gray-800"
+            data-aos="zoom-in" data-aos-delay="150" style="min-height: 450px;">
+            <iframe src="https://www.instagram.com/p/DWjaT4iFBDv/embed" class="w-full h-full"
+              style="min-height: 450px; border:none;" frameborder="0" scrolling="no" allowtransparency="true"></iframe>
           </div>
 
           <!-- Paste Instagram Embed Block Here -->
-          <div class="w-full max-w-[400px] border border-gray-200 dark:border-gray-700 rounded-lg overflow-hidden flex items-center justify-center bg-gray-50 dark:bg-gray-800" data-aos="zoom-in" data-aos-delay="300" style="min-height: 450px;">
-            <p class="text-gray-500 dark:text-gray-400 p-6 text-sm italic">
-              (Paste your 3rd Instagram Embed Code Here)
-            </p>
+          <div
+            class="w-full max-w-[400px] border border-gray-200 dark:border-gray-700 rounded-lg overflow-hidden flex items-center justify-center bg-gray-50 dark:bg-gray-800"
+            data-aos="zoom-in" data-aos-delay="300" style="min-height: 450px;">
+            <iframe src="https://www.instagram.com/p/DSl5w2zkh1s/embed" class="w-full h-full"
+              style="min-height: 450px; border:none;" frameborder="0" scrolling="no" allowtransparency="true"></iframe>
+          </div>
+
+          <!-- Card 4 -->
+          <div
+            class="w-full max-w-[400px] border border-gray-200 dark:border-gray-700 rounded-lg overflow-hidden flex items-center justify-center bg-gray-50 dark:bg-gray-800"
+            data-aos="zoom-in" style="min-height: 450px;">
+            <iframe src="https://www.instagram.com/p/DXJYSaMlEdl/embed" class="w-full h-full"
+              style="min-height: 450px; border:none;" frameborder="0" scrolling="no" allowtransparency="true"></iframe>
+          </div>
+          <!-- Card 5 -->
+          <div
+            class="w-full max-w-[400px] border border-gray-200 dark:border-gray-700 rounded-lg overflow-hidden flex items-center justify-center bg-gray-50 dark:bg-gray-800"
+            data-aos="zoom-in" style="min-height: 450px;">
+            <iframe src="https://www.instagram.com/p/DWkZEoHkmXQ/embed" class="w-full h-full"
+              style="min-height: 450px; border:none;" frameborder="0" scrolling="no" allowtransparency="true"></iframe>
+          </div>
+          <!-- Card 6 -->
+          <div
+            class="w-full max-w-[400px] border border-gray-200 dark:border-gray-700 rounded-lg overflow-hidden flex items-center justify-center bg-gray-50 dark:bg-gray-800"
+            data-aos="zoom-in" style="min-height: 450px;">
+            <iframe src="https://www.instagram.com/p/DVsVK7QkVuC/embed" class="w-full h-full"
+              style="min-height: 450px; border:none;" frameborder="0" scrolling="no" allowtransparency="true"></iframe>
+          </div>
+          <!-- Card 7 -->
+          <div
+            class="w-full max-w-[400px] border border-gray-200 dark:border-gray-700 rounded-lg overflow-hidden flex items-center justify-center bg-gray-50 dark:bg-gray-800"
+            data-aos="zoom-in" style="min-height: 450px;">
+            <iframe src="https://www.instagram.com/p/DVH_7ogiYWV/embed" class="w-full h-full"
+              style="min-height: 450px; border:none;" frameborder="0" scrolling="no" allowtransparency="true"></iframe>
+          </div>
+          <!-- Card 8 -->
+          <div
+            class="w-full max-w-[400px] border border-gray-200 dark:border-gray-700 rounded-lg overflow-hidden flex items-center justify-center bg-gray-50 dark:bg-gray-800"
+            data-aos="zoom-in" style="min-height: 450px;">
+            <iframe src="https://www.instagram.com/p/DUkGfobiSc9/embed" class="w-full h-full"
+              style="min-height: 450px; border:none;" frameborder="0" scrolling="no" allowtransparency="true"></iframe>
+          </div>
+          <!-- Card 9 -->
+          <div
+            class="w-full max-w-[400px] border border-gray-200 dark:border-gray-700 rounded-lg overflow-hidden flex items-center justify-center bg-gray-50 dark:bg-gray-800"
+            data-aos="zoom-in" style="min-height: 450px;">
+            <iframe src="https://www.instagram.com/p/DUSeZa0EQxi/embed" class="w-full h-full"
+              style="min-height: 450px; border:none;" frameborder="0" scrolling="no" allowtransparency="true"></iframe>
+          </div>
+          <!-- Card 10 -->
+          <div
+            class="w-full max-w-[400px] border border-gray-200 dark:border-gray-700 rounded-lg overflow-hidden flex items-center justify-center bg-gray-50 dark:bg-gray-800"
+            data-aos="zoom-in" style="min-height: 450px;">
+            <iframe src="https://www.instagram.com/p/DUAqd-yFNtc/embed" class="w-full h-full"
+              style="min-height: 450px; border:none;" frameborder="0" scrolling="no" allowtransparency="true"></iframe>
+          </div>
+          <!-- Card 11 -->
+          <div
+            class="w-full max-w-[400px] border border-gray-200 dark:border-gray-700 rounded-lg overflow-hidden flex items-center justify-center bg-gray-50 dark:bg-gray-800"
+            data-aos="zoom-in" style="min-height: 450px;">
+            <iframe src="https://www.instagram.com/p/DThvvRuFPAZ/embed" class="w-full h-full"
+              style="min-height: 450px; border:none;" frameborder="0" scrolling="no" allowtransparency="true"></iframe>
+          </div>
+          <!-- Card 12 -->
+          <div
+            class="w-full max-w-[400px] border border-gray-200 dark:border-gray-700 rounded-lg overflow-hidden flex items-center justify-center bg-gray-50 dark:bg-gray-800"
+            data-aos="zoom-in" style="min-height: 450px;">
+            <iframe src="https://www.instagram.com/p/DSlqj-1CYNv/embed" class="w-full h-full"
+              style="min-height: 450px; border:none;" frameborder="0" scrolling="no" allowtransparency="true"></iframe>
+          </div>
+          <!-- Card 13 -->
+          <div
+            class="w-full max-w-[400px] border border-gray-200 dark:border-gray-700 rounded-lg overflow-hidden flex items-center justify-center bg-gray-50 dark:bg-gray-800"
+            data-aos="zoom-in" style="min-height: 450px;">
+            <iframe src="https://www.instagram.com/p/DSEV3xVicMk/embed" class="w-full h-full"
+              style="min-height: 450px; border:none;" frameborder="0" scrolling="no" allowtransparency="true"></iframe>
+          </div>
+          <!-- Card 14 -->
+          <div
+            class="w-full max-w-[400px] border border-gray-200 dark:border-gray-700 rounded-lg overflow-hidden flex items-center justify-center bg-gray-50 dark:bg-gray-800"
+            data-aos="zoom-in" style="min-height: 450px;">
+            <iframe src="https://www.instagram.com/p/DRMRx8lCcID/embed" class="w-full h-full"
+              style="min-height: 450px; border:none;" frameborder="0" scrolling="no" allowtransparency="true"></iframe>
           </div>
 
         </div>
@@ -151,68 +253,280 @@
     <section class="py-16 px-6 bg-[#f5faff] dark:bg-gray-800 transition-colors duration-300">
       <div class="max-w-6xl mx-auto">
         <div class="text-center mb-12">
-          <h2 class="text-3xl font-bold mb-4" data-aos="fade-down"><span class="text-[#10B981]">Videography</span> Works</h2>
+          <h2 class="text-3xl font-bold mb-4" data-aos="fade-down"><span class="text-[#10B981]">Videography</span> Works
+          </h2>
           <p class="text-gray-600 dark:text-gray-300 max-w-2xl mx-auto" data-aos="fade-up">
-            Selected video projects covering events, promos, and visual narratives. Embedded directly from YouTube/Instagram Reels for fast loading.
+            Selected video projects covering events, promos, and visual narratives. Embedded directly from
+            YouTube/Instagram Reels for fast loading.
           </p>
         </div>
+        <!-- Long-form Video (YouTube) -->
+        <div class="mb-20">
+          <div class="text-center mb-8">
+            <h3
+              class="text-2xl font-bold inline-block border-b-4 border-[#10B981] pb-2 text-gray-800 dark:text-gray-100"
+              data-aos="fade-up">Long-form Projects (YouTube)</h3>
+          </div>
+          <div class="flex flex-col gap-12">
 
-        <div class="flex flex-col gap-12">
-          
-          <!-- Video 1 -->
-          <div class="flex flex-col lg:flex-row items-center gap-8" data-aos="fade-right">
-            <!-- Video Container (Responsive 16:9) -->
-            <div class="w-full lg:w-3/5 rounded-xl overflow-hidden shadow-lg border-4 border-gray-100 dark:border-gray-700 bg-gray-200 dark:bg-gray-900 aspect-video flex items-center justify-center relative">
-              <p class="text-gray-500 text-center px-4 italic absolute">
-                 (Paste YouTube &lt;iframe&gt; embed code here and add class "w-full h-full" to the iframe) <br><br> Example: &lt;iframe class="w-full h-full" src="..."&gt;&lt;/iframe&gt;
-              </p>
+            <!-- Video 1 -->
+            <div class="flex flex-col lg:flex-row items-center gap-8" data-aos="fade-right">
+              <!-- Video Container (Responsive 16:9) -->
+              <div
+                class="w-full lg:w-3/5 rounded-xl overflow-hidden shadow-lg border-4 border-gray-100 dark:border-gray-700 bg-gray-200 dark:bg-gray-900 aspect-video flex items-center justify-center relative">
+                <iframe class="w-full h-full" src="https://www.youtube.com/embed/XWzVFmBMRFo"
+                  title="YouTube video player" frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+              </div>
+              <!-- Video Text -->
+              <div class="w-full lg:w-2/5">
+                <h3 class="text-2xl font-bold mb-3 text-gray-800 dark:text-gray-100">
+                  Pelatihan Pengelolaan Sampah Anorganik. Kolaborasi Koperasi GEMI dan Mahasiswa Fakultas Biologi UGM
+                </h3>
+                <p class="text-gray-600 dark:text-gray-300 leading-relaxed">
+                  Kegiatan ini bertujuan untuk meningkatkan kesadaran masyarakat dalam memilah dan memanfaatkan sampah
+                  anorganik menjadi produk yang bernilai guna — salah satunya pembuatan bantal ecobrick!
+                  <br><br>🧱💚Dengan semangat gotong royong dan kepedulian terhadap lingkungan, kita belajar bahwa
+                  menjaga bumi bisa dimulai dari hal sederhana: mengelola sampah dengan bijak.
+                  <br><br>🌍✨ Kecil aksinya, besar dampaknya!Mari bersama wujudkan lingkungan yang bersih, sehat, dan
+                  berkelanjutan 🌱
+                </p>
+              </div>
             </div>
-            <!-- Video Text -->
-            <div class="w-full lg:w-2/5">
-              <h3 class="text-2xl font-bold mb-3 text-gray-800 dark:text-gray-100">Project Video Title 1</h3>
-              <p class="text-gray-600 dark:text-gray-300 leading-relaxed">
-                Describe the context of the video. For example: "A recap video documenting the 3-day internal company workshop. Responsible for setting up the camera gear, capturing b-roll, and final editing."
-              </p>
+
+            <!-- Video 2 -->
+            <div class="flex flex-col-reverse lg:flex-row items-center gap-8" data-aos="fade-left">
+              <!-- Video Text -->
+              <div class="w-full lg:w-2/5 lg:text-right">
+                <h3 class="text-2xl font-bold mb-3 text-gray-800 dark:text-gray-100">Real Talk Usaha Anggota GEMI</h3>
+                <p class="text-gray-600 dark:text-gray-300 leading-relaxed">
+                  Program Real Talk Usaha Anggota GEMI, kami menghadirkan cerita nyata dari para anggota mengenai
+                  perkembangan usaha, tantangan ekonomi, serta upaya mereka untuk terus bertumbuh.
+
+                  Kegiatan ini menjadi ruang bagi anggota untuk berbagi pengalaman, memberikan inspirasi, dan menjadi
+                  dasar evaluasi bagi Koperasi GEMI dalam memperkuat layanan pemberdayaan ekonomi ke depan.
+
+                  Terus bertumbuh, terus berdaya.
+                  Bersama GEMI, menuju ekonomi anggota yang lebih mandiri dan berkelanjutan.
+
+                </p>
+              </div>
+              <!-- Video Container (Responsive 16:9) -->
+              <div
+                class="w-full lg:w-3/5 rounded-xl overflow-hidden shadow-lg border-4 border-gray-100 dark:border-gray-700 bg-gray-200 dark:bg-gray-900 aspect-video flex items-center justify-center relative">
+                <iframe class="w-full h-full" src="https://www.youtube.com/embed/VpXfOs_G6rg?start=10"
+                  title="YouTube video player" frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+              </div>
             </div>
+
+            <!-- Video 3 -->
+            <div class="flex flex-col lg:flex-row items-center gap-8" data-aos="fade-right">
+              <div
+                class="w-full lg:w-3/5 rounded-xl overflow-hidden shadow-lg border-4 border-gray-100 dark:border-gray-700 bg-gray-200 dark:bg-gray-900 aspect-video flex items-center justify-center relative">
+                <iframe class="w-full h-full" src="https://www.youtube.com/embed/RmqZKWdsl-0"
+                  title="YouTube video player" frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+              </div>
+              <div class="w-full lg:w-2/5">
+                <h3 class="text-2xl font-bold mb-3 text-gray-800 dark:text-gray-100">Gabungan Organisasi Wanita (GOW)
+                  melakukan Studi Banding Ke Koperasi Gemi</h3>
+                <p class="text-gray-600 dark:text-gray-300 leading-relaxed">Gabungan Organisasi Wanita (GOW) Kabupaten
+                  Lombok Timur melakukan kunjungan studi banding ke Koperasi GEMI. Kegiatan ini menjadi ruang berbagi
+                  praktik baik dalam penguatan ekonomi perempuan dan pengembangan usaha berbasis kebersamaan. Semoga
+                  sinergi ini menjadi langkah strategis dalam menghadirkan program-program pemberdayaan yang
+                  berkelanjutan di berbagai daerah.</p>
+              </div>
+            </div>
+
+            <!-- Video 4 -->
+            <div class="flex flex-col-reverse lg:flex-row items-center gap-8" data-aos="fade-left">
+              <div class="w-full lg:w-2/5 lg:text-right">
+                <h3 class="text-2xl font-bold mb-3 text-gray-800 dark:text-gray-100">Senam Sehat & Temu Anggota dalam
+                  rangka Hari Ibu Nasional</h3>
+                <p class="text-gray-600 dark:text-gray-300 leading-relaxed">Dalam rangka memperingati Hari Ibu, GEMI
+                  area Gunungkidul menggelar Senam Sehat & Temu Anggota sebagai wujud kebersamaan, semangat hidup sehat,
+                  dan apresiasi untuk para ibu hebat 💐 Terima kasih untuk seluruh anggota yang hadir dan meramaikan
+                  kegiatan ini. Ibu sehat, keluarga kuat, ekonomi umat pun semakin hebat</p>
+              </div>
+              <div
+                class="w-full lg:w-3/5 rounded-xl overflow-hidden shadow-lg border-4 border-gray-100 dark:border-gray-700 bg-gray-200 dark:bg-gray-900 aspect-video flex items-center justify-center relative">
+                <iframe class="w-full h-full" src="https://www.youtube.com/embed/7xKQmLV5ZQg"
+                  title="YouTube video player" frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+              </div>
+            </div>
+
+            <!-- Video 5 -->
+            <div class="flex flex-col lg:flex-row items-center gap-8" data-aos="fade-right">
+              <div
+                class="w-full lg:w-3/5 rounded-xl overflow-hidden shadow-lg border-4 border-gray-100 dark:border-gray-700 bg-gray-200 dark:bg-gray-900 aspect-video flex items-center justify-center relative">
+                <iframe class="w-full h-full" src="https://www.youtube.com/embed/nJ5cEXfEjl4"
+                  title="YouTube video player" frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+              </div>
+              <div class="w-full lg:w-2/5">
+                <h3 class="text-2xl font-bold mb-3 text-gray-800 dark:text-gray-100">Testimoni & Kunjungan GOW Lombok
+                  Barat</h3>
+                <p class="text-gray-600 dark:text-gray-300 leading-relaxed">Testimoni & Kunjungan GOW Lombok Barat Wakil
+                  Bupati Kabupaten Lombok Barat sekaligus Ketua GOW Lombok Barat, Ibu Hj. Nurul Adha, berkesempatan
+                  mengunjungi Bank Sampah Berdikari Sejahtera, mitra Koperasi GEMI. Dalam kunjungan ini, beliau
+                  menyampaikan apresiasi terhadap inovasi pengolahan minyak jelantah menjadi produk sabun cuci yang
+                  dikombinasikan dengan bahan-bahan alami, seperti ampas kulit jeruk, ampas kelapa, daun kelor, dan
+                  bahan ramah lingkungan lainnya. Inisiatif ini dinilai tidak hanya mampu mengurangi limbah, tetapi juga
+                  menghadirkan produk bernilai ekonomi yang mendukung pemberdayaan masyarakat, khususnya perempuan.
+                  Koperasi GEMI bersama mitra terus mendorong lahirnya usaha berkelanjutan yang berdampak positif bagi
+                  lingkungan dan kesejahteraan masyarakat.</p>
+              </div>
+            </div>
+
+            <!-- Video 6 -->
+            <div class="flex flex-col-reverse lg:flex-row items-center gap-8" data-aos="fade-left">
+              <div class="w-full lg:w-2/5 lg:text-right">
+                <h3 class="text-2xl font-bold mb-3 text-gray-800 dark:text-gray-100">Rapat Kerja Koperasi Syariah GEMI
+                  2026</h3>
+                <p class="text-gray-600 dark:text-gray-300 leading-relaxed">Rapat Kerja 2026 menjadi momentum strategis
+                  bagi Koperasi Gemi dalam melakukan evaluasi capaian program, menyusun perencanaan kerja, serta
+                  merumuskan implementasi program ke depan agar semakin tepat sasaran dan berkelanjutan. Melalui forum
+                  ini, seluruh tim berkolaborasi untuk menyatukan visi, memperkuat sinergi, dan menegaskan komitmen
+                  dalam menghadirkan program-program pemberdayaan yang berdampak nyata bagi anggota dan masyarakat.</p>
+              </div>
+              <div
+                class="w-full lg:w-3/5 rounded-xl overflow-hidden shadow-lg border-4 border-gray-100 dark:border-gray-700 bg-gray-200 dark:bg-gray-900 aspect-video flex items-center justify-center relative">
+                <iframe class="w-full h-full" src="https://www.youtube.com/embed/Q1RAg5SQX_A"
+                  title="YouTube video player" frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+              </div>
+            </div>
+
+            <!-- Video 7 -->
+            <div class="flex flex-col lg:flex-row items-center gap-8" data-aos="fade-right">
+              <div
+                class="w-full lg:w-3/5 rounded-xl overflow-hidden shadow-lg border-4 border-gray-100 dark:border-gray-700 bg-gray-200 dark:bg-gray-900 aspect-video flex items-center justify-center relative">
+                <iframe class="w-full h-full" src="https://www.youtube.com/embed/-IncEW3P2GE?start=16"
+                  title="YouTube video player" frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+              </div>
+              <div class="w-full lg:w-2/5">
+                <h3 class="text-2xl font-bold mb-3 text-gray-800 dark:text-gray-100">[GEMI BERCERITA] KISAH INSPIRATIF
+                  ANGGOTA KOPERASI GEMI IBU LESTARI KANTIN SEKOLAH</h3>
+                <p class="text-gray-600 dark:text-gray-300 leading-relaxed">[Kisah Inspiratif Anggota GEMI] Di balik
+                  etalase kantin sederhana, tersimpan cerita perjuangan yang luar biasa. Ibu Lestari Ningsih, anggota
+                  Koperasi GEMI sejak tahun 2012, dengan penuh keteguhan menjalani peran sebagai penjual jajanan anak
+                  sekaligus ibu hebat bagi anak-anaknya. Lebih dari 13 tahun bersama GEMI, beliau membuktikan bahwa
+                  keterbatasan bukan penghalang untuk terus berjuang, mandiri, dan menghidupi keluarga dengan penuh
+                  keikhlasan.</p>
+              </div>
+            </div>
+
+            <!-- Video 8 -->
+            <div class="flex flex-col-reverse lg:flex-row items-center gap-8" data-aos="fade-left">
+              <div class="w-full lg:w-2/5 lg:text-right">
+                <h3 class="text-2xl font-bold mb-3 text-gray-800 dark:text-gray-100">Sosialisasi Manajemen Usaha Bisnis
+                  Islam dan Mindset Sukses Pemasaran</h3>
+                <p class="text-gray-600 dark:text-gray-300 leading-relaxed">📚 Dokumentasi Sosialisasi Manajemen Usaha
+                  Bisnis Islam &amp; Mindset Sukses Pemasaran 📅 9–12 Februari 2026 Alhamdulillah, Koperasi GEMI telah
+                  melaksanakan kegiatan sosialisasi dan pendampingan bagi anggota dengan fokus pada penguatan manajemen
+                  usaha berbasis nilai-nilai Islam serta pembentukan mindset sukses dalam pemasaran. Melalui kegiatan
+                  ini, peserta dibekali pemahaman tentang: ✨ Pengelolaan usaha yang amanah dan profesional ✨ Strategi
+                  pemasaran yang efektif ✨ Pola pikir bertumbuh untuk meningkatkan omzet dan keberlanjutan usaha Semoga
+                  ilmu yang dibagikan menjadi bekal dalam mengembangkan usaha yang lebih mandiri, berkah, dan berdaya
+                  saing. Bersama Koperasi GEMI, kita tumbuh, kita kuat, dan kita sukses bersama. 💚</p>
+              </div>
+              <div
+                class="w-full lg:w-3/5 rounded-xl overflow-hidden shadow-lg border-4 border-gray-100 dark:border-gray-700 bg-gray-200 dark:bg-gray-900 aspect-video flex items-center justify-center relative">
+                <iframe class="w-full h-full" src="https://www.youtube.com/embed/Ct_DcbrFaj0"
+                  title="YouTube video player" frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Short-form Video (Instagram Reels) -->
+        <div>
+          <div class="text-center mb-8">
+            <h3
+              class="text-2xl font-bold inline-block border-b-4 border-[#10B981] pb-2 text-gray-800 dark:text-gray-100"
+              data-aos="fade-up">Short-form Content (IG Reels)</h3>
           </div>
 
-          <!-- Video 2 -->
-          <div class="flex flex-col-reverse lg:flex-row items-center gap-8" data-aos="fade-left">
-            <!-- Video Text -->
-            <div class="w-full lg:w-2/5 lg:text-right">
-              <h3 class="text-2xl font-bold mb-3 text-gray-800 dark:text-gray-100">Project Video Title 2</h3>
-              <p class="text-gray-600 dark:text-gray-300 leading-relaxed">
-                Describe the context of the video. Example: "A short promotional video for social media campaigns. Focused on color grading and upbeat transitions to retain audience retention."
-              </p>
+          <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 justify-items-center">
+            <!-- Reel 1 -->
+            <div
+              class="w-full max-w-[300px] border border-gray-200 dark:border-gray-700 rounded-xl overflow-hidden flex items-center justify-center bg-gray-50 dark:bg-gray-800 aspect-[9/16]"
+              data-aos="zoom-in">
+              <iframe src="https://www.instagram.com/p/DXVf0J7k5dc/embed" class="w-full h-full"
+                style="min-height: 450px; border:none;" frameborder="0" scrolling="no"
+                allowtransparency="true"></iframe>
             </div>
-            <!-- Video Container (Responsive 16:9) -->
-            <div class="w-full lg:w-3/5 rounded-xl overflow-hidden shadow-lg border-4 border-gray-100 dark:border-gray-700 bg-gray-200 dark:bg-gray-900 aspect-video flex items-center justify-center relative">
-              <p class="text-gray-500 text-center px-4 italic absolute">
-                 (Paste YouTube 2nd &lt;iframe&gt; here)
-              </p>
+            <!-- Reel 2 -->
+            <div
+              class="w-full max-w-[300px] border border-gray-200 dark:border-gray-700 rounded-xl overflow-hidden flex items-center justify-center bg-gray-50 dark:bg-gray-800 aspect-[9/16]"
+              data-aos="zoom-in" data-aos-delay="100">
+              <iframe src="https://www.instagram.com/p/DVsVaYRRgIj/embed" class="w-full h-full"
+                style="min-height: 450px; border:none;" frameborder="0" scrolling="no"
+                allowtransparency="true"></iframe>
+            </div>
+            <!-- Reel 3 -->
+            <div
+              class="w-full max-w-[300px] border border-gray-200 dark:border-gray-700 rounded-xl overflow-hidden flex items-center justify-center bg-gray-50 dark:bg-gray-800 aspect-[9/16]"
+              data-aos="zoom-in" data-aos-delay="200">
+              <iframe src="https://www.instagram.com/p/DVaKiZ3kZO7/embed" class="w-full h-full"
+                style="min-height: 450px; border:none;" frameborder="0" scrolling="no"
+                allowtransparency="true"></iframe>
+            </div>
+            <!-- Reel 4 -->
+            <div
+              class="w-full max-w-[300px] border border-gray-200 dark:border-gray-700 rounded-xl overflow-hidden flex items-center justify-center bg-gray-50 dark:bg-gray-800 aspect-[9/16]"
+              data-aos="zoom-in" data-aos-delay="300">
+              <iframe src="https://www.instagram.com/p/DUvJcFbE5A6/embed" class="w-full h-full"
+                style="min-height: 450px; border:none;" frameborder="0" scrolling="no"
+                allowtransparency="true"></iframe>
+            </div>
+            <div
+              class="w-full max-w-[300px] border border-gray-200 dark:border-gray-700 rounded-xl overflow-hidden flex items-center justify-center bg-gray-50 dark:bg-gray-800 aspect-[9/16]"
+              data-aos="zoom-in" data-aos-delay="300">
+              <iframe src="https://www.instagram.com/p/DUAqd-yFNtc/embed" class="w-full h-full"
+                style="min-height: 450px; border:none;" frameborder="0" scrolling="no"
+                allowtransparency="true"></iframe>
             </div>
           </div>
-
         </div>
 
       </div>
     </section>
 
     <div class="max-w-4xl mx-auto my-16 px-6">
-      <p class="py-5 px-6 bg-[#ebfbf5] dark:bg-[#107052]/20 border-l-4 border-[#10B981] rounded-r-lg text-base text-gray-800 dark:text-gray-200 leading-relaxed shadow-sm" data-aos="fade-up">
-        <strong>The IT Multimedia Internship</strong> allowed me to deeply explore the creative side of technology. From understanding framing and lighting in photography to mastering post-production editing for videos, this experience sharpened my eye for aesthetics while maintaining technical precision. The selected pieces above represent my continuous growth in the multimedia field.
+      <p class="py-5 px-6 bg-[#ebfbf5] dark:bg-[#107052]/20 border-l-4 border-[#10B981] rounded-r-lg text-base text-gray-800 dark:text-gray-200 leading-relaxed shadow-sm"
+        data-aos="fade-up">
+        <strong>The IT Multimedia Internship</strong> allowed me to deeply explore the creative side of technology. From
+        understanding framing and lighting in photography to mastering post-production editing for videos, this
+        experience sharpened my eye for aesthetics while maintaining technical precision. The selected pieces above
+        represent my continuous growth in the multimedia field.
       </p>
     </div>
 
   </main>
 
   <!-- Footer -->
-  <footer class="bg-[#f5faff] dark:bg-gray-900 shadow-md border-t border-gray-200 dark:border-gray-800 transition-colors duration-300">
+  <footer
+    class="bg-[#f5faff] dark:bg-gray-900 shadow-md border-t border-gray-200 dark:border-gray-800 transition-colors duration-300">
     <div class="container mx-auto px-6 py-4 flex flex-col md:flex-row justify-between items-center">
       <div class="text-xl font-semibold text-[#5E3BEE]"><a href="index.html">MyPorto</a></div>
       <div class="text-gray-600 dark:text-gray-400">©2025 by FarisDani</div>
       <div class="flex space-x-4 mt-4 md:mt-0">
-        <a href="http://www.linkedin.com/in/faris-dani-rizkianto-rizkianto-809629310/" target="_blank" class="text-gray-600 hover:text-[#0077B5] transition">
+        <a href="http://www.linkedin.com/in/faris-dani-rizkianto-rizkianto-809629310/" target="_blank"
+          class="text-gray-600 hover:text-[#0077B5] transition">
           <i class="fab fa-linkedin fa-lg"></i>
         </a>
         <a href="https://github.com/FarisDani" target="_blank" class="text-gray-600 hover:text-[#0077B5] transition">
